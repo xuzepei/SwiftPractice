@@ -57,7 +57,7 @@ class RCDynamicHeightCellViewController: UIViewController,UITableViewDelegate,UI
             //cell.textLabel?.text = items[indexPath.row]["title"];
             cell.titleTV.delegate = self;
             cell.descriptionTV.delegate = self;
-            
+            cell.myLabel.text = items[indexPath.row]["title"]
             cell.titleTV.text = items[indexPath.row]["title"]
             cell.descriptionTV.text = items[indexPath.row]["description"]
 

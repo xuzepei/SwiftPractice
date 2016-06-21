@@ -12,6 +12,7 @@ class RCCellFromXib: UITableViewCell {
     
     //MARK:- Properties
     @IBOutlet weak var titleTV:UITextView!
+    @IBOutlet weak var myLabel:UILabel!
     @IBOutlet weak var descriptionTV:UITextView!
 
     //MARK:-

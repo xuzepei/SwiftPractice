@@ -18,6 +18,8 @@
 		095F423D1D054EC3006DC84A /* SwiftPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F423C1D054EC3006DC84A /* SwiftPracticeUITests.swift */; };
 		095F42531D055736006DC84A /* RCRootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F42521D055736006DC84A /* RCRootTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		095F42551D0561F5006DC84A /* RCDynamicHeightCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F42541D0561F5006DC84A /* RCDynamicHeightCellViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		09EA03371D17E1DA00EA3515 /* RCTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EA03361D17E1DA00EA3515 /* RCTool.swift */; settings = {ASSET_TAGS = (); }; };
+		09EA03381D17E1DA00EA3515 /* RCTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EA03361D17E1DA00EA3515 /* RCTool.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		095F423E1D054EC3006DC84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		095F42521D055736006DC84A /* RCRootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCRootTableViewController.swift; sourceTree = "<group>"; };
 		095F42541D0561F5006DC84A /* RCDynamicHeightCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCDynamicHeightCellViewController.swift; sourceTree = "<group>"; };
+		09EA03361D17E1DA00EA3515 /* RCTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCTool.swift; sourceTree = "<group>"; };
+		09EA033A1D17E74100EA3515 /* SwiftPractice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPractice-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				095F42251D054EC3006DC84A /* LaunchScreen.storyboard */,
 				095F42281D054EC3006DC84A /* Info.plist */,
 				095F42201D054EC3006DC84A /* SwiftPractice.xcdatamodeld */,
+				09EA03361D17E1DA00EA3515 /* RCTool.swift */,
+				09EA033A1D17E74100EA3515 /* SwiftPractice-Bridging-Header.h */,
 			);
 			path = SwiftPractice;
 			sourceTree = "<group>";
@@ -199,6 +205,7 @@
 		095F420E1D054EC3006DC84A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = xuzepei;
 				TargetAttributes = {
@@ -272,6 +279,7 @@
 				095F42551D0561F5006DC84A /* RCDynamicHeightCellViewController.swift in Sources */,
 				095F42221D054EC3006DC84A /* SwiftPractice.xcdatamodeld in Sources */,
 				095F42531D055736006DC84A /* RCRootTableViewController.swift in Sources */,
+				09EA03371D17E1DA00EA3515 /* RCTool.swift in Sources */,
 				095F421A1D054EC3006DC84A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09EA03381D17E1DA00EA3515 /* RCTool.swift in Sources */,
 				095F42321D054EC3006DC84A /* SwiftPracticeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,11 +423,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftPractice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.practice.SwiftPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPractice/SwiftPractice-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -426,11 +438,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftPractice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.practice.SwiftPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPractice/SwiftPractice-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -438,10 +452,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftPracticeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.practice.SwiftPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPractice/SwiftPracticeTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftPractice.app/SwiftPractice";
 			};
 			name = Debug;
@@ -450,10 +467,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftPracticeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.practice.SwiftPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPractice/SwiftPracticeTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftPractice.app/SwiftPractice";
 			};
 			name = Release;
