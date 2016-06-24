@@ -1,5 +1,5 @@
 //
-//  RCTool.swift
+//  Tool.swift
 //  SwiftPractice
 //
 //  Created by xuzepei on 16/6/20.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class RCTool {
+class Tool {
     
-    static let sharedInstance = RCTool()
+    static let sharedInstance = Tool()
     
     class func writableDirectoryPath() -> String {
         

@@ -1,5 +1,5 @@
 //
-//  RCRootTableViewController.swift
+//  RootTableViewController.swift
 //  SwiftPractice
 //
 //  Created by xuzepei on 16/6/6.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RCRootTableViewController: UITableViewController {
+class RootTableViewController: UITableViewController {
     
     //MARK: - Properties
     var items = [String]()
@@ -25,6 +25,8 @@ class RCRootTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        requestData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -104,8 +106,64 @@ class RCRootTableViewController: UITableViewController {
     
     func loadItems() -> [String] {
         
-        return ["Dynamic Height Table View Cell","456","789"]
+        return ["Dynamic Height Table View Cell","PhotoTagger","789"]
         
+    }
+    
+    func requestData() {
+    
+        let url = "https://services.hugsnhearts.com/more/princessnewmommybaby/en-US/8FB40395-8F2B-48B4-BF25-478B84B0660B/?model=iPhone_Simulator&sysVer=9.0&bundleVer=1.4&bundleID=com.hugsnhearts.princessnewmommybaby&title=&v=2&top=&landscape=1"
+        
+        //using protocol
+        let temp = HttpRequest()
+//        temp.delegate = self
+//        temp.request(.Get, url: url, token: nil, completion: nil)
+        
+        //using closure
+        temp.request(.Get, url: url, token: nil) { (result, httpStatusCode, error) -> Void in
+            
+            if let jsonString = result as? String {
+                
+                if let dict = Tool.parseToDictionary(jsonString) {
+
+                    let item0 = dict["default_app_icon"] as? String ?? ""
+                    let item1 = dict["btn_img"] as? String ?? ""
+                    var item2: [[String: AnyObject]]//= dict["apps"] as? [[String: AnyObject]] ?? ""
+                    let item3 = dict["secondary_btn_img"] as? String ?? ""
+                    let item4 = dict["test"] as? String ?? ""
+                    
+                    if let apps = dict["apps"] as? [[String: AnyObject]] {
+                       item2 = apps
+                    } else {
+                       item2 = []
+                    }
+                    
+                    NSLog("default_app_icon:%@,btn_img:%@,apps:%@,secondary_btn_img:%@,test:%@",item0,item1,item2,item3,item4)
+                    
+                }
+                
+            }
+        }
+    }
+
+}
+
+extension RootTableViewController: HttpRequestProtocol {
+    
+    func willStartRequest(token: AnyObject) {
+        NSLog("willStartRequest")
+    }
+    
+    func updatePercentage(percentage: Float, token: AnyObject) {
+        NSLog("updatePercentage")
+    }
+    
+    func didFinishRequest(result: AnyObject, token: AnyObject) {
+        NSLog("didFinishRequest")
+    }
+    
+    func didFailRequest(token: AnyObject) {
+        NSLog("didFailRequest")
     }
 
 }

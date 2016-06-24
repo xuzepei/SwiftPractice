@@ -1,5 +1,5 @@
 //
-//  RCDynamicHeightCellViewController.swift
+//  DynamicHeightCellViewController.swift
 //  SwiftPractice
 //
 //  Created by xuzepei on 16/6/6.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RCDynamicHeightCellViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextViewDelegate {
+class DynamicHeightCellViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextViewDelegate {
     
     //MARK:- Properties
     @IBOutlet weak var tableView:UITableView!

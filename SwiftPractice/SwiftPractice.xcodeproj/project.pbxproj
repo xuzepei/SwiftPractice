@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0907512E1D065DDB00888CA9 /* RCCellFromXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907512C1D065DDB00888CA9 /* RCCellFromXib.swift */; settings = {ASSET_TAGS = (); }; };
-		0907512F1D065DDB00888CA9 /* RCCellFromXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0907512D1D065DDB00888CA9 /* RCCellFromXib.xib */; settings = {ASSET_TAGS = (); }; };
+		0907512E1D065DDB00888CA9 /* RCCellFromXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907512C1D065DDB00888CA9 /* RCCellFromXib.swift */; };
+		0907512F1D065DDB00888CA9 /* RCCellFromXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0907512D1D065DDB00888CA9 /* RCCellFromXib.xib */; };
 		095F421A1D054EC3006DC84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F42191D054EC3006DC84A /* AppDelegate.swift */; };
 		095F421F1D054EC3006DC84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 095F421D1D054EC3006DC84A /* Main.storyboard */; };
 		095F42221D054EC3006DC84A /* SwiftPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 095F42201D054EC3006DC84A /* SwiftPractice.xcdatamodeld */; };
@@ -16,10 +16,13 @@
 		095F42271D054EC3006DC84A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 095F42251D054EC3006DC84A /* LaunchScreen.storyboard */; };
 		095F42321D054EC3006DC84A /* SwiftPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F42311D054EC3006DC84A /* SwiftPracticeTests.swift */; };
 		095F423D1D054EC3006DC84A /* SwiftPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F423C1D054EC3006DC84A /* SwiftPracticeUITests.swift */; };
-		095F42531D055736006DC84A /* RCRootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F42521D055736006DC84A /* RCRootTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		095F42551D0561F5006DC84A /* RCDynamicHeightCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F42541D0561F5006DC84A /* RCDynamicHeightCellViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		09EA03371D17E1DA00EA3515 /* RCTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EA03361D17E1DA00EA3515 /* RCTool.swift */; settings = {ASSET_TAGS = (); }; };
-		09EA03381D17E1DA00EA3515 /* RCTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EA03361D17E1DA00EA3515 /* RCTool.swift */; settings = {ASSET_TAGS = (); }; };
+		095F42531D055736006DC84A /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F42521D055736006DC84A /* RootTableViewController.swift */; };
+		095F42551D0561F5006DC84A /* DynamicHeightCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F42541D0561F5006DC84A /* DynamicHeightCellViewController.swift */; };
+		09EA03371D17E1DA00EA3515 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EA03361D17E1DA00EA3515 /* Tool.swift */; };
+		09EA03381D17E1DA00EA3515 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EA03361D17E1DA00EA3515 /* Tool.swift */; };
+		09FB3B391D1A8CDE006DCC08 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FB3B381D1A8CDE006DCC08 /* HttpRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		09FB3B3A1D1A8CDE006DCC08 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FB3B381D1A8CDE006DCC08 /* HttpRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		22DF4C887D7A154D3FDB7AEF /* Pods_SwiftPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53EA355B7BA7B154F859345 /* Pods_SwiftPractice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +58,14 @@
 		095F42381D054EC3006DC84A /* SwiftPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		095F423C1D054EC3006DC84A /* SwiftPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPracticeUITests.swift; sourceTree = "<group>"; };
 		095F423E1D054EC3006DC84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		095F42521D055736006DC84A /* RCRootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCRootTableViewController.swift; sourceTree = "<group>"; };
-		095F42541D0561F5006DC84A /* RCDynamicHeightCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCDynamicHeightCellViewController.swift; sourceTree = "<group>"; };
-		09EA03361D17E1DA00EA3515 /* RCTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCTool.swift; sourceTree = "<group>"; };
+		095F42521D055736006DC84A /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
+		095F42541D0561F5006DC84A /* DynamicHeightCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHeightCellViewController.swift; sourceTree = "<group>"; };
+		09EA03361D17E1DA00EA3515 /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		09EA033A1D17E74100EA3515 /* SwiftPractice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPractice-Bridging-Header.h"; sourceTree = "<group>"; };
+		09FB3B381D1A8CDE006DCC08 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		552061EFC8E9C8FAB5B48BA2 /* Pods-SwiftPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPractice/Pods-SwiftPractice.debug.xcconfig"; sourceTree = "<group>"; };
+		A53EA355B7BA7B154F859345 /* Pods_SwiftPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B417CAC791353F251D7A6A3D /* Pods-SwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPractice/Pods-SwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22DF4C887D7A154D3FDB7AEF /* Pods_SwiftPractice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +101,8 @@
 				095F42301D054EC3006DC84A /* SwiftPracticeTests */,
 				095F423B1D054EC3006DC84A /* SwiftPracticeUITests */,
 				095F42171D054EC3006DC84A /* Products */,
+				0F661229D50193C869E04B57 /* Pods */,
+				0AFC22D2D641EEE31D3D574D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,15 +122,16 @@
 				095F42191D054EC3006DC84A /* AppDelegate.swift */,
 				0907512C1D065DDB00888CA9 /* RCCellFromXib.swift */,
 				0907512D1D065DDB00888CA9 /* RCCellFromXib.xib */,
-				095F42521D055736006DC84A /* RCRootTableViewController.swift */,
-				095F42541D0561F5006DC84A /* RCDynamicHeightCellViewController.swift */,
+				095F42521D055736006DC84A /* RootTableViewController.swift */,
+				095F42541D0561F5006DC84A /* DynamicHeightCellViewController.swift */,
 				095F421D1D054EC3006DC84A /* Main.storyboard */,
 				095F42231D054EC3006DC84A /* Assets.xcassets */,
 				095F42251D054EC3006DC84A /* LaunchScreen.storyboard */,
 				095F42281D054EC3006DC84A /* Info.plist */,
 				095F42201D054EC3006DC84A /* SwiftPractice.xcdatamodeld */,
-				09EA03361D17E1DA00EA3515 /* RCTool.swift */,
+				09EA03361D17E1DA00EA3515 /* Tool.swift */,
 				09EA033A1D17E74100EA3515 /* SwiftPractice-Bridging-Header.h */,
+				09FB3B381D1A8CDE006DCC08 /* HttpRequest.swift */,
 			);
 			path = SwiftPractice;
 			sourceTree = "<group>";
@@ -143,6 +154,23 @@
 			path = SwiftPracticeUITests;
 			sourceTree = "<group>";
 		};
+		0AFC22D2D641EEE31D3D574D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A53EA355B7BA7B154F859345 /* Pods_SwiftPractice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F661229D50193C869E04B57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				552061EFC8E9C8FAB5B48BA2 /* Pods-SwiftPractice.debug.xcconfig */,
+				B417CAC791353F251D7A6A3D /* Pods-SwiftPractice.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 095F42411D054EC3006DC84A /* Build configuration list for PBXNativeTarget "SwiftPractice" */;
 			buildPhases = (
+				0F6471EBA6BBD6717BC12C02 /* Check Pods Manifest.lock */,
 				095F42121D054EC3006DC84A /* Sources */,
 				095F42131D054EC3006DC84A /* Frameworks */,
 				095F42141D054EC3006DC84A /* Resources */,
+				A05A8C94E9940E26DE88BFFB /* Embed Pods Frameworks */,
+				84C7AF3AB70C1E8F008F4275 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,16 +301,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F6471EBA6BBD6717BC12C02 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		84C7AF3AB70C1E8F008F4275 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftPractice/Pods-SwiftPractice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A05A8C94E9940E26DE88BFFB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftPractice/Pods-SwiftPractice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		095F42121D054EC3006DC84A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0907512E1D065DDB00888CA9 /* RCCellFromXib.swift in Sources */,
-				095F42551D0561F5006DC84A /* RCDynamicHeightCellViewController.swift in Sources */,
+				09FB3B391D1A8CDE006DCC08 /* HttpRequest.swift in Sources */,
+				095F42551D0561F5006DC84A /* DynamicHeightCellViewController.swift in Sources */,
 				095F42221D054EC3006DC84A /* SwiftPractice.xcdatamodeld in Sources */,
-				095F42531D055736006DC84A /* RCRootTableViewController.swift in Sources */,
-				09EA03371D17E1DA00EA3515 /* RCTool.swift in Sources */,
+				095F42531D055736006DC84A /* RootTableViewController.swift in Sources */,
+				09EA03371D17E1DA00EA3515 /* Tool.swift in Sources */,
 				095F421A1D054EC3006DC84A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +368,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09EA03381D17E1DA00EA3515 /* RCTool.swift in Sources */,
+				09EA03381D17E1DA00EA3515 /* Tool.swift in Sources */,
+				09FB3B3A1D1A8CDE006DCC08 /* HttpRequest.swift in Sources */,
 				095F42321D054EC3006DC84A /* SwiftPracticeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +502,7 @@
 		};
 		095F42421D054EC3006DC84A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 552061EFC8E9C8FAB5B48BA2 /* Pods-SwiftPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -436,6 +518,7 @@
 		};
 		095F42431D054EC3006DC84A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B417CAC791353F251D7A6A3D /* Pods-SwiftPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

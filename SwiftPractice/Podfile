@@ -1,0 +1,17 @@
+platform :ios, '7.0'
+use_frameworks!
+
+target 'SwiftPractice' do
+
+pod 'MBProgressHUD'
+
+end
+
+target 'SwiftPracticeTests' do
+
+end
+
+target 'SwiftPracticeUITests' do
+
+end
+
