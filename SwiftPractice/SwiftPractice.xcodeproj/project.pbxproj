@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0907512E1D065DDB00888CA9 /* RCCellFromXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907512C1D065DDB00888CA9 /* RCCellFromXib.swift */; };
 		0907512F1D065DDB00888CA9 /* RCCellFromXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0907512D1D065DDB00888CA9 /* RCCellFromXib.xib */; };
+		090E3AEF1D3729770074972D /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090E3AEE1D3729770074972D /* ImageLoader.swift */; settings = {ASSET_TAGS = (); }; };
+		095DEDF91D23708C005B37E9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 095DEDF81D23708C005B37E9 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
+		095DEDFB1D23BFDF005B37E9 /* PopMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095DEDFA1D23BFDF005B37E9 /* PopMusicViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		095F421A1D054EC3006DC84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F42191D054EC3006DC84A /* AppDelegate.swift */; };
 		095F421F1D054EC3006DC84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 095F421D1D054EC3006DC84A /* Main.storyboard */; };
 		095F42221D054EC3006DC84A /* SwiftPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 095F42201D054EC3006DC84A /* SwiftPractice.xcdatamodeld */; };
@@ -18,6 +21,10 @@
 		095F423D1D054EC3006DC84A /* SwiftPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F423C1D054EC3006DC84A /* SwiftPracticeUITests.swift */; };
 		095F42531D055736006DC84A /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F42521D055736006DC84A /* RootTableViewController.swift */; };
 		095F42551D0561F5006DC84A /* DynamicHeightCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095F42541D0561F5006DC84A /* DynamicHeightCellViewController.swift */; };
+		096D9D121D24A2EC00CA8D03 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096D9D111D24A2EC00CA8D03 /* Album.swift */; settings = {ASSET_TAGS = (); }; };
+		096D9D141D24A57200CA8D03 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096D9D131D24A57200CA8D03 /* AlbumView.swift */; settings = {ASSET_TAGS = (); }; };
+		096D9DB01D24ED9E00CA8D03 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096D9DAF1D24ED9E00CA8D03 /* DataManager.swift */; settings = {ASSET_TAGS = (); }; };
+		096D9DB21D250E4300CA8D03 /* AlbumsScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096D9DB11D250E4300CA8D03 /* AlbumsScroller.swift */; settings = {ASSET_TAGS = (); }; };
 		09EA03371D17E1DA00EA3515 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EA03361D17E1DA00EA3515 /* Tool.swift */; };
 		09EA03381D17E1DA00EA3515 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EA03361D17E1DA00EA3515 /* Tool.swift */; };
 		09FB3B391D1A8CDE006DCC08 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FB3B381D1A8CDE006DCC08 /* HttpRequest.swift */; settings = {ASSET_TAGS = (); }; };
@@ -45,6 +52,10 @@
 /* Begin PBXFileReference section */
 		0907512C1D065DDB00888CA9 /* RCCellFromXib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCCellFromXib.swift; sourceTree = "<group>"; };
 		0907512D1D065DDB00888CA9 /* RCCellFromXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCellFromXib.xib; sourceTree = "<group>"; };
+		090E3AEE1D3729770074972D /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		095DEDF71D23708C005B37E9 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		095DEDF81D23708C005B37E9 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		095DEDFA1D23BFDF005B37E9 /* PopMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopMusicViewController.swift; sourceTree = "<group>"; };
 		095F42161D054EC3006DC84A /* SwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		095F42191D054EC3006DC84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		095F421E1D054EC3006DC84A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +71,10 @@
 		095F423E1D054EC3006DC84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		095F42521D055736006DC84A /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		095F42541D0561F5006DC84A /* DynamicHeightCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHeightCellViewController.swift; sourceTree = "<group>"; };
+		096D9D111D24A2EC00CA8D03 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		096D9D131D24A57200CA8D03 /* AlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		096D9DAF1D24ED9E00CA8D03 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		096D9DB11D250E4300CA8D03 /* AlbumsScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsScroller.swift; sourceTree = "<group>"; };
 		09EA03361D17E1DA00EA3515 /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		09EA033A1D17E74100EA3515 /* SwiftPractice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPractice-Bridging-Header.h"; sourceTree = "<group>"; };
 		09FB3B381D1A8CDE006DCC08 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
@@ -94,6 +109,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		095DEDF61D236F42005B37E9 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				095DEDF71D23708C005B37E9 /* Reachability.h */,
+				095DEDF81D23708C005B37E9 /* Reachability.m */,
+				09EA03361D17E1DA00EA3515 /* Tool.swift */,
+				09FB3B381D1A8CDE006DCC08 /* HttpRequest.swift */,
+				090E3AEE1D3729770074972D /* ImageLoader.swift */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		095DEDFC1D23BFF2005B37E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				095F42521D055736006DC84A /* RootTableViewController.swift */,
+				095F42541D0561F5006DC84A /* DynamicHeightCellViewController.swift */,
+				095DEDFA1D23BFDF005B37E9 /* PopMusicViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		095F420D1D054EC3006DC84A = {
 			isa = PBXGroup;
 			children = (
@@ -119,19 +156,20 @@
 		095F42181D054EC3006DC84A /* SwiftPractice */ = {
 			isa = PBXGroup;
 			children = (
+				096D9DAE1D24ECE900CA8D03 /* View */,
+				096D9DAD1D24EC8C00CA8D03 /* Model */,
+				095DEDFC1D23BFF2005B37E9 /* Controller */,
+				095DEDF61D236F42005B37E9 /* Tool */,
 				095F42191D054EC3006DC84A /* AppDelegate.swift */,
 				0907512C1D065DDB00888CA9 /* RCCellFromXib.swift */,
 				0907512D1D065DDB00888CA9 /* RCCellFromXib.xib */,
-				095F42521D055736006DC84A /* RootTableViewController.swift */,
-				095F42541D0561F5006DC84A /* DynamicHeightCellViewController.swift */,
 				095F421D1D054EC3006DC84A /* Main.storyboard */,
 				095F42231D054EC3006DC84A /* Assets.xcassets */,
 				095F42251D054EC3006DC84A /* LaunchScreen.storyboard */,
 				095F42281D054EC3006DC84A /* Info.plist */,
 				095F42201D054EC3006DC84A /* SwiftPractice.xcdatamodeld */,
-				09EA03361D17E1DA00EA3515 /* Tool.swift */,
 				09EA033A1D17E74100EA3515 /* SwiftPractice-Bridging-Header.h */,
-				09FB3B381D1A8CDE006DCC08 /* HttpRequest.swift */,
+				096D9DAF1D24ED9E00CA8D03 /* DataManager.swift */,
 			);
 			path = SwiftPractice;
 			sourceTree = "<group>";
@@ -152,6 +190,23 @@
 				095F423E1D054EC3006DC84A /* Info.plist */,
 			);
 			path = SwiftPracticeUITests;
+			sourceTree = "<group>";
+		};
+		096D9DAD1D24EC8C00CA8D03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				096D9D111D24A2EC00CA8D03 /* Album.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		096D9DAE1D24ECE900CA8D03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				096D9D131D24A57200CA8D03 /* AlbumView.swift */,
+				096D9DB11D250E4300CA8D03 /* AlbumsScroller.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		0AFC22D2D641EEE31D3D574D /* Frameworks */ = {
@@ -354,13 +409,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090E3AEF1D3729770074972D /* ImageLoader.swift in Sources */,
+				096D9D141D24A57200CA8D03 /* AlbumView.swift in Sources */,
+				096D9DB01D24ED9E00CA8D03 /* DataManager.swift in Sources */,
 				0907512E1D065DDB00888CA9 /* RCCellFromXib.swift in Sources */,
 				09FB3B391D1A8CDE006DCC08 /* HttpRequest.swift in Sources */,
+				096D9DB21D250E4300CA8D03 /* AlbumsScroller.swift in Sources */,
+				095DEDF91D23708C005B37E9 /* Reachability.m in Sources */,
+				095DEDFB1D23BFDF005B37E9 /* PopMusicViewController.swift in Sources */,
 				095F42551D0561F5006DC84A /* DynamicHeightCellViewController.swift in Sources */,
 				095F42221D054EC3006DC84A /* SwiftPractice.xcdatamodeld in Sources */,
 				095F42531D055736006DC84A /* RootTableViewController.swift in Sources */,
 				09EA03371D17E1DA00EA3515 /* Tool.swift in Sources */,
 				095F421A1D054EC3006DC84A /* AppDelegate.swift in Sources */,
+				096D9D121D24A2EC00CA8D03 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

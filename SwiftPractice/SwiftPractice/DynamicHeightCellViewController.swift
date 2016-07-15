@@ -18,6 +18,8 @@ class DynamicHeightCellViewController: UIViewController,UITableViewDelegate,UITa
     //MARK:-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Dynamic Height Cells"
 
         // Do any additional setup after loading the view.
         items += loadItems()

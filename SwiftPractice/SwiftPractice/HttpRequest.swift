@@ -75,7 +75,7 @@ class HttpRequest: NSObject {
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true
             
             if true == self.delegate?.respondsToSelector(Selector("willStartRequest:")) {
-                self.delegate?.willStartRequest!(self.token ?? "")
+                self.delegate?.willStartRequest?(self.token ?? "")
             }
         }
         
@@ -127,7 +127,7 @@ extension  HttpRequest: NSURLConnectionDelegate, NSURLConnectionDataDelegate {
         }
         
         if true == self.delegate?.respondsToSelector(Selector("didFinishRequest:token:")) {
-            self.delegate?.didFinishRequest!(jsonString ?? "", token: self.token ?? "")
+            self.delegate?.didFinishRequest?(jsonString ?? "", token: self.token ?? "")
         }
         
         if let completionClosure = self.completionClosure {
@@ -142,7 +142,7 @@ extension  HttpRequest: NSURLConnectionDelegate, NSURLConnectionDataDelegate {
         self.receivedData.length = 0
         
         if true == self.delegate?.respondsToSelector(Selector("didFailRequest:")) {
-            self.delegate?.didFailRequest!(self.token ?? "")
+            self.delegate?.didFailRequest?(self.token ?? "")
         }
         
         if let completionClosure = self.completionClosure {

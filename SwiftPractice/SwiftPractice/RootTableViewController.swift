@@ -26,7 +26,10 @@ class RootTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        requestData()
+        if Tool.isReachableViaInternet() {
+            requestData()
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +61,16 @@ class RootTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true);
         
-        
+        switch indexPath.row {
+        case 0:
+            self.performSegueWithIdentifier("to_dynamic_height_cell_vc", sender: nil)
+        case 1:
+            break;
+        case 2:
+            self.performSegueWithIdentifier("to_popmusic_vc", sender: nil)
+        default:
+            break;
+        }
     }
     
 
@@ -68,13 +80,15 @@ class RootTableViewController: UITableViewController {
         
         if let cell = sender as? UITableViewCell {
         
-            if let selectedIndexPath  = self.tableView .indexPathForCell(cell) {
+//            if let selectedIndexPath  = self.tableView .indexPathForCell(cell) {
+//            
+//                if selectedIndexPath.row == 0 {
+//                
+//                    return true
+//                }
+//            }
             
-                if selectedIndexPath.row == 0 {
-                
-                    return true
-                }
-            }
+            return true
         }
         
         return false
@@ -91,22 +105,20 @@ class RootTableViewController: UITableViewController {
                 if selectedIndexPath.row == 0 {
                     
                     segue.destinationViewController.title = "Dynamic Height Cells";
+                    
+                } else if selectedIndexPath.row == 2{
+                
                 }
             }
         }
         
         NSLog("%@",segue.identifier ?? "Unknown segue.")
-        
-        if segue.identifier == "to_dynamic_height_cells" {
-        
-            
-        }
     }
 
     
     func loadItems() -> [String] {
         
-        return ["Dynamic Height Table View Cell","PhotoTagger","789"]
+        return ["Dynamic Height Table View Cell","PhotoTagger","Pop Music"]
         
     }
     
