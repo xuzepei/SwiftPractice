@@ -15,3 +15,7 @@ target 'SwiftPracticeUITests' do
 
 end
 
+target 'BitWatch' do
+platform :watchos, '2.0'
+end
+

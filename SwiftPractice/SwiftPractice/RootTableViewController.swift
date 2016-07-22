@@ -68,6 +68,8 @@ class RootTableViewController: UITableViewController {
             break;
         case 2:
             self.performSegueWithIdentifier("to_popmusic_vc", sender: nil)
+        case 3:
+            self.performSegueWithIdentifier("to_bitwatch_vc", sender: nil)
         default:
             break;
         }
@@ -118,7 +120,7 @@ class RootTableViewController: UITableViewController {
     
     func loadItems() -> [String] {
         
-        return ["Dynamic Height Table View Cell","PhotoTagger","Pop Music"]
+        return ["Dynamic Height Table View Cell","PhotoTagger","Pop Music", "BitWatch"]
         
     }
     
