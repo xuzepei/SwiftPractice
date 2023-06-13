@@ -1,0 +1,31 @@
+PODS:
+  - Charts (4.1.0):
+    - Charts/Core (= 4.1.0)
+  - Charts/Core (4.1.0):
+    - SwiftAlgorithms (~> 1.0)
+  - Floaty (4.2.0)
+  - RimhTypingLetters (0.1.1)
+  - SwiftAlgorithms (1.0.0)
+
+DEPENDENCIES:
+  - Charts (= 4.1.0)
+  - Floaty (= 4.2.0)
+  - RimhTypingLetters
+  - SwiftAlgorithms (= 1.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - Floaty
+    - RimhTypingLetters
+    - SwiftAlgorithms
+
+SPEC CHECKSUMS:
+  Charts: 354f86803d11d9c35de280587fef50d1af063978
+  Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
+  RimhTypingLetters: 914370e62a8280bcfc44bbcd887323bbaa0df609
+  SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
+
+PODFILE CHECKSUM: d39e8f3ab8c7380592287cafc56d2bf6f9fc06d0
+
+COCOAPODS: 1.12.1
