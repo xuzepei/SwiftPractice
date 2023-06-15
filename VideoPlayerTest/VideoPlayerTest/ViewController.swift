@@ -40,11 +40,11 @@ class ViewController: UIViewController {
     
     func setupCircularProgressView() {
         // set view
-        let circleProgressView = CircleProgressView(frame: CGRectMake(0, 0, 30, 30))
+        let circleProgressView = CircleProgressView(frame: CGRectMake(0, 0, 50, 50))
         // align to the center of the screen
         circleProgressView.center = view.center
         // call the animation with circularViewDuration
-        circleProgressView.progressAnimation(duration: 2)
+        circleProgressView.updateContent(progress: 2/3.0, progressColor: UIColor.yellow)
         // add this view to the view controller
         view.addSubview(circleProgressView)
     }
