@@ -51,12 +51,12 @@ class ViewController: UIViewController {
         //759是contentView在iphone14pro上的设计高度，subview展开后contentView增加250高
         if self.contentView.bounds.size.height <= (759 + 250) {
             offsetY = self.isExpanded ? -250 : 250
-            self.contentViewConstraintHeight.constant = self.contentViewConstraintHeight.constant + offsetY
+            //self.contentViewConstraintHeight.constant = self.contentViewConstraintHeight.constant + offsetY
         }
         
 
         UIView.animate(withDuration: 0.5) {
-            self.scrollView.contentSize = CGSizeMake(self.scrollView.contentSize.width, self.contentViewConstraintHeight.constant)
+            //self.scrollView.contentSize = CGSizeMake(self.scrollView.contentSize.width, self.contentViewConstraintHeight.constant)
             
             print("self.contentViewConstraintHeight.constant: \(self.contentViewConstraintHeight.constant)")
             print("self.scrollView.contentSize.height: \(self.scrollView.contentSize.height)")

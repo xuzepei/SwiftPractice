@@ -64,6 +64,7 @@
                                             <constraint firstItem="RGu-bF-mvX" firstAttribute="top" secondItem="Hgw-aT-BW5" secondAttribute="bottom" constant="34" id="g0Z-KJ-f3J"/>
                                             <constraint firstItem="RGu-bF-mvX" firstAttribute="centerX" secondItem="TS8-fa-st9" secondAttribute="centerX" constant="4.1666666666666572" id="hfY-8R-u2m"/>
                                             <constraint firstItem="Hgw-aT-BW5" firstAttribute="top" secondItem="TS8-fa-st9" secondAttribute="top" constant="362" id="t2G-9z-LN1"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RGu-bF-mvX" secondAttribute="bottom" constant="100" id="vh2-ba-ir2"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -71,7 +72,7 @@
                                     <constraint firstItem="TS8-fa-st9" firstAttribute="top" secondItem="mls-wE-Lki" secondAttribute="top" id="4Ne-xB-zXv"/>
                                     <constraint firstItem="TS8-fa-st9" firstAttribute="leading" secondItem="mls-wE-Lki" secondAttribute="leading" id="4PQ-1b-4RO"/>
                                     <constraint firstItem="TS8-fa-st9" firstAttribute="bottom" secondItem="mls-wE-Lki" secondAttribute="bottom" id="BFR-gu-ZzG"/>
-                                    <constraint firstItem="TS8-fa-st9" firstAttribute="height" secondItem="42F-kF-9j8" secondAttribute="height" id="Qas-1I-doK"/>
+                                    <constraint firstItem="TS8-fa-st9" firstAttribute="height" secondItem="42F-kF-9j8" secondAttribute="height" priority="250" id="Qas-1I-doK"/>
                                     <constraint firstItem="TS8-fa-st9" firstAttribute="trailing" secondItem="mls-wE-Lki" secondAttribute="trailing" id="jaF-gt-ZbY"/>
                                     <constraint firstItem="TS8-fa-st9" firstAttribute="width" secondItem="42F-kF-9j8" secondAttribute="width" id="lkp-11-M5F"/>
                                 </constraints>
