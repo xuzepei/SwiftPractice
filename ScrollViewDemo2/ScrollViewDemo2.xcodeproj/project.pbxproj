@@ -13,6 +13,9 @@
 		09B251952A42E72500F59118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B251932A42E72500F59118 /* Main.storyboard */; };
 		09B251972A42E72500F59118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B251962A42E72500F59118 /* Assets.xcassets */; };
 		09B2519A2A42E72500F59118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B251982A42E72500F59118 /* LaunchScreen.storyboard */; };
+		09C0AAFD2A49309F0005544D /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0AAFC2A49309F0005544D /* MyTableViewController.swift */; };
+		09C0AB002A49340B0005544D /* ExpandingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0AAFE2A49340B0005544D /* ExpandingScrollViewController.swift */; };
+		09C0AB012A49340B0005544D /* ExpandingScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C0AAFF2A49340B0005544D /* ExpandingScrollViewController.xib */; };
 		09CF76A32A482B1100156019 /* ScrollView1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF76A12A482B1100156019 /* ScrollView1Controller.swift */; };
 		09CF76A42A482B1100156019 /* ScrollView1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09CF76A22A482B1100156019 /* ScrollView1Controller.xib */; };
 		09CF76AB2A482CC300156019 /* ScrollView2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF76A92A482CC200156019 /* ScrollView2Controller.swift */; };
@@ -30,6 +33,9 @@
 		09B251962A42E72500F59118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09B251992A42E72500F59118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09B2519B2A42E72500F59118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09C0AAFC2A49309F0005544D /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		09C0AAFE2A49340B0005544D /* ExpandingScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingScrollViewController.swift; sourceTree = "<group>"; };
+		09C0AAFF2A49340B0005544D /* ExpandingScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandingScrollViewController.xib; sourceTree = "<group>"; };
 		09CF76A12A482B1100156019 /* ScrollView1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView1Controller.swift; sourceTree = "<group>"; };
 		09CF76A22A482B1100156019 /* ScrollView1Controller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollView1Controller.xib; sourceTree = "<group>"; };
 		09CF76A92A482CC200156019 /* ScrollView2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView2Controller.swift; sourceTree = "<group>"; };
@@ -71,6 +77,7 @@
 				09B2518D2A42E72500F59118 /* AppDelegate.swift */,
 				09B2518F2A42E72500F59118 /* SceneDelegate.swift */,
 				09B251912A42E72500F59118 /* ViewController.swift */,
+				09C0AAFC2A49309F0005544D /* MyTableViewController.swift */,
 				09B251932A42E72500F59118 /* Main.storyboard */,
 				09B251962A42E72500F59118 /* Assets.xcassets */,
 				09B251982A42E72500F59118 /* LaunchScreen.storyboard */,
@@ -81,6 +88,8 @@
 				09CF76AA2A482CC200156019 /* ScrollView2Controller.xib */,
 				09CF76AD2A4844A000156019 /* ScrollView3Controller.swift */,
 				09CF76AE2A4844A000156019 /* ScrollView3Controller.xib */,
+				09C0AAFE2A49340B0005544D /* ExpandingScrollViewController.swift */,
+				09C0AAFF2A49340B0005544D /* ExpandingScrollViewController.xib */,
 			);
 			path = ScrollViewDemo2;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 				09CF76A42A482B1100156019 /* ScrollView1Controller.xib in Resources */,
 				09B251972A42E72500F59118 /* Assets.xcassets in Resources */,
 				09B251952A42E72500F59118 /* Main.storyboard in Resources */,
+				09C0AB012A49340B0005544D /* ExpandingScrollViewController.xib in Resources */,
 				09CF76AC2A482CC300156019 /* ScrollView2Controller.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				09B251922A42E72500F59118 /* ViewController.swift in Sources */,
+				09C0AAFD2A49309F0005544D /* MyTableViewController.swift in Sources */,
+				09C0AB002A49340B0005544D /* ExpandingScrollViewController.swift in Sources */,
 				09CF76AB2A482CC300156019 /* ScrollView2Controller.swift in Sources */,
 				09CF76A32A482B1100156019 /* ScrollView1Controller.swift in Sources */,
 				09B2518E2A42E72500F59118 /* AppDelegate.swift in Sources */,
