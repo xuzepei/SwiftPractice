@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="PushApp.app/Contents/MacOS/PushApp">
+      <BCSymbolMapName>PushApp.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>PushApp.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/xuzepei/CSharpProjects/PushApp/PushApp/obj/Debug/net7.0-macos/osx-x64/mtouch-symbols.list</SymbolFile>
+      <DSymName>PushApp.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/xuzepei/CSharpProjects/PushApp/PushApp</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

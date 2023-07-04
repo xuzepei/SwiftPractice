@@ -1,0 +1,89 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/xuzepei/CSharpProjects/PushApp/PushApp/PushApp.csproj": {}
+  },
+  "projects": {
+    "/Users/xuzepei/CSharpProjects/PushApp/PushApp/PushApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/xuzepei/CSharpProjects/PushApp/PushApp/PushApp.csproj",
+        "projectName": "PushApp",
+        "projectPath": "/Users/xuzepei/CSharpProjects/PushApp/PushApp/PushApp.csproj",
+        "packagesPath": "/Users/xuzepei/.nuget/packages/",
+        "outputPath": "/Users/xuzepei/CSharpProjects/PushApp/PushApp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/xuzepei/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0-macos"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0-macos13.0": {
+            "targetAlias": "net7.0-macos",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0-macos13.0": {
+          "targetAlias": "net7.0-macos",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Net.Requests": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.osx-x64",
+              "version": "[7.0.7, 7.0.7]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.osx-x64",
+              "version": "[7.0.7, 7.0.7]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.macOS": {
+              "privateAssets": "all"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "osx-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{EA543DB6-03C9-42D6-83CE-C1CF1BD190E8}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PushApp/PushNew.cs">
+    <Files>
+      <File FileName="PushApp/ViewController.cs" Line="98" Column="1" />
+      <File FileName="PushApp/PushNew.cs" Line="31" Column="25" />
+      <File FileName="PushApp/AppDelegate.cs" Line="8" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PushApp" expanded="True">
+            <Node name="PushApp" expanded="True">
+              <Node name="Main.storyboard" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.PushApp PreferredExecutionTarget="MyMacID" />
+</Properties>

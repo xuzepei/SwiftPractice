@@ -100,9 +100,6 @@ class ChatReceivedCell: UITableViewCell {
         messageLabel.trailingAnchor.constraint(equalTo: chatBubble.trailingAnchor, constant: -textMargin).isActive = true
         
         
-        
-        
-        
         contentView.addSubview(chatBubble)
         // 使用 Auto Layout 约束，调整聊天气泡的大小和位置
         chatBubble.translatesAutoresizingMaskIntoConstraints = false
