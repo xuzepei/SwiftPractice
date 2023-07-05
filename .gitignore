@@ -23,6 +23,7 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+.vs/
 
 # Pods - for those of you who use CocoaPods
 Pods
