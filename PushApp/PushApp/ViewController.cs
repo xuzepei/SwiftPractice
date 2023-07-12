@@ -122,13 +122,24 @@ public partial class ViewController : NSViewController {
         PushNew pushNew = new PushNew();
 
         var bundleId = "com.freqty.pandacloud.test2"; //应用BundleID
-        if (bundleIdTF.StringValue.Length > 0)
+        if (bundleIdTF.StringValue.Length > 0) {
             bundleId = bundleIdTF.StringValue;
 
+            NSUserDefaults.StandardUserDefaults.SetString(bundleId, "bundle_id");
+            NSUserDefaults.StandardUserDefaults.Synchronize();
+        }
+            
 
-        var deviceToken = "60ceef8431532f4dfc28d6727b603761de95173cbd9c6975d4eb1166de8046f6"; // 接收通知的设备令牌
-        if (deviceTokenTF.StringValue.Length > 0)
+
+        var deviceToken = "fe8375319b6ad5eb37f7b75852fc845bdc88f654555b3e2709ef31cf5f53d6ff"; // 接收通知的设备令牌
+        if (deviceTokenTF.StringValue.Length > 0) {
+
             deviceToken = deviceTokenTF.StringValue;
+
+            NSUserDefaults.StandardUserDefaults.SetString(deviceToken, "device_token");
+            NSUserDefaults.StandardUserDefaults.Synchronize();
+        }
+            
 
         string filepath = NSBundle.MainBundle.PathForResource("pandacloud_push", "p12");
         Console.WriteLine("filepath: " + filepath);
