@@ -1,0 +1,11 @@
+//
+//  PrefixHeader.pch
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define SRDebugLog NSLog
+#import "Tool.h"
+
+#endif /* PrefixHeader_pch */
