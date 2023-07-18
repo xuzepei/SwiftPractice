@@ -15,6 +15,6 @@ struct LandmarkContentView: View {
 
 struct LandmarkContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkContentView()
+        LandmarkContentView().environmentObject(ModelData())
     }
 }

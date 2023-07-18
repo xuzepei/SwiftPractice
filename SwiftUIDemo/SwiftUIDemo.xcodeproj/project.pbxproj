@@ -22,7 +22,17 @@
 		095B80412A614BB9001D95CE /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B80402A614BB9001D95CE /* LandmarkRow.swift */; };
 		095B80432A614DF3001D95CE /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B80422A614DF3001D95CE /* LandmarkList.swift */; };
 		095B80452A614F83001D95CE /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B80442A614F83001D95CE /* LandmarkDetail.swift */; };
+		09C03F752A661E0200A377C5 /* DataPassTestView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F742A661E0200A377C5 /* DataPassTestView1.swift */; };
+		09C03F772A66200C00A377C5 /* DataPassTestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F762A66200C00A377C5 /* DataPassTestView2.swift */; };
+		09C03F792A66281E00A377C5 /* DataPassTestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F782A66281E00A377C5 /* DataPassTestList.swift */; };
+		09C03F7C2A662C9B00A377C5 /* DataPassTestEnviromentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F7B2A662C9B00A377C5 /* DataPassTestEnviromentObject.swift */; };
+		09C03F7E2A66313900A377C5 /* DataPassTestChangeEnviromentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F7D2A66313900A377C5 /* DataPassTestChangeEnviromentObject.swift */; };
+		09C03F802A66367B00A377C5 /* DataPassTestObservedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F7F2A66367B00A377C5 /* DataPassTestObservedObject.swift */; };
+		09C03F822A66374F00A377C5 /* DataPassTestChangeObservedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F812A66374F00A377C5 /* DataPassTestChangeObservedObject.swift */; };
+		09C03F842A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F832A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift */; };
+		09C03F862A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F852A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift */; };
 		09E0C19B2A64D27200C24842 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C19A2A64D27200C24842 /* UIDevice+Extension.swift */; };
+		09E0C19E2A6548B600C24842 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C19D2A6548B600C24842 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +53,17 @@
 		095B80402A614BB9001D95CE /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		095B80422A614DF3001D95CE /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		095B80442A614F83001D95CE /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		09C03F742A661E0200A377C5 /* DataPassTestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestView1.swift; sourceTree = "<group>"; };
+		09C03F762A66200C00A377C5 /* DataPassTestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestView2.swift; sourceTree = "<group>"; };
+		09C03F782A66281E00A377C5 /* DataPassTestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestList.swift; sourceTree = "<group>"; };
+		09C03F7B2A662C9B00A377C5 /* DataPassTestEnviromentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestEnviromentObject.swift; sourceTree = "<group>"; };
+		09C03F7D2A66313900A377C5 /* DataPassTestChangeEnviromentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestChangeEnviromentObject.swift; sourceTree = "<group>"; };
+		09C03F7F2A66367B00A377C5 /* DataPassTestObservedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestObservedObject.swift; sourceTree = "<group>"; };
+		09C03F812A66374F00A377C5 /* DataPassTestChangeObservedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestChangeObservedObject.swift; sourceTree = "<group>"; };
+		09C03F832A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestEnvironmentKeyValue.swift; sourceTree = "<group>"; };
+		09C03F852A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestChangeEnvironmentKeyValue.swift; sourceTree = "<group>"; };
 		09E0C19A2A64D27200C24842 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		09E0C19D2A6548B600C24842 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +96,7 @@
 		095B801A2A612F42001D95CE /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				09C03F7A2A66282600A377C5 /* DataPassTest */,
 				09E0C19C2A64D27E00C24842 /* Common */,
 				095B803D2A614B33001D95CE /* Resource */,
 				095B803C2A6149AD001D95CE /* Model */,
@@ -108,6 +129,7 @@
 				095B80402A614BB9001D95CE /* LandmarkRow.swift */,
 				095B80422A614DF3001D95CE /* LandmarkList.swift */,
 				095B80442A614F83001D95CE /* LandmarkDetail.swift */,
+				09E0C19D2A6548B600C24842 /* FavoriteButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +149,22 @@
 				095B80352A614540001D95CE /* landmarkData.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		09C03F7A2A66282600A377C5 /* DataPassTest */ = {
+			isa = PBXGroup;
+			children = (
+				09C03F782A66281E00A377C5 /* DataPassTestList.swift */,
+				09C03F742A661E0200A377C5 /* DataPassTestView1.swift */,
+				09C03F762A66200C00A377C5 /* DataPassTestView2.swift */,
+				09C03F7B2A662C9B00A377C5 /* DataPassTestEnviromentObject.swift */,
+				09C03F7D2A66313900A377C5 /* DataPassTestChangeEnviromentObject.swift */,
+				09C03F7F2A66367B00A377C5 /* DataPassTestObservedObject.swift */,
+				09C03F812A66374F00A377C5 /* DataPassTestChangeObservedObject.swift */,
+				09C03F832A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift */,
+				09C03F852A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift */,
+			);
+			path = DataPassTest;
 			sourceTree = "<group>";
 		};
 		09E0C19C2A64D27E00C24842 /* Common */ = {
@@ -208,19 +246,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09C03F772A66200C00A377C5 /* DataPassTestView2.swift in Sources */,
 				09E0C19B2A64D27200C24842 /* UIDevice+Extension.swift in Sources */,
+				09C03F802A66367B00A377C5 /* DataPassTestObservedObject.swift in Sources */,
 				095B80342A613D57001D95CE /* MapView.swift in Sources */,
+				09C03F792A66281E00A377C5 /* DataPassTestList.swift in Sources */,
 				095B80432A614DF3001D95CE /* LandmarkList.swift in Sources */,
+				09C03F862A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift in Sources */,
 				095B80282A612F43001D95CE /* SwiftUIDemo.xcdatamodeld in Sources */,
 				095B803A2A6148EC001D95CE /* ModelData.swift in Sources */,
+				09C03F822A66374F00A377C5 /* DataPassTestChangeObservedObject.swift in Sources */,
 				095B80452A614F83001D95CE /* LandmarkDetail.swift in Sources */,
+				09C03F7C2A662C9B00A377C5 /* DataPassTestEnviromentObject.swift in Sources */,
 				095B80252A612F43001D95CE /* Persistence.swift in Sources */,
+				09C03F752A661E0200A377C5 /* DataPassTestView1.swift in Sources */,
 				095B80382A614567001D95CE /* Landmark.swift in Sources */,
+				09C03F842A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift in Sources */,
 				095B80302A61348E001D95CE /* LandmarkContentView.swift in Sources */,
 				095B801E2A612F42001D95CE /* ContentView.swift in Sources */,
 				095B801C2A612F42001D95CE /* SwiftUIDemoApp.swift in Sources */,
+				09E0C19E2A6548B600C24842 /* FavoriteButton.swift in Sources */,
 				095B80412A614BB9001D95CE /* LandmarkRow.swift in Sources */,
 				095B80322A613B6A001D95CE /* CircleImage.swift in Sources */,
+				09C03F7E2A66313900A377C5 /* DataPassTestChangeEnviromentObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@ import SwiftUI
 @main
 struct SwiftUIDemoApp: App {
     let persistenceController = PersistenceController.shared
+    
+    @StateObject private var modelData = ModelData()
 
     var body: some Scene {
         WindowGroup {
@@ -17,6 +19,7 @@ struct SwiftUIDemoApp: App {
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
             
             LandmarkContentView()
+                .environmentObject(modelData)
         }
     }
 }

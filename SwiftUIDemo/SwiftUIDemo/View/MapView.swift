@@ -8,6 +8,7 @@
 import SwiftUI
 import MapKit
 
+
 struct MapView: View {
     
     var landmark: Landmark
@@ -37,6 +38,6 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(landmark: landmarks[0])
+        MapView(landmark: ModelData().landmarks[0])
     }
 }
