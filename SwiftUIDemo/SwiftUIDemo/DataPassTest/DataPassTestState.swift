@@ -1,5 +1,5 @@
 //
-//  DataPassTestView1.swift
+//  DataPassTestState.swift
 //  SwiftUIDemo
 //
 //  Created by xuzepei on 2023/7/18.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DataPassTestView1: View {
+struct DataPassTestState: View {
     
     //使用 @State private var 属性包装器可以在视图内部存储和管理状态
     @State private var count = 0
@@ -26,8 +26,8 @@ struct DataPassTestView1: View {
                     .cornerRadius(10)
             }.padding()
             
-            NavigationLink(destination: DataPassTestView2(count: $count)) {
-                Text("Go to DataPassTestView2")
+            NavigationLink(destination: DataPassTestBinding(count: $count)) {
+                Text("Go to DataPassTestBinding")
                     .font(.title2)
                     .foregroundColor(.blue)
             }.padding()
@@ -37,8 +37,8 @@ struct DataPassTestView1: View {
     }
 }
 
-struct DataPassTestView1_Previews: PreviewProvider {
+struct DataPassTestState_Previews: PreviewProvider {
     static var previews: some View {
-        DataPassTestView1()
+        DataPassTestState()
     }
 }

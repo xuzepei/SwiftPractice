@@ -17,7 +17,7 @@ struct DataPassTestList: View {
                     NavigationLink {
                         
                         if index == 0 {
-                            DataPassTestView1()
+                            DataPassTestState()
                         } else if index == 1 {
                             DataPassTestEnviromentObject().environmentObject(UserSettings())
                         } else if index == 2 {

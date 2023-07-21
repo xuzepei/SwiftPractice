@@ -22,8 +22,8 @@
 		095B80412A614BB9001D95CE /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B80402A614BB9001D95CE /* LandmarkRow.swift */; };
 		095B80432A614DF3001D95CE /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B80422A614DF3001D95CE /* LandmarkList.swift */; };
 		095B80452A614F83001D95CE /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B80442A614F83001D95CE /* LandmarkDetail.swift */; };
-		09C03F752A661E0200A377C5 /* DataPassTestView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F742A661E0200A377C5 /* DataPassTestView1.swift */; };
-		09C03F772A66200C00A377C5 /* DataPassTestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F762A66200C00A377C5 /* DataPassTestView2.swift */; };
+		09C03F752A661E0200A377C5 /* DataPassTestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F742A661E0200A377C5 /* DataPassTestState.swift */; };
+		09C03F772A66200C00A377C5 /* DataPassTestBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F762A66200C00A377C5 /* DataPassTestBinding.swift */; };
 		09C03F792A66281E00A377C5 /* DataPassTestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F782A66281E00A377C5 /* DataPassTestList.swift */; };
 		09C03F7C2A662C9B00A377C5 /* DataPassTestEnviromentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F7B2A662C9B00A377C5 /* DataPassTestEnviromentObject.swift */; };
 		09C03F7E2A66313900A377C5 /* DataPassTestChangeEnviromentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F7D2A66313900A377C5 /* DataPassTestChangeEnviromentObject.swift */; };
@@ -53,8 +53,8 @@
 		095B80402A614BB9001D95CE /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		095B80422A614DF3001D95CE /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		095B80442A614F83001D95CE /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
-		09C03F742A661E0200A377C5 /* DataPassTestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestView1.swift; sourceTree = "<group>"; };
-		09C03F762A66200C00A377C5 /* DataPassTestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestView2.swift; sourceTree = "<group>"; };
+		09C03F742A661E0200A377C5 /* DataPassTestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestState.swift; sourceTree = "<group>"; };
+		09C03F762A66200C00A377C5 /* DataPassTestBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestBinding.swift; sourceTree = "<group>"; };
 		09C03F782A66281E00A377C5 /* DataPassTestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestList.swift; sourceTree = "<group>"; };
 		09C03F7B2A662C9B00A377C5 /* DataPassTestEnviromentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestEnviromentObject.swift; sourceTree = "<group>"; };
 		09C03F7D2A66313900A377C5 /* DataPassTestChangeEnviromentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestChangeEnviromentObject.swift; sourceTree = "<group>"; };
@@ -155,8 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				09C03F782A66281E00A377C5 /* DataPassTestList.swift */,
-				09C03F742A661E0200A377C5 /* DataPassTestView1.swift */,
-				09C03F762A66200C00A377C5 /* DataPassTestView2.swift */,
+				09C03F742A661E0200A377C5 /* DataPassTestState.swift */,
+				09C03F762A66200C00A377C5 /* DataPassTestBinding.swift */,
 				09C03F7B2A662C9B00A377C5 /* DataPassTestEnviromentObject.swift */,
 				09C03F7D2A66313900A377C5 /* DataPassTestChangeEnviromentObject.swift */,
 				09C03F7F2A66367B00A377C5 /* DataPassTestObservedObject.swift */,
@@ -246,7 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09C03F772A66200C00A377C5 /* DataPassTestView2.swift in Sources */,
+				09C03F772A66200C00A377C5 /* DataPassTestBinding.swift in Sources */,
 				09E0C19B2A64D27200C24842 /* UIDevice+Extension.swift in Sources */,
 				09C03F802A66367B00A377C5 /* DataPassTestObservedObject.swift in Sources */,
 				095B80342A613D57001D95CE /* MapView.swift in Sources */,
@@ -259,7 +259,7 @@
 				095B80452A614F83001D95CE /* LandmarkDetail.swift in Sources */,
 				09C03F7C2A662C9B00A377C5 /* DataPassTestEnviromentObject.swift in Sources */,
 				095B80252A612F43001D95CE /* Persistence.swift in Sources */,
-				09C03F752A661E0200A377C5 /* DataPassTestView1.swift in Sources */,
+				09C03F752A661E0200A377C5 /* DataPassTestState.swift in Sources */,
 				095B80382A614567001D95CE /* Landmark.swift in Sources */,
 				09C03F842A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift in Sources */,
 				095B80302A61348E001D95CE /* LandmarkContentView.swift in Sources */,

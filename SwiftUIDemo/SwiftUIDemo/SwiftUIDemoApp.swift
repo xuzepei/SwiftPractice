@@ -11,15 +11,15 @@ import SwiftUI
 struct SwiftUIDemoApp: App {
     let persistenceController = PersistenceController.shared
     
-    @StateObject private var modelData = ModelData()
+    private var modelData = ModelData()
 
     var body: some Scene {
         WindowGroup {
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
             
-            LandmarkContentView()
-                .environmentObject(modelData)
+            LandmarkContentView().environmentObject(modelData)
+                
         }
     }
 }
