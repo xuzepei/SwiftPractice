@@ -33,11 +33,11 @@ public class PushNew
                 type = type,
                 title = title,
                 textBody = textBody,
-                image_url = imageUrl,
-                page_url = pageUrl,
-                date = date,
+                imageUrl = imageUrl,
+                pageUrl = pageUrl,
+                createDate = date,
                 from = from,
-                reply_num = 99
+                replyNum = 99
             }
         };
 
