@@ -13,6 +13,8 @@
 		09BAF0982A32F04700E910B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BAF0962A32F04700E910B0 /* Main.storyboard */; };
 		09BAF09A2A32F04700E910B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BAF0992A32F04700E910B0 /* Assets.xcassets */; };
 		09BAF09D2A32F04700E910B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BAF09B2A32F04700E910B0 /* LaunchScreen.storyboard */; };
+		09E707222A8B13E100E2282A /* FullscreenPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E707202A8B13E100E2282A /* FullscreenPageView.swift */; };
+		09E7072C2A8B68DD00E2282A /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7072B2A8B68DD00E2282A /* InfiniteScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		09BAF0992A32F04700E910B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09BAF09C2A32F04700E910B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09BAF09E2A32F04700E910B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E707202A8B13E100E2282A /* FullscreenPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenPageView.swift; sourceTree = "<group>"; };
+		09E7072B2A8B68DD00E2282A /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		09BAF08F2A32F04700E910B0 /* PageScrollViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				09E707202A8B13E100E2282A /* FullscreenPageView.swift */,
 				09BAF0902A32F04700E910B0 /* AppDelegate.swift */,
 				09BAF0922A32F04700E910B0 /* SceneDelegate.swift */,
 				09BAF0942A32F04700E910B0 /* ViewController.swift */,
@@ -63,6 +68,7 @@
 				09BAF0992A32F04700E910B0 /* Assets.xcassets */,
 				09BAF09B2A32F04700E910B0 /* LaunchScreen.storyboard */,
 				09BAF09E2A32F04700E910B0 /* Info.plist */,
+				09E7072B2A8B68DD00E2282A /* InfiniteScrollView.swift */,
 			);
 			path = PageScrollViewDemo;
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 			files = (
 				09BAF0952A32F04700E910B0 /* ViewController.swift in Sources */,
 				09BAF0912A32F04700E910B0 /* AppDelegate.swift in Sources */,
+				09E7072C2A8B68DD00E2282A /* InfiniteScrollView.swift in Sources */,
+				09E707222A8B13E100E2282A /* FullscreenPageView.swift in Sources */,
 				09BAF0932A32F04700E910B0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
