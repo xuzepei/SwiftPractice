@@ -20,7 +20,7 @@ class HomeTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView"])
+        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation"])
     }
 
     // MARK: - Table view data source
@@ -61,6 +61,10 @@ class HomeTableViewController: UITableViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 1 {
             let vc = CollectionViewController()
+            vc.title = getItemByIndex(indexPath: indexPath)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 2 {
+            let vc = ScanAnimationViewController()
             vc.title = getItemByIndex(indexPath: indexPath)
             self.navigationController?.pushViewController(vc, animated: true)
         }

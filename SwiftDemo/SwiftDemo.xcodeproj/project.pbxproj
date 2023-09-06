@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09B485AD2A9F15CC008E08DD /* ScanAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */; };
+		09B485AE2A9F15CC008E08DD /* ScanAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */; };
+		09B485B02A9F1630008E08DD /* FaceScanAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B485AF2A9F1630008E08DD /* FaceScanAnimationView.swift */; };
+		09B485B22A9F1C24008E08DD /* ScanningLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B485B12A9F1C24008E08DD /* ScanningLineView.swift */; };
 		09D36B972A5D42CB0096C6EC /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D36B952A5D42CB0096C6EC /* CollectionViewController.swift */; };
 		09D36B982A5D42CB0096C6EC /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09D36B962A5D42CB0096C6EC /* CollectionViewController.xib */; };
 		09D36B9D2A5D51260096C6EC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D36B9B2A5D51260096C6EC /* CollectionViewCell.swift */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAnimationViewController.swift; sourceTree = "<group>"; };
+		09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanAnimationViewController.xib; sourceTree = "<group>"; };
+		09B485AF2A9F1630008E08DD /* FaceScanAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceScanAnimationView.swift; sourceTree = "<group>"; };
+		09B485B12A9F1C24008E08DD /* ScanningLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningLineView.swift; sourceTree = "<group>"; };
 		09D36B952A5D42CB0096C6EC /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		09D36B962A5D42CB0096C6EC /* CollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewController.xib; sourceTree = "<group>"; };
 		09D36B9B2A5D51260096C6EC /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -61,6 +69,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09B485AA2A9F1568008E08DD /* ScanAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */,
+				09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */,
+				09B485AF2A9F1630008E08DD /* FaceScanAnimationView.swift */,
+				09B485B12A9F1C24008E08DD /* ScanningLineView.swift */,
+			);
+			path = ScanAnimation;
+			sourceTree = "<group>";
+		};
 		09D36B992A5D50CF0096C6EC /* AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +122,7 @@
 		09DAE3912A5D055E00B77060 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				09B485AA2A9F1568008E08DD /* ScanAnimation */,
 				09D36BA12A5D549B0096C6EC /* Tool.swift */,
 				09D36B9F2A5D54840096C6EC /* HttpRequest.swift */,
 				09DAE3922A5D055E00B77060 /* AppDelegate.swift */,
@@ -197,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B485AE2A9F15CC008E08DD /* ScanAnimationViewController.xib in Resources */,
 				09DAE3A22A5D055F00B77060 /* LaunchScreen.storyboard in Resources */,
 				09D36B982A5D42CB0096C6EC /* CollectionViewController.xib in Resources */,
 				09D36B9E2A5D51260096C6EC /* CollectionViewCell.xib in Resources */,
@@ -255,13 +276,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B485AD2A9F15CC008E08DD /* ScanAnimationViewController.swift in Sources */,
 				09D36B972A5D42CB0096C6EC /* CollectionViewController.swift in Sources */,
 				09DAE3AA2A5D20F900B77060 /* HomeTableViewController.swift in Sources */,
 				09DAE39D2A5D055E00B77060 /* SwiftDemo.xcdatamodeld in Sources */,
+				09B485B02A9F1630008E08DD /* FaceScanAnimationView.swift in Sources */,
 				09D36B9D2A5D51260096C6EC /* CollectionViewCell.swift in Sources */,
 				09DAE3932A5D055E00B77060 /* AppDelegate.swift in Sources */,
 				09D36BA02A5D54840096C6EC /* HttpRequest.swift in Sources */,
 				09D36BA22A5D549B0096C6EC /* Tool.swift in Sources */,
+				09B485B22A9F1C24008E08DD /* ScanningLineView.swift in Sources */,
 				09DAE3952A5D055E00B77060 /* SceneDelegate.swift in Sources */,
 				09DAE3AD2A5D248900B77060 /* AutoLayoutViewController.swift in Sources */,
 			);
