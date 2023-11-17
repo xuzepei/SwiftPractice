@@ -17,9 +17,9 @@ namespace PushDemo
     public class Push
     {
         private SslStream _sslStream = null;
-        private string deviceToken = "60ceef8431532f4dfc28d6727b603761de95173cbd9c6975d4eb1166de8046f6"; // 接收通知的设备令牌
-        private string appBundleId = "com.freqty.pandacloud.test2";
-        private string certificatePath = "./pandacloud_push.p12"; // my certificate path
+        private string deviceToken = "8b24f4975921c60bd7e328364789513f64af9d3c5995a5e06dee6aeccce9d8cb"; // 接收通知的设备令牌
+        private string appBundleId = "com.freqtek.pandaunion";
+        private string certificatePath = "./PandaUnion_Push_DEV.p12"; // my certificate path
         private string password = "1111";
 
 

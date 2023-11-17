@@ -9,19 +9,35 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <CreatePackage>false</CreatePackage>
     <UseSGen>false</UseSGen>
+    <WarningLevel>4</WarningLevel>
+    <LinkMode>None</LinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <CreatePackage>false</CreatePackage>
     <UseSGen>false</UseSGen>
+    <DebugSymbols>true</DebugSymbols>
+    <WarningLevel>4</WarningLevel>
+    <LinkMode>None</LinkMode>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Net.Requests" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="pandacloud_push.p12" />
+    <None Remove="PandaUnion_Push_DEV.p12" />
+    <None Remove="PandaUnion_Push_DIS.p12" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="pandacloud_push.p12" />
+    <None Update="PandaUnion_Push_DIS.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="PandaUnion_Push_DEV.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="PandaUnion_Push_DIS.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
 </Project>

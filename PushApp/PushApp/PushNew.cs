@@ -9,6 +9,7 @@ using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using PushApp;
 using ThreadNetwork;
 
 public class PushNew
@@ -58,11 +59,18 @@ public class PushNew
                 httpClient.DefaultRequestVersion = HttpVersion.Version20;
                 httpClient.DefaultVersionPolicy = HttpVersionPolicy.RequestVersionOrLower;
 
-                //测试URL
-                string url = "https://api.sandbox.push.apple.com/3/device/" + deviceToken;
 
-                //发布用URL
-                //string url = "https://api.push.apple.com/3/device/" + deviceToken;
+                string url = "";
+                if (Tool.isDebug)
+                {
+                    //测试URL
+                    url = "https://api.sandbox.push.apple.com/3/device/" + deviceToken;
+                }
+                else
+                {
+                    //发布用URL
+                    url = "https://api.push.apple.com/3/device/" + deviceToken;
+                }
 
                 httpClient.DefaultRequestHeaders.Add("apns-topic", bundleId);
                 httpClient.DefaultRequestHeaders.Add("apns-push-type", apnsPushType);

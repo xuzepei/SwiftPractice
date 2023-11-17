@@ -5,6 +5,11 @@ using ObjCRuntime;
 
 namespace PushApp;
 
+public class Tool
+{
+    public static bool isDebug = false;
+}
+
 public partial class ViewController : NSViewController {
 
     [Outlet]
@@ -121,17 +126,18 @@ public partial class ViewController : NSViewController {
     {
         PushNew pushNew = new PushNew();
 
-        var bundleId = "com.freqty.pandacloud.test2"; //应用BundleID
+        var bundleId = "com.freqtek.pandaunion"; //应用BundleID
         if (bundleIdTF.StringValue.Length > 0) {
             bundleId = bundleIdTF.StringValue;
 
             NSUserDefaults.StandardUserDefaults.SetString(bundleId, "bundle_id");
             NSUserDefaults.StandardUserDefaults.Synchronize();
         }
-            
 
 
-        var deviceToken = "fe8375319b6ad5eb37f7b75852fc845bdc88f654555b3e2709ef31cf5f53d6ff"; // 接收通知的设备令牌
+
+        //var deviceToken = "8b24f4975921c60bd7e328364789513f64af9d3c5995a5e06dee6aeccce9d8cb"; // 接收通知的设备令牌
+        var deviceToken = "9ef00afc01927bd6bf72a334583daed373f9cb0a1cf12055f95cf0de28729b0d";
         if (deviceTokenTF.StringValue.Length > 0) {
 
             deviceToken = deviceTokenTF.StringValue;
@@ -139,11 +145,16 @@ public partial class ViewController : NSViewController {
             NSUserDefaults.StandardUserDefaults.SetString(deviceToken, "device_token");
             NSUserDefaults.StandardUserDefaults.Synchronize();
         }
-            
 
-        string filepath = NSBundle.MainBundle.PathForResource("pandacloud_push", "p12");
-        Console.WriteLine("filepath: " + filepath);
-        var p12FilePath = filepath;//"/Users/xuzepei/Desktop/pandacloud_push.p12"; //p12文件地址
+        if (Tool.isDebug) {
+            p12FilePath = NSBundle.MainBundle.PathForResource("PandaUnion_Push_DEV", "p12");
+        } else {
+            p12FilePath = NSBundle.MainBundle.PathForResource("PandaUnion_Push_DIS", "p12");
+            //var p12FilePath = "/Users/xuzepei/Desktop/Push-PandaUnion/PandaUnion_Push_DIS.p12"; //p12文件地址
+        }
+
+        Console.WriteLine("filepath-new: " + p12FilePath);
+
         var p12Password = "1111"; //p12文件密码
 
 
