@@ -35,10 +35,11 @@ class MyTabBar: UIView {
         //self.layer.borderColor = UIColor.blue.cgColor
 
         // Set shadow properties
-        self.layer.shadowColor = Tool.mainColor.cgColor
+        self.layer.shadowColor = UIColor.red.cgColor
         self.layer.shadowOffset = CGSize.zero
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 6
+        //self.layer.masksToBounds = true
         
         self.contentView.backgroundColor = .clear
     }

@@ -34,6 +34,14 @@ enum CellType: Int {
     case OrganizationContact
 }
 
+enum ToastType: Int {
+    case Unknown = 0
+    case Success
+    case Error
+    case Warning
+    case Info
+}
+
 @objcMembers class Tool: NSObject, AVAudioPlayerDelegate {
     
     @objc static let shared = Tool()
@@ -690,10 +698,98 @@ enum CellType: Int {
 
         return ceil(boundingRect.height)
     }
+    
+    //MARK: - Toast
+    class func showToast(text: String, type:ToastType = .Unknown, icon: UIImage?=nil, showIcon:Bool = true, duration: TimeInterval = 2.0, subtitle: String?=nil) {
+
+        if text.count == 0 {
+            return
+        }
+
+        let attributes = [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14),
+            NSAttributedString.Key.foregroundColor: UIColor.black
+        ]
+        let attributedString  = NSMutableAttributedString(string: text , attributes: attributes)
+
+        let subtitleAttributes = [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),
+            NSAttributedString.Key.foregroundColor: UIColor.systemGray
+        ]
+
+        var subtitleAttributedString:NSAttributedString? = nil
+        if let temp = subtitle, temp.count > 0 {
+            subtitleAttributedString = NSMutableAttributedString(string: temp, attributes: subtitleAttributes)
+        }
+        
+        var image:UIImage? = nil
+        if showIcon == true {
+            image = icon
+            if image == nil {
+                switch(type) {
+                case .Success:
+                    image = UIImage(named: "success")
+                    break
+                case .Error:
+                    image = UIImage(named: "error")
+                    break
+                case .Warning:
+                    image = UIImage(named: "warning")
+                    break
+                case .Info:
+                    image = UIImage(named: "info")
+                    break
+                default:
+                    break
+                }
+            }
+        }
+
+        
+        var bgColor = UIColor.white
+        switch(type) {
+        case .Success:
+            bgColor = UIColor.successToastSecondaryColor
+            break
+        case .Error:
+            bgColor = UIColor.errorToastSecondaryColor
+            break
+        case .Warning:
+            bgColor = UIColor.warningToastSecondaryColor
+            break
+        case .Info:
+            bgColor = UIColor.infoToastSecondaryColor
+            break
+        default:
+            break
+        }
+        
+        if let myIcon = image {
+            let toast = Toast.default(image:myIcon,title:attributedString, subtitle:subtitleAttributedString, viewConfig: .init(minHeight: 40, lightBackgroundColor: bgColor, titleNumberOfLines: 0, cornerRadius: 8),config: .init(
+                direction: .bottom,
+                dismissBy: [.time(time: duration)]))
+            toast.show()
+        } else {
+            let toast = Toast.text(attributedString, subtitle:subtitleAttributedString, viewConfig: .init(minHeight: 40, lightBackgroundColor: bgColor, titleNumberOfLines: 0, cornerRadius: 8),config: .init(
+                direction: .bottom,
+                dismissBy: [.time(time: duration)]))
+            toast.show()
+        }
+    }
 }
 
 //MARK: -
 extension UIColor {
+    
+    static let successToastSecondaryColor = UIColor(red: 233/255.0, green: 244/255.0, blue: 232/255.0, alpha: 1)
+    static let warningToastSecondaryColor = UIColor(red: 253/255.0, green: 241/255.0, blue: 221/255.0, alpha: 1)
+    static let errorToastSecondaryColor = UIColor(red: 247/255.0, green: 228/255.0, blue: 221/255.0, alpha: 1)
+    static let infoToastSecondaryColor = UIColor(red: 227/255.0, green: 238/255.0, blue: 250/255.0, alpha: 1)
+
+    static let successToastPrimaryColor = UIColor(red: 145/255.0, green: 197/255.0, blue: 139/255.0, alpha: 1)
+    static let warningToastPrimaryColor = UIColor(red: 244/255.0, green: 186/255.0, blue: 97/255.0, alpha: 1)
+    static let errorToastPrimaryColor = UIColor(red: 239/255.0, green: 143/255.0, blue: 108/255.0, alpha: 1)
+    static let infoToastPrimaryColor = UIColor(red: 116/255.0, green: 170/255.0, blue: 232/255.0, alpha: 1)
     
     class func color(_ hexString:String) -> UIColor {
         

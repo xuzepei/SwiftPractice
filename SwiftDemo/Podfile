@@ -11,6 +11,8 @@ target 'SwiftDemo' do
   pod 'Alamofire','5.7.1'
   pod 'Toast','4.0.0'
   pod 'MBProgressHUD','1.2.0'
+  #pod "ToastViewSwift"
+  pod 'PowerplayToastKit'
   
 end
 

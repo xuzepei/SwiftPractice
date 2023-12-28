@@ -20,6 +20,10 @@ import SwiftSignalRClient
         isConnecting = false
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override init() {
     
         let url = URL(string: "http://4134d577z4.zicp.vip:51930/dsdapi/hubs/notify")
@@ -35,10 +39,6 @@ import SwiftSignalRClient
                 return ""
             }
         }).withLogging(minLogLevel: .error).build()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     func connect() {

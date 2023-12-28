@@ -7,7 +7,7 @@ namespace PushApp;
 
 public class Tool
 {
-    public static bool isDebug = false;
+    public static bool isDebug = true;
 }
 
 public partial class ViewController : NSViewController {
