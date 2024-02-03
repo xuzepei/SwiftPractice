@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TagViewController" customModule="SwiftDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="tagListView" destination="dCY-Du-fGm" id="jbr-DL-tBS"/>
+                <outlet property="tagsView" destination="OXt-mw-gzi" id="IYJ-Vb-9Kb"/>
+                <outlet property="tagsViewConstraintHeight" destination="8uo-5x-vF6" id="ZmP-jh-cGB"/>
+                <outlet property="textTagCollectionView" destination="vEg-Dc-41p" id="KWA-X8-zf5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCY-Du-fGm" customClass="TagListView" customModule="TagListView">
+                    <rect key="frame" x="76.666666666666686" y="186" width="240" height="30"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="KG4-oR-4Go"/>
+                        <constraint firstAttribute="height" constant="30" id="zPd-sX-12A"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                            <color key="value" red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tagHighlightedBackgroundColor">
+                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tagSelectedBackgroundColor">
+                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="paddingY">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vEg-Dc-41p" customClass="TTGTextTagCollectionView">
+                    <rect key="frame" x="76.666666666666686" y="382" width="240" height="30"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="552-a6-9D3"/>
+                        <constraint firstAttribute="width" constant="240" id="fOu-LP-boY"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXt-mw-gzi" customClass="TagsView" customModule="SwiftDemo" customModuleProvider="target">
+                    <rect key="frame" x="76" y="554" width="241" height="86"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="86" id="8uo-5x-vF6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="labelColor"/>
+            <constraints>
+                <constraint firstItem="OXt-mw-gzi" firstAttribute="top" secondItem="vEg-Dc-41p" secondAttribute="bottom" constant="142" id="2HT-qa-mFw"/>
+                <constraint firstItem="vEg-Dc-41p" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Du1-aa-m0b"/>
+                <constraint firstItem="vEg-Dc-41p" firstAttribute="top" secondItem="dCY-Du-fGm" secondAttribute="bottom" constant="166" id="EqR-Ly-0Wa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OXt-mw-gzi" secondAttribute="trailing" constant="76" id="hYS-Rv-OWH"/>
+                <constraint firstItem="dCY-Du-fGm" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="lcF-0g-TSt"/>
+                <constraint firstItem="OXt-mw-gzi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="76" id="uM8-fM-ODX"/>
+                <constraint firstItem="dCY-Du-fGm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="127" id="ucj-DM-hsM"/>
+            </constraints>
+            <point key="canvasLocation" x="14.503816793893129" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

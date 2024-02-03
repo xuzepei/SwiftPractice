@@ -13,6 +13,9 @@ target 'SwiftDemo' do
   pod 'MBProgressHUD','1.2.0'
   #pod "ToastViewSwift"
   pod 'PowerplayToastKit'
+  pod 'ZLImageEditor'
+  pod 'TagListView'
+  pod "TTGTagCollectionView"
   
 end
 

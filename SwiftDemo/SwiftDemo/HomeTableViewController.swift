@@ -8,6 +8,7 @@
 import UIKit
 import PowerplayToastKit
 import SnapKit
+import ZLImageEditor
 
 class HomeTableViewController: UITableViewController {
     
@@ -22,7 +23,7 @@ class HomeTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast"])
+        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView"])
     }
 
     // MARK: - Table view data source
@@ -100,6 +101,20 @@ class HomeTableViewController: UITableViewController {
 //                .shared
 //                .showToast(of: .success(title: "", message: message), at: .center)
 
+        } else if indexPath.row == 4 {
+            
+            ZLImageEditorConfiguration.default()
+                .editImageTools([.draw, .clip, .imageSticker, .textSticker])
+                .adjustTools([.brightness, .contrast, .saturation])
+
+            ZLEditImageViewController.showEditImageVC(parentVC: self, image: UIImage(named: "tes")!, editModel: nil) { [weak self] (resImage, editModel) in
+                NSLog("done.")
+            }
+            
+        } else if indexPath.row == 5 {
+            let vc = TagViewController()
+            vc.title = getItemByIndex(indexPath: indexPath)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

@@ -5,14 +5,22 @@ PODS:
     - SnapKit
   - ReachabilitySwift (5.0.0)
   - SnapKit (5.6.0)
+  - TagListView (1.4.1)
   - Toast (4.0.0)
+  - TTGTagCollectionView (2.4.2)
+  - ZLImageEditor (1.2.1):
+    - ZLImageEditor/Core (= 1.2.1)
+  - ZLImageEditor/Core (1.2.1)
 
 DEPENDENCIES:
   - Alamofire (= 5.7.1)
   - MBProgressHUD (= 1.2.0)
   - PowerplayToastKit
   - ReachabilitySwift (= 5.0.0)
+  - TagListView
   - Toast (= 4.0.0)
+  - TTGTagCollectionView
+  - ZLImageEditor
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -21,7 +29,10 @@ SPEC REPOS:
     - PowerplayToastKit
     - ReachabilitySwift
     - SnapKit
+    - TagListView
     - Toast
+    - TTGTagCollectionView
+    - ZLImageEditor
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
@@ -29,8 +40,11 @@ SPEC CHECKSUMS:
   PowerplayToastKit: 1a9c1549af3d24462939dadd6fc77f0b30ef7919
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  TTGTagCollectionView: 0d4625aaf7ee3ad755c39d549368a4ce69bd17d1
+  ZLImageEditor: df1cd2f84aa2a38ad4d76bdcc34538be6c3a7e73
 
-PODFILE CHECKSUM: 982fb4021d26cff70f3f6b716c7979ffc0ff298d
+PODFILE CHECKSUM: 331f74f59f098ba5a9479c18d877648028332011
 
 COCOAPODS: 1.12.1
