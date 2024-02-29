@@ -41,7 +41,15 @@ extension ImageCropperModelImplementation: ImageCropperModel {
     set {
       parentRect = newValue
       
-      let figureSize = configuration.figure.maskSize(with: newValue.size, ratio: configuration.customRatio)
+        //一寸照295*413px
+        //四寸照898*1181px
+      
+        var size = CGSize(width: 898, height: 1181)
+        if size.width > 400 {
+            size = CGSize(width: size.width * 0.25, height: size.height * 0.25)
+        }
+        
+        let figureSize = CGSize(width: size.width, height: size.height)//configuration.figure.maskSize(with: newValue.size, ratio: configuration.customRatio)
       figureFrame = CGRect(x: (newValue.width - figureSize.width) / 2, y: (newValue.height - figureSize.height) / 2, width: figureSize.width, height: figureSize.height)
       cornerRadius =  min(figureSize.width, figureSize.height) / 2 * configuration.cornerRadius
       
