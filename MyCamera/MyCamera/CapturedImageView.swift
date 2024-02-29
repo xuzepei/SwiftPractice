@@ -24,6 +24,7 @@ class CapturedImageView : UIView {
         imageView.layer.cornerRadius = 8
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.backgroundColor = .red
         return imageView
     }()
     

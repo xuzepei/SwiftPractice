@@ -16,6 +16,24 @@
 		090944142A5E75DD006C1F8B /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090944122A5E75DD006C1F8B /* CapturedImageView.swift */; };
 		09E026312A5F9CCF001F6826 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E026302A5F9CCF001F6826 /* CoreML.framework */; };
 		09E026332A5F9E22001F6826 /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 09E026322A5F9E22001F6826 /* DeepLabV3.mlmodel */; };
+		09E0919E2B849A2F001FF11D /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0919D2B849A2F001FF11D /* ImageProcessor.swift */; };
+		09E091B12B84AEE5001FF11D /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091A02B84AEE5001FF11D /* Array+Extensions.swift */; };
+		09E091B22B84AEE5001FF11D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091A12B84AEE5001FF11D /* Math.swift */; };
+		09E091B32B84AEE5001FF11D /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091A22B84AEE5001FF11D /* UIImage+CVPixelBuffer.swift */; };
+		09E091B42B84AEE5001FF11D /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091A32B84AEE5001FF11D /* Predictions.swift */; };
+		09E091B52B84AEE5001FF11D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091A42B84AEE5001FF11D /* UIImage+Extensions.swift */; };
+		09E091B62B84AEE5001FF11D /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091A52B84AEE5001FF11D /* CGImagePropertyOrientation.swift */; };
+		09E091B72B84AEE5001FF11D /* UIImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091A62B84AEE5001FF11D /* UIImage+RawBytes.swift */; };
+		09E091B82B84AEE5001FF11D /* MLMultiArray+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091A72B84AEE5001FF11D /* MLMultiArray+Helpers.swift */; };
+		09E091B92B84AEE5001FF11D /* MLModel+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091A82B84AEE5001FF11D /* MLModel+Images.swift */; };
+		09E091BA2B84AEE5001FF11D /* CoreML+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091A92B84AEE5001FF11D /* CoreML+Combine.swift */; };
+		09E091BB2B84AEE5001FF11D /* CVPixelBuffer+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091AA2B84AEE5001FF11D /* CVPixelBuffer+Create.swift */; };
+		09E091BC2B84AEE5001FF11D /* CGImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091AB2B84AEE5001FF11D /* CGImage+CVPixelBuffer.swift */; };
+		09E091BD2B84AEE5001FF11D /* NonMaxSuppression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091AC2B84AEE5001FF11D /* NonMaxSuppression.swift */; };
+		09E091BE2B84AEE5001FF11D /* CGImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091AD2B84AEE5001FF11D /* CGImage+RawBytes.swift */; };
+		09E091BF2B84AEE5001FF11D /* MLMultiArray+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091AE2B84AEE5001FF11D /* MLMultiArray+Image.swift */; };
+		09E091C02B84AEE5001FF11D /* CVPixelBuffer+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091AF2B84AEE5001FF11D /* CVPixelBuffer+Resize.swift */; };
+		09E091C12B84AEE5001FF11D /* CVPixelBuffer+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091B02B84AEE5001FF11D /* CVPixelBuffer+Rotate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +48,24 @@
 		090944122A5E75DD006C1F8B /* CapturedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapturedImageView.swift; sourceTree = "<group>"; };
 		09E026302A5F9CCF001F6826 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		09E026322A5F9E22001F6826 /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
+		09E0919D2B849A2F001FF11D /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		09E091A02B84AEE5001FF11D /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		09E091A12B84AEE5001FF11D /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		09E091A22B84AEE5001FF11D /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		09E091A32B84AEE5001FF11D /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
+		09E091A42B84AEE5001FF11D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		09E091A52B84AEE5001FF11D /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		09E091A62B84AEE5001FF11D /* UIImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+RawBytes.swift"; sourceTree = "<group>"; };
+		09E091A72B84AEE5001FF11D /* MLMultiArray+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Helpers.swift"; sourceTree = "<group>"; };
+		09E091A82B84AEE5001FF11D /* MLModel+Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLModel+Images.swift"; sourceTree = "<group>"; };
+		09E091A92B84AEE5001FF11D /* CoreML+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreML+Combine.swift"; sourceTree = "<group>"; };
+		09E091AA2B84AEE5001FF11D /* CVPixelBuffer+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Create.swift"; sourceTree = "<group>"; };
+		09E091AB2B84AEE5001FF11D /* CGImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		09E091AC2B84AEE5001FF11D /* NonMaxSuppression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonMaxSuppression.swift; sourceTree = "<group>"; };
+		09E091AD2B84AEE5001FF11D /* CGImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+RawBytes.swift"; sourceTree = "<group>"; };
+		09E091AE2B84AEE5001FF11D /* MLMultiArray+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Image.swift"; sourceTree = "<group>"; };
+		09E091AF2B84AEE5001FF11D /* CVPixelBuffer+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Resize.swift"; sourceTree = "<group>"; };
+		09E091B02B84AEE5001FF11D /* CVPixelBuffer+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Rotate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +100,7 @@
 		090943FD2A5E5DCD006C1F8B /* MyCamera */ = {
 			isa = PBXGroup;
 			children = (
+				09E0919F2B84AEE5001FF11D /* CoreMLHelpers */,
 				090943FE2A5E5DCD006C1F8B /* AppDelegate.swift */,
 				090944002A5E5DCD006C1F8B /* SceneDelegate.swift */,
 				090944022A5E5DCD006C1F8B /* ViewController.swift */,
@@ -73,6 +110,7 @@
 				0909440C2A5E5DCE006C1F8B /* Info.plist */,
 				090944122A5E75DD006C1F8B /* CapturedImageView.swift */,
 				09E026322A5F9E22001F6826 /* DeepLabV3.mlmodel */,
+				09E0919D2B849A2F001FF11D /* ImageProcessor.swift */,
 			);
 			path = MyCamera;
 			sourceTree = "<group>";
@@ -83,6 +121,30 @@
 				09E026302A5F9CCF001F6826 /* CoreML.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09E0919F2B84AEE5001FF11D /* CoreMLHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				09E091A02B84AEE5001FF11D /* Array+Extensions.swift */,
+				09E091A12B84AEE5001FF11D /* Math.swift */,
+				09E091A22B84AEE5001FF11D /* UIImage+CVPixelBuffer.swift */,
+				09E091A32B84AEE5001FF11D /* Predictions.swift */,
+				09E091A42B84AEE5001FF11D /* UIImage+Extensions.swift */,
+				09E091A52B84AEE5001FF11D /* CGImagePropertyOrientation.swift */,
+				09E091A62B84AEE5001FF11D /* UIImage+RawBytes.swift */,
+				09E091A72B84AEE5001FF11D /* MLMultiArray+Helpers.swift */,
+				09E091A82B84AEE5001FF11D /* MLModel+Images.swift */,
+				09E091A92B84AEE5001FF11D /* CoreML+Combine.swift */,
+				09E091AA2B84AEE5001FF11D /* CVPixelBuffer+Create.swift */,
+				09E091AB2B84AEE5001FF11D /* CGImage+CVPixelBuffer.swift */,
+				09E091AC2B84AEE5001FF11D /* NonMaxSuppression.swift */,
+				09E091AD2B84AEE5001FF11D /* CGImage+RawBytes.swift */,
+				09E091AE2B84AEE5001FF11D /* MLMultiArray+Image.swift */,
+				09E091AF2B84AEE5001FF11D /* CVPixelBuffer+Resize.swift */,
+				09E091B02B84AEE5001FF11D /* CVPixelBuffer+Rotate.swift */,
+			);
+			path = CoreMLHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,11 +218,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E091B82B84AEE5001FF11D /* MLMultiArray+Helpers.swift in Sources */,
+				09E091C02B84AEE5001FF11D /* CVPixelBuffer+Resize.swift in Sources */,
+				09E091BB2B84AEE5001FF11D /* CVPixelBuffer+Create.swift in Sources */,
+				09E091B72B84AEE5001FF11D /* UIImage+RawBytes.swift in Sources */,
+				09E091BC2B84AEE5001FF11D /* CGImage+CVPixelBuffer.swift in Sources */,
+				09E091B42B84AEE5001FF11D /* Predictions.swift in Sources */,
 				090944142A5E75DD006C1F8B /* CapturedImageView.swift in Sources */,
 				090944032A5E5DCD006C1F8B /* ViewController.swift in Sources */,
 				090943FF2A5E5DCD006C1F8B /* AppDelegate.swift in Sources */,
+				09E091BD2B84AEE5001FF11D /* NonMaxSuppression.swift in Sources */,
+				09E091B52B84AEE5001FF11D /* UIImage+Extensions.swift in Sources */,
+				09E091BE2B84AEE5001FF11D /* CGImage+RawBytes.swift in Sources */,
+				09E091B12B84AEE5001FF11D /* Array+Extensions.swift in Sources */,
 				09E026332A5F9E22001F6826 /* DeepLabV3.mlmodel in Sources */,
+				09E091C12B84AEE5001FF11D /* CVPixelBuffer+Rotate.swift in Sources */,
+				09E091BA2B84AEE5001FF11D /* CoreML+Combine.swift in Sources */,
+				09E0919E2B849A2F001FF11D /* ImageProcessor.swift in Sources */,
+				09E091B92B84AEE5001FF11D /* MLModel+Images.swift in Sources */,
 				090944012A5E5DCD006C1F8B /* SceneDelegate.swift in Sources */,
+				09E091BF2B84AEE5001FF11D /* MLMultiArray+Image.swift in Sources */,
+				09E091B32B84AEE5001FF11D /* UIImage+CVPixelBuffer.swift in Sources */,
+				09E091B62B84AEE5001FF11D /* CGImagePropertyOrientation.swift in Sources */,
+				09E091B22B84AEE5001FF11D /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +387,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2699D9JM3T;
+				DEVELOPMENT_TEAM = 7S69FZM933;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyCamera/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -336,7 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2699D9JM3T;
+				DEVELOPMENT_TEAM = 7S69FZM933;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyCamera/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -23,7 +23,7 @@ class HomeTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView"])
+        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper"])
     }
 
     // MARK: - Table view data source
@@ -113,6 +113,38 @@ class HomeTableViewController: UITableViewController {
             
         } else if indexPath.row == 5 {
             let vc = TagViewController()
+            vc.title = getItemByIndex(indexPath: indexPath)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 6 {
+            let vc = ImageProcessorViewController()
+            vc.title = getItemByIndex(indexPath: indexPath)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 7 {
+            
+            let photo = UIImage(named: "photo")!
+            
+            guard let figure = ImageCropperConfiguration.ImageCropperFigureType(rawValue: 8) else { return }
+            
+            
+            var config = ImageCropperConfiguration(with: photo, and: figure, cornerRadius: 0)
+            config.showGrid = false
+            if figure == .customRect {
+                
+                //一寸照295*413
+              config.customRatio = CGSize(width: 16, height: 9)
+            }
+            
+            config.backTintColor = .red
+            config.backTitle = ""
+            
+            var croppedImage = photo
+            let vc = ImageCropperViewController.initialize(with: config, completionHandler: { _croppedImage in
+                guard let _img = _croppedImage else {
+                    return
+                }
+
+                Tool.saveImageToPhotoLibrary(image: _img, rootVC: self)
+            })
             vc.title = getItemByIndex(indexPath: indexPath)
             self.navigationController?.pushViewController(vc, animated: true)
         }

@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>This app uses your location to personalize your app experience. It is convenient for users to obtain current location information when setting user information.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This app needs to access your Photo Library to select photos. The selected photo will be used for the digital smile teeth design function or be used to set your avatar.</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>This app needs to access your Photo Library to save photos.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>This app needs to use your camera to take a selfie to get your facial photo. The photo will be used for the digital smile teeth design function or be used to set your avatar.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

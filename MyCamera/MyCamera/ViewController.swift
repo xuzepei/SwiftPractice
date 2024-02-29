@@ -83,7 +83,12 @@ class ViewController: UIViewController {
             self.captureSession.automaticallyConfiguresCaptureDeviceForWideColor = true
             
             //setup inputs
+#if targetEnvironment(simulator)
+            
+#else
             self.setupInputs()
+#endif
+            
             
             DispatchQueue.main.async {
                 //setup preview layer
@@ -275,7 +280,21 @@ class ViewController: UIViewController {
     
     //MARK:- Actions
     @objc func captureImage(_ sender: UIButton?){
-        takePicture = true
+        //takePicture = true
+        
+        let image = UIImage(named: "photo")!
+        let imageProcessor = ImageProcessor()
+        imageProcessor.removeBackground(from: image) { (resultImage) in
+            if let resultImage = resultImage {
+                // Use the resultImage with background removed
+                // For example, display it in a UIImageView
+                //imageView.image = resultImage
+                
+                self.capturedImageView.image = resultImage
+            } else {
+                print("Failed to remove background")
+            }
+        }
     }
     
     @objc func switchCamera(_ sender: UIButton?){

@@ -387,6 +387,39 @@ enum ToastType: Int {
         return false
     }
     
+    class func saveImageToPhotoLibrary(image: UIImage, rootVC: UIViewController?) {
+        PHPhotoLibrary.shared().performChanges({
+            let request = PHAssetCreationRequest.forAsset()
+            request.addResource(with: .photo, data: image.pngData()!, options: nil)
+        }, completionHandler: { success, error in
+            if success {
+                print("Image saved to Photo Library successfully!")
+                
+                DispatchQueue.main.async {
+                    Tool.showAlert("Success", message: "The image has been saved to your Photo Library successfully.", rootVC: rootVC)
+                }
+                
+            } else {
+                
+                let status = PHPhotoLibrary.authorizationStatus()
+                switch status {
+                case .authorized:
+                    break
+                case .denied, .restricted, .notDetermined:
+                    // User has explicitly denied or restricted access.
+                    DispatchQueue.main.async {
+                        Tool.showAlert("Tip", message: "Please grant access to the Photo Library in Settings first.", rootVC: rootVC)
+                    }
+                    break
+                default:
+                    break
+                }
+                
+                print("Error saving image to Photo Library: \(error?.localizedDescription ?? "unknown error")")
+            }
+        })
+    }
+    
     class func getImageLocalPath(_ imageUrl: String?) -> String? {
         
         if let imageUrl = imageUrl, imageUrl.count > 0 {

@@ -23,6 +23,15 @@
 		091F5B292B32EBF80092FD6E /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F5B1B2B32EBF80092FD6E /* AnimationType.swift */; };
 		091F5B2A2B32EBF80092FD6E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F5B1C2B32EBF80092FD6E /* Toast.swift */; };
 		091F5B2B2B32EBF80092FD6E /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F5B1D2B32EBF80092FD6E /* Direction.swift */; };
+		097841382B8DD0EA00CFEB4F /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097841372B8DD0EA00CFEB4F /* ColorButton.swift */; };
+		097841522B8F372400CFEB4F /* ImageCropperConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097841472B8F372400CFEB4F /* ImageCropperConfiguration.swift */; };
+		097841542B8F372400CFEB4F /* ImageCropperConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097841492B8F372400CFEB4F /* ImageCropperConfigurator.swift */; };
+		097841552B8F372400CFEB4F /* ImageCropperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978414A2B8F372400CFEB4F /* ImageCropperModel.swift */; };
+		097841562B8F372400CFEB4F /* ImageCropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978414B2B8F372400CFEB4F /* ImageCropperViewController.swift */; };
+		097841572B8F372400CFEB4F /* ImageCropperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978414C2B8F372400CFEB4F /* ImageCropperPresenter.swift */; };
+		097841582B8F372400CFEB4F /* ImageCropper.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0978414D2B8F372400CFEB4F /* ImageCropper.xib */; };
+		097841592B8F372400CFEB4F /* UIImage+NormalizeOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978414E2B8F372400CFEB4F /* UIImage+NormalizeOrientation.swift */; };
+		0978415A2B8F372400CFEB4F /* ImageCropperRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978414F2B8F372400CFEB4F /* ImageCropperRouter.swift */; };
 		09B20CBF2B4E263900055509 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B20CBE2B4E263900055509 /* TagsView.swift */; };
 		09B485AD2A9F15CC008E08DD /* ScanAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */; };
 		09B485AE2A9F15CC008E08DD /* ScanAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */; };
@@ -34,6 +43,7 @@
 		09D36B9E2A5D51260096C6EC /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09D36B9C2A5D51260096C6EC /* CollectionViewCell.xib */; };
 		09D36BA02A5D54840096C6EC /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D36B9F2A5D54840096C6EC /* HttpRequest.swift */; };
 		09D36BA22A5D549B0096C6EC /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D36BA12A5D549B0096C6EC /* Tool.swift */; };
+		09D3DCE22B88887D0076DBAB /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D3DCE12B88887D0076DBAB /* ColorSelector.swift */; };
 		09DAE3932A5D055E00B77060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAE3922A5D055E00B77060 /* AppDelegate.swift */; };
 		09DAE3952A5D055E00B77060 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAE3942A5D055E00B77060 /* SceneDelegate.swift */; };
 		09DAE39A2A5D055E00B77060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DAE3982A5D055E00B77060 /* Main.storyboard */; };
@@ -43,6 +53,27 @@
 		09DAE3AA2A5D20F900B77060 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAE3A92A5D20F900B77060 /* HomeTableViewController.swift */; };
 		09DAE3AD2A5D248900B77060 /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAE3AB2A5D248900B77060 /* AutoLayoutViewController.swift */; };
 		09DAE3AE2A5D248900B77060 /* AutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DAE3AC2A5D248900B77060 /* AutoLayoutViewController.xib */; };
+		09E091C42B85D84A001FF11D /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091C32B85D84A001FF11D /* ImageProcessor.swift */; };
+		09E091C62B85D85A001FF11D /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 09E091C52B85D85A001FF11D /* DeepLabV3.mlmodel */; };
+		09E091C92B85D895001FF11D /* ImageProcessorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091C72B85D895001FF11D /* ImageProcessorViewController.swift */; };
+		09E091CA2B85D895001FF11D /* ImageProcessorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09E091C82B85D895001FF11D /* ImageProcessorViewController.xib */; };
+		09E091DD2B85D93E001FF11D /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091CC2B85D93E001FF11D /* Array+Extensions.swift */; };
+		09E091DE2B85D93E001FF11D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091CD2B85D93E001FF11D /* Math.swift */; };
+		09E091DF2B85D93E001FF11D /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091CE2B85D93E001FF11D /* UIImage+CVPixelBuffer.swift */; };
+		09E091E02B85D93E001FF11D /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091CF2B85D93E001FF11D /* Predictions.swift */; };
+		09E091E12B85D93E001FF11D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091D02B85D93E001FF11D /* UIImage+Extensions.swift */; };
+		09E091E22B85D93E001FF11D /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091D12B85D93E001FF11D /* CGImagePropertyOrientation.swift */; };
+		09E091E32B85D93E001FF11D /* UIImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091D22B85D93E001FF11D /* UIImage+RawBytes.swift */; };
+		09E091E42B85D93E001FF11D /* MLMultiArray+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091D32B85D93E001FF11D /* MLMultiArray+Helpers.swift */; };
+		09E091E52B85D93E001FF11D /* MLModel+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091D42B85D93E001FF11D /* MLModel+Images.swift */; };
+		09E091E62B85D93E001FF11D /* CoreML+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091D52B85D93E001FF11D /* CoreML+Combine.swift */; };
+		09E091E72B85D93E001FF11D /* CVPixelBuffer+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091D62B85D93E001FF11D /* CVPixelBuffer+Create.swift */; };
+		09E091E82B85D93E001FF11D /* CGImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091D72B85D93E001FF11D /* CGImage+CVPixelBuffer.swift */; };
+		09E091E92B85D93E001FF11D /* NonMaxSuppression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091D82B85D93E001FF11D /* NonMaxSuppression.swift */; };
+		09E091EA2B85D93E001FF11D /* CGImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091D92B85D93E001FF11D /* CGImage+RawBytes.swift */; };
+		09E091EB2B85D93E001FF11D /* MLMultiArray+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091DA2B85D93E001FF11D /* MLMultiArray+Image.swift */; };
+		09E091EC2B85D93E001FF11D /* CVPixelBuffer+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091DB2B85D93E001FF11D /* CVPixelBuffer+Resize.swift */; };
+		09E091ED2B85D93E001FF11D /* CVPixelBuffer+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E091DC2B85D93E001FF11D /* CVPixelBuffer+Rotate.swift */; };
 		74979223C0CC5BC3B343E517 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 728D38DCCCFFDCFA9B396010 /* Pods_SwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +94,15 @@
 		091F5B1B2B32EBF80092FD6E /* AnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
 		091F5B1C2B32EBF80092FD6E /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		091F5B1D2B32EBF80092FD6E /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		097841372B8DD0EA00CFEB4F /* ColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButton.swift; sourceTree = "<group>"; };
+		097841472B8F372400CFEB4F /* ImageCropperConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperConfiguration.swift; sourceTree = "<group>"; };
+		097841492B8F372400CFEB4F /* ImageCropperConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperConfigurator.swift; sourceTree = "<group>"; };
+		0978414A2B8F372400CFEB4F /* ImageCropperModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperModel.swift; sourceTree = "<group>"; };
+		0978414B2B8F372400CFEB4F /* ImageCropperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperViewController.swift; sourceTree = "<group>"; };
+		0978414C2B8F372400CFEB4F /* ImageCropperPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperPresenter.swift; sourceTree = "<group>"; };
+		0978414D2B8F372400CFEB4F /* ImageCropper.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCropper.xib; sourceTree = "<group>"; };
+		0978414E2B8F372400CFEB4F /* UIImage+NormalizeOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+NormalizeOrientation.swift"; sourceTree = "<group>"; };
+		0978414F2B8F372400CFEB4F /* ImageCropperRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperRouter.swift; sourceTree = "<group>"; };
 		09B20CBE2B4E263900055509 /* TagsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAnimationViewController.swift; sourceTree = "<group>"; };
 		09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanAnimationViewController.xib; sourceTree = "<group>"; };
@@ -75,6 +115,7 @@
 		09D36B9F2A5D54840096C6EC /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		09D36BA12A5D549B0096C6EC /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		09D36BA32A5D55B40096C6EC /* SwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		09D3DCE12B88887D0076DBAB /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
 		09DAE38F2A5D055E00B77060 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DAE3922A5D055E00B77060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09DAE3942A5D055E00B77060 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +127,27 @@
 		09DAE3A92A5D20F900B77060 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		09DAE3AB2A5D248900B77060 /* AutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutViewController.swift; sourceTree = "<group>"; };
 		09DAE3AC2A5D248900B77060 /* AutoLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoLayoutViewController.xib; sourceTree = "<group>"; };
+		09E091C32B85D84A001FF11D /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = ../../../MyCamera/MyCamera/ImageProcessor.swift; sourceTree = "<group>"; };
+		09E091C52B85D85A001FF11D /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = DeepLabV3.mlmodel; path = ../../../MyCamera/MyCamera/DeepLabV3.mlmodel; sourceTree = "<group>"; };
+		09E091C72B85D895001FF11D /* ImageProcessorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessorViewController.swift; sourceTree = "<group>"; };
+		09E091C82B85D895001FF11D /* ImageProcessorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageProcessorViewController.xib; sourceTree = "<group>"; };
+		09E091CC2B85D93E001FF11D /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		09E091CD2B85D93E001FF11D /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		09E091CE2B85D93E001FF11D /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		09E091CF2B85D93E001FF11D /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
+		09E091D02B85D93E001FF11D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		09E091D12B85D93E001FF11D /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		09E091D22B85D93E001FF11D /* UIImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+RawBytes.swift"; sourceTree = "<group>"; };
+		09E091D32B85D93E001FF11D /* MLMultiArray+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Helpers.swift"; sourceTree = "<group>"; };
+		09E091D42B85D93E001FF11D /* MLModel+Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLModel+Images.swift"; sourceTree = "<group>"; };
+		09E091D52B85D93E001FF11D /* CoreML+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreML+Combine.swift"; sourceTree = "<group>"; };
+		09E091D62B85D93E001FF11D /* CVPixelBuffer+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Create.swift"; sourceTree = "<group>"; };
+		09E091D72B85D93E001FF11D /* CGImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		09E091D82B85D93E001FF11D /* NonMaxSuppression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonMaxSuppression.swift; sourceTree = "<group>"; };
+		09E091D92B85D93E001FF11D /* CGImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+RawBytes.swift"; sourceTree = "<group>"; };
+		09E091DA2B85D93E001FF11D /* MLMultiArray+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Image.swift"; sourceTree = "<group>"; };
+		09E091DB2B85D93E001FF11D /* CVPixelBuffer+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Resize.swift"; sourceTree = "<group>"; };
+		09E091DC2B85D93E001FF11D /* CVPixelBuffer+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Rotate.swift"; sourceTree = "<group>"; };
 		116B8783A79B503D024E6D6F /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		728D38DCCCFFDCFA9B396010 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F905FCF97CB3066E3B05FB49 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +220,29 @@
 			path = Queue;
 			sourceTree = "<group>";
 		};
+		097841452B8F372400CFEB4F /* ImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				097841462B8F372400CFEB4F /* Classes */,
+			);
+			path = ImageCropper;
+			sourceTree = "<group>";
+		};
+		097841462B8F372400CFEB4F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				097841472B8F372400CFEB4F /* ImageCropperConfiguration.swift */,
+				097841492B8F372400CFEB4F /* ImageCropperConfigurator.swift */,
+				0978414A2B8F372400CFEB4F /* ImageCropperModel.swift */,
+				0978414B2B8F372400CFEB4F /* ImageCropperViewController.swift */,
+				0978414C2B8F372400CFEB4F /* ImageCropperPresenter.swift */,
+				0978414D2B8F372400CFEB4F /* ImageCropper.xib */,
+				0978414E2B8F372400CFEB4F /* UIImage+NormalizeOrientation.swift */,
+				0978414F2B8F372400CFEB4F /* ImageCropperRouter.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		09B485AA2A9F1568008E08DD /* ScanAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +296,7 @@
 		09DAE3912A5D055E00B77060 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				09E091C22B85D827001FF11D /* ImageProcessor */,
 				091CE2802B47A60500204E23 /* Tags */,
 				091F5B0C2B32EBF80092FD6E /* Toast */,
 				09B485AA2A9F1568008E08DD /* ScanAnimation */,
@@ -228,6 +314,46 @@
 				09D36B9A2A5D50EF0096C6EC /* CollectionView */,
 			);
 			path = SwiftDemo;
+			sourceTree = "<group>";
+		};
+		09E091C22B85D827001FF11D /* ImageProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				097841452B8F372400CFEB4F /* ImageCropper */,
+				09E091CB2B85D93E001FF11D /* CoreMLHelpers */,
+				09E091C52B85D85A001FF11D /* DeepLabV3.mlmodel */,
+				09E091C32B85D84A001FF11D /* ImageProcessor.swift */,
+				09E091C72B85D895001FF11D /* ImageProcessorViewController.swift */,
+				09E091C82B85D895001FF11D /* ImageProcessorViewController.xib */,
+				09D3DCE12B88887D0076DBAB /* ColorSelector.swift */,
+				097841372B8DD0EA00CFEB4F /* ColorButton.swift */,
+			);
+			path = ImageProcessor;
+			sourceTree = "<group>";
+		};
+		09E091CB2B85D93E001FF11D /* CoreMLHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				09E091CC2B85D93E001FF11D /* Array+Extensions.swift */,
+				09E091CD2B85D93E001FF11D /* Math.swift */,
+				09E091CE2B85D93E001FF11D /* UIImage+CVPixelBuffer.swift */,
+				09E091CF2B85D93E001FF11D /* Predictions.swift */,
+				09E091D02B85D93E001FF11D /* UIImage+Extensions.swift */,
+				09E091D12B85D93E001FF11D /* CGImagePropertyOrientation.swift */,
+				09E091D22B85D93E001FF11D /* UIImage+RawBytes.swift */,
+				09E091D32B85D93E001FF11D /* MLMultiArray+Helpers.swift */,
+				09E091D42B85D93E001FF11D /* MLModel+Images.swift */,
+				09E091D52B85D93E001FF11D /* CoreML+Combine.swift */,
+				09E091D62B85D93E001FF11D /* CVPixelBuffer+Create.swift */,
+				09E091D72B85D93E001FF11D /* CGImage+CVPixelBuffer.swift */,
+				09E091D82B85D93E001FF11D /* NonMaxSuppression.swift */,
+				09E091D92B85D93E001FF11D /* CGImage+RawBytes.swift */,
+				09E091DA2B85D93E001FF11D /* MLMultiArray+Image.swift */,
+				09E091DB2B85D93E001FF11D /* CVPixelBuffer+Resize.swift */,
+				09E091DC2B85D93E001FF11D /* CVPixelBuffer+Rotate.swift */,
+			);
+			name = CoreMLHelpers;
+			path = ../../../MyCamera/MyCamera/CoreMLHelpers;
 			sourceTree = "<group>";
 		};
 		43BB109DDC3DA6C848C26E18 /* Frameworks */ = {
@@ -310,12 +436,14 @@
 			files = (
 				09B485AE2A9F15CC008E08DD /* ScanAnimationViewController.xib in Resources */,
 				091CE27E2B47A5ED00204E23 /* TagViewController.xib in Resources */,
+				09E091CA2B85D895001FF11D /* ImageProcessorViewController.xib in Resources */,
 				09DAE3A22A5D055F00B77060 /* LaunchScreen.storyboard in Resources */,
 				09D36B982A5D42CB0096C6EC /* CollectionViewController.xib in Resources */,
 				09D36B9E2A5D51260096C6EC /* CollectionViewCell.xib in Resources */,
 				09DAE39F2A5D055F00B77060 /* Assets.xcassets in Resources */,
 				09DAE39A2A5D055E00B77060 /* Main.storyboard in Resources */,
 				09DAE3AE2A5D248900B77060 /* AutoLayoutViewController.xib in Resources */,
+				097841582B8F372400CFEB4F /* ImageCropper.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,30 +496,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E091E22B85D93E001FF11D /* CGImagePropertyOrientation.swift in Sources */,
 				091F5B262B32EBF80092FD6E /* ToastViewConfiguration.swift in Sources */,
 				091F5B232B32EBF80092FD6E /* TextAppleToastView.swift in Sources */,
+				09E091DE2B85D93E001FF11D /* Math.swift in Sources */,
 				091F5B212B32EBF80092FD6E /* ToastView.swift in Sources */,
+				09E091EA2B85D93E001FF11D /* CGImage+RawBytes.swift in Sources */,
+				097841592B8F372400CFEB4F /* UIImage+NormalizeOrientation.swift in Sources */,
+				09E091C92B85D895001FF11D /* ImageProcessorViewController.swift in Sources */,
+				09E091C62B85D85A001FF11D /* DeepLabV3.mlmodel in Sources */,
 				091F5B1F2B32EBF80092FD6E /* ToastDelegate.swift in Sources */,
 				09B485AD2A9F15CC008E08DD /* ScanAnimationViewController.swift in Sources */,
 				091F5B202B32EBF80092FD6E /* MulticastDelegate.swift in Sources */,
+				09E091E52B85D93E001FF11D /* MLModel+Images.swift in Sources */,
 				09D36B972A5D42CB0096C6EC /* CollectionViewController.swift in Sources */,
 				09DAE3AA2A5D20F900B77060 /* HomeTableViewController.swift in Sources */,
+				09E091EC2B85D93E001FF11D /* CVPixelBuffer+Resize.swift in Sources */,
+				09D3DCE22B88887D0076DBAB /* ColorSelector.swift in Sources */,
+				09E091EB2B85D93E001FF11D /* MLMultiArray+Image.swift in Sources */,
+				097841382B8DD0EA00CFEB4F /* ColorButton.swift in Sources */,
+				097841542B8F372400CFEB4F /* ImageCropperConfigurator.swift in Sources */,
 				091F5B292B32EBF80092FD6E /* AnimationType.swift in Sources */,
+				09E091DD2B85D93E001FF11D /* Array+Extensions.swift in Sources */,
 				091F5B272B32EBF80092FD6E /* ToastQueueDelegate.swift in Sources */,
 				091F5B252B32EBF80092FD6E /* ToastHelper.swift in Sources */,
+				097841552B8F372400CFEB4F /* ImageCropperModel.swift in Sources */,
+				0978415A2B8F372400CFEB4F /* ImageCropperRouter.swift in Sources */,
+				09E091ED2B85D93E001FF11D /* CVPixelBuffer+Rotate.swift in Sources */,
+				09E091E42B85D93E001FF11D /* MLMultiArray+Helpers.swift in Sources */,
+				09E091E12B85D93E001FF11D /* UIImage+Extensions.swift in Sources */,
+				097841572B8F372400CFEB4F /* ImageCropperPresenter.swift in Sources */,
 				09DAE39D2A5D055E00B77060 /* SwiftDemo.xcdatamodeld in Sources */,
 				09B485B02A9F1630008E08DD /* FaceScanAnimationView.swift in Sources */,
 				091F5B242B32EBF80092FD6E /* IconAppleToastView.swift in Sources */,
 				09D36B9D2A5D51260096C6EC /* CollectionViewCell.swift in Sources */,
+				097841522B8F372400CFEB4F /* ImageCropperConfiguration.swift in Sources */,
 				091CE27D2B47A5ED00204E23 /* TagViewController.swift in Sources */,
 				091F5B222B32EBF80092FD6E /* AppleToastView.swift in Sources */,
 				091F5B1E2B32EBF80092FD6E /* ToastConfiguration.swift in Sources */,
+				09E091E92B85D93E001FF11D /* NonMaxSuppression.swift in Sources */,
+				09E091E82B85D93E001FF11D /* CGImage+CVPixelBuffer.swift in Sources */,
 				09DAE3932A5D055E00B77060 /* AppDelegate.swift in Sources */,
+				09E091E72B85D93E001FF11D /* CVPixelBuffer+Create.swift in Sources */,
+				09E091C42B85D84A001FF11D /* ImageProcessor.swift in Sources */,
 				09D36BA02A5D54840096C6EC /* HttpRequest.swift in Sources */,
+				09E091DF2B85D93E001FF11D /* UIImage+CVPixelBuffer.swift in Sources */,
 				091F5B282B32EBF80092FD6E /* ToastQueue.swift in Sources */,
 				09D36BA22A5D549B0096C6EC /* Tool.swift in Sources */,
+				097841562B8F372400CFEB4F /* ImageCropperViewController.swift in Sources */,
 				09B485B22A9F1C24008E08DD /* ScanningLineView.swift in Sources */,
 				09B20CBF2B4E263900055509 /* TagsView.swift in Sources */,
+				09E091E32B85D93E001FF11D /* UIImage+RawBytes.swift in Sources */,
+				09E091E02B85D93E001FF11D /* Predictions.swift in Sources */,
+				09E091E62B85D93E001FF11D /* CoreML+Combine.swift in Sources */,
 				091F5B2A2B32EBF80092FD6E /* Toast.swift in Sources */,
 				09DAE3952A5D055E00B77060 /* SceneDelegate.swift in Sources */,
 				09DAE3AD2A5D248900B77060 /* AutoLayoutViewController.swift in Sources */,
@@ -544,7 +701,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2699D9JM3T;
+				DEVELOPMENT_TEAM = 7S69FZM933;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -552,7 +709,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -577,7 +734,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2699D9JM3T;
+				DEVELOPMENT_TEAM = 7S69FZM933;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -585,7 +742,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
