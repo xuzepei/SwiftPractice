@@ -49,6 +49,7 @@ enum ToastType: Int {
     //key
     static let updating_photo_key = "updating_photo_data"
     static let notification_filter_key = "notification_filter"
+
     
     //color
     static let textHighlightColor = UIColor(red: 0.34, green: 0.366, blue: 0.983, alpha: 1)
@@ -62,9 +63,22 @@ enum ToastType: Int {
 
     static let documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
     
+    
+    static let defaultDPI:Double = 72.0
+    static let photoDPI:Double = 300.0
+    //一寸照295*413px, 300DPI, 25*35mm
+    //四寸照898*1181px, 300DPI, 76*100mm
+    static let photo1Inches = Photo(pixelSize: CGSizeMake(295.0, 413.0), physicalSize: CGSizeMake(25, 35))
+    static let photo4Inches = Photo(pixelSize: CGSizeMake(898.0, 1181.0), physicalSize: CGSizeMake(76, 100))
+    
     var hud: MBProgressHUD? = nil
     var audioPlayer: AVAudioPlayer? = nil
     var completeBlock: (()->Void)? = nil
+    
+    class func millimetersToInches(_ millimeters: Double) -> Double {
+        let inches = millimeters * 0.03937
+        return inches
+    }
     
     class func md5(_ sourceString:String?) -> String {
         
@@ -966,6 +980,12 @@ extension UIImage {
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return newImage!
+    }
+    
+    func resize(targetSize: CGSize) -> UIImage {
+        return UIGraphicsImageRenderer(size:targetSize).image { _ in
+            self.draw(in: CGRect(origin: .zero, size: targetSize))
+        }
     }
     
 //    func rotate(radians: Double) -> UIImage? {

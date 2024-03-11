@@ -142,15 +142,89 @@ class HomeTableViewController: UITableViewController {
                 guard let _img = _croppedImage else {
                     return
                 }
-
-                Tool.saveImageToPhotoLibrary(image: _img, rootVC: self)
+                
+                if let image = self.resizeImageByDPI(image: _img, target: Tool.photo4Inches)
+                {
+                    Tool.saveImageToPhotoLibrary(image: image, rootVC: self)
+                }
+                
             })
             vc.title = getItemByIndex(indexPath: indexPath)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
+    func getDefaultDPI(for image: UIImage) -> CGFloat {
+        // 获取图像的尺寸（以点为单位）
+        let sizeInPoints = image.size
+        
+        // 获取图像的缩放比例（通常为1.0或2.0）
+        let scale = image.scale
+        
+        // 计算图像的尺寸（以像素为单位）
+        let widthInPixels = sizeInPoints.width * scale
+        let heightInPixels = sizeInPoints.height * scale
+        
+        // 计算图像的默认 DPI
+        let defaultDPI: CGFloat = 72.0 // iOS 设备的标准 DPI
+        
+        return max(widthInPixels, heightInPixels) / max(sizeInPoints.width, sizeInPoints.height) * defaultDPI
+    }
+    
+    func resizeImageByDPI(image: UIImage, target: Photo) -> UIImage? {
+        let newSize = target.physicalSize
+        
+        let rect = CGRect(origin: .zero, size: CGSize(width: newSize.width * target.millimetersToInches * Tool.defaultDPI, height: newSize.height * target.millimetersToInches * Tool.defaultDPI))
 
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, Tool.photoDPI/Tool.defaultDPI)
+        defer { UIGraphicsEndImageContext() }
+
+        image.draw(in: rect)
+
+        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
+            return nil
+        }
+
+        return newImage
+    }
+
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
+        let newSize = targetSize
+        let rect = CGRect(origin: .zero, size: newSize)
+
+        UIGraphicsBeginImageContextWithOptions(targetSize, true, image.scale)
+        defer { UIGraphicsEndImageContext() }
+
+        image.draw(in: rect)
+
+        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
+            return nil
+        }
+
+        return newImage
+    }
+    
+    func resizeImage2(image: UIImage, targetSize: CGSize) -> UIImage? {
+        let newSize = targetSize
+        
+        // Define the physical size of the image in inches
+        let imageSizeInInches = CGSize(width: Tool.millimetersToInches(newSize.width), height: Tool.millimetersToInches(newSize.height))
+        
+        // Calculate the image size in points (1 point = 1/72 inch)
+        let imageSizeInPoints = CGSize(width: imageSizeInInches.width * 300.0, height: imageSizeInInches.height * 300.0)
+
+        // Create a graphics context with the specified size and resolution (DPI)
+        UIGraphicsBeginImageContextWithOptions(imageSizeInPoints, false, 1.0)
+        defer { UIGraphicsEndImageContext() }
+
+        image.draw(in: CGRect(origin: .zero, size: imageSizeInPoints))
+
+        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
+            return nil
+        }
+
+        return newImage
+    }
 
     /*
     // MARK: - Navigation

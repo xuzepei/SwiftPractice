@@ -37,6 +37,11 @@ public class ImageCropperViewController: UIViewController {
   
   @IBOutlet fileprivate weak var activityView: UIView!
   @IBOutlet fileprivate weak var activity: UIActivityIndicatorView!
+    
+    
+  @IBOutlet fileprivate weak var testSizeView: UIView!
+  @IBOutlet weak var testSizeViewConstraintWidth: NSLayoutConstraint!
+  @IBOutlet weak var testSizeViewConstraintHeight: NSLayoutConstraint!
   
   var presenter: ImageCropperPresenter?
 
@@ -47,7 +52,35 @@ public class ImageCropperViewController: UIViewController {
   override public func viewDidLoad() {
     super.viewDidLoad()
     presenter?.viewDidLoad()
+      
+      
+      self.testSizeView.backgroundColor = .red
+      
+      //一寸照295*413px, 300DPI, 25*35mm
+      //四寸照898*1181px, 300DPI, 76*100mm
+      let frameSizeInPoints = getDisplaySizeByPhysicalSize(size: CGSize(width: 25, height: 35))
+      self.testSizeViewConstraintWidth.constant = frameSizeInPoints.width
+      self.testSizeViewConstraintHeight.constant = frameSizeInPoints.height
+      
+      NSLog("####frameSizeInPoints: \(frameSizeInPoints)")
+      self.view.layoutIfNeeded()
+      
+      self.testSizeView.isHidden = true
   }
+    
+    
+    func getDisplaySizeByPhysicalSize(size: CGSize) -> CGSize {
+        
+        // Define the physical size of the frame in inches
+        let frameSizeInInches = CGSize(width: Tool.millimetersToInches(size.width), height: Tool.millimetersToInches(size.height))
+        
+        // Calculate the frame size in points (1 point = 1/72 inch)
+        let frameSizeInPoints = CGSize(width: frameSizeInInches.width * UIScreen.main.scale * 72.0,
+                                        height: frameSizeInInches.height * UIScreen.main.scale * 72.0)
+        
+        
+        return frameSizeInPoints
+    }
   
   override public func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()

@@ -32,6 +32,7 @@
 		097841582B8F372400CFEB4F /* ImageCropper.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0978414D2B8F372400CFEB4F /* ImageCropper.xib */; };
 		097841592B8F372400CFEB4F /* UIImage+NormalizeOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978414E2B8F372400CFEB4F /* UIImage+NormalizeOrientation.swift */; };
 		0978415A2B8F372400CFEB4F /* ImageCropperRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978414F2B8F372400CFEB4F /* ImageCropperRouter.swift */; };
+		097841612B91C26300CFEB4F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097841602B91C26300CFEB4F /* Photo.swift */; };
 		09B20CBF2B4E263900055509 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B20CBE2B4E263900055509 /* TagsView.swift */; };
 		09B485AD2A9F15CC008E08DD /* ScanAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */; };
 		09B485AE2A9F15CC008E08DD /* ScanAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */; };
@@ -103,6 +104,7 @@
 		0978414D2B8F372400CFEB4F /* ImageCropper.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCropper.xib; sourceTree = "<group>"; };
 		0978414E2B8F372400CFEB4F /* UIImage+NormalizeOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+NormalizeOrientation.swift"; sourceTree = "<group>"; };
 		0978414F2B8F372400CFEB4F /* ImageCropperRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperRouter.swift; sourceTree = "<group>"; };
+		097841602B91C26300CFEB4F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		09B20CBE2B4E263900055509 /* TagsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAnimationViewController.swift; sourceTree = "<group>"; };
 		09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanAnimationViewController.xib; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				091F5B0C2B32EBF80092FD6E /* Toast */,
 				09B485AA2A9F1568008E08DD /* ScanAnimation */,
 				09D36BA12A5D549B0096C6EC /* Tool.swift */,
+				097841602B91C26300CFEB4F /* Photo.swift */,
 				09D36B9F2A5D54840096C6EC /* HttpRequest.swift */,
 				09DAE3922A5D055E00B77060 /* AppDelegate.swift */,
 				09DAE3942A5D055E00B77060 /* SceneDelegate.swift */,
@@ -524,6 +527,7 @@
 				0978415A2B8F372400CFEB4F /* ImageCropperRouter.swift in Sources */,
 				09E091ED2B85D93E001FF11D /* CVPixelBuffer+Rotate.swift in Sources */,
 				09E091E42B85D93E001FF11D /* MLMultiArray+Helpers.swift in Sources */,
+				097841612B91C26300CFEB4F /* Photo.swift in Sources */,
 				09E091E12B85D93E001FF11D /* UIImage+Extensions.swift in Sources */,
 				097841572B8F372400CFEB4F /* ImageCropperPresenter.swift in Sources */,
 				09DAE39D2A5D055E00B77060 /* SwiftDemo.xcdatamodeld in Sources */,
