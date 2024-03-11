@@ -20,6 +20,9 @@ class ImageCropView: UIView {
     var imageFrame = CGRect.zero //图片的Rect
     var figureFrame = CGRect.zero //剪切框的Rect
     
+    
+    var panLastLocation: CGPoint?
+    
     var bgView: UIView!
     var completionBlock: ((Bool)->Void)? = nil
     
@@ -37,15 +40,19 @@ class ImageCropView: UIView {
     func updateContent(originalImage: UIImage, targetPhoto: Photo) {
         localize()
         
+        self.backgroundColor = .blue
+        
         self.originalImage = originalImage
         self.targetPhoto = targetPhoto
         var size = self.targetPhoto.pixelSize
-        if size.width > 400 {
-            size = CGSize(width: size.width * 0.25, height: size.height * 0.25)
+        while size.width > self.width() - 40 || size.height > self.height() - 40 {
+            size = CGSize(width: size.width * 0.9, height: size.height * 0.9)
         }
         
         let figureSize = CGSize(width: size.width, height: size.height)
         figureFrame = CGRect(x: (self.bounds.width - figureSize.width) / 2, y: (self.bounds.height - figureSize.height) / 2, width: figureSize.width, height: figureSize.height)
+        
+        NSLog("figureFrame: \(figureFrame)")
       
         
         imageFrame = imageInitialFrame
@@ -53,7 +60,7 @@ class ImageCropView: UIView {
         self.imageView.image = self.originalImage
         self.imageView.frame = imageFrame
         
-        self.drawMask(by: self.maskPath, with: UIColor.red.withAlphaComponent(0.3))
+        self.drawMask()
         self.drawBorber()
 //        self.drawGrid(with: model.grid, with: model.gridColor)
         
@@ -80,28 +87,25 @@ class ImageCropView: UIView {
         return CGRect(x: (self.bounds.width - size.width) / 2, y: (self.bounds.height - size.height) / 2, width: size.width, height: size.height)
     }
     
-    func drawMask(by path: CGPath, with fillColor: UIColor) {
+    func drawMask() {
         
-    var holePath: CGPath {
-      var border: CGPath {
-        return UIBezierPath(roundedRect: self.figureFrame, cornerRadius: 1.0).cgPath
-      }
-      let hole = UIBezierPath(cgPath: border)
-      let path = UIBezierPath(roundedRect: self.bounds, cornerRadius: 0)
-      path.append(hole)
-      return path.cgPath
-    }
+        var holePath: CGPath {
+            var border: CGPath {
+                return UIBezierPath(roundedRect: self.figureFrame, cornerRadius: 1.0).cgPath
+            }
+            let hole = UIBezierPath(cgPath: border)
+            let path = UIBezierPath(roundedRect: self.bounds, cornerRadius: 0)
+            path.append(hole)
+            return path.cgPath
+        }
         
-      let hole = CAShapeLayer()
-      hole.frame = self.imageMaskView.bounds
-      hole.path = path
-      hole.fillRule = CAShapeLayerFillRule.evenOdd
-      self.imageMaskView.layer.mask = hole
-      self.imageMaskView.backgroundColor = fillColor
+        let hole = CAShapeLayer()
+        hole.frame = self.imageMaskView.bounds
+        hole.path = holePath
+        hole.fillRule = CAShapeLayerFillRule.evenOdd
+        self.imageMaskView.layer.mask = hole
+        self.imageMaskView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
     }
-    
-
-    
     
     func drawBorber() {
       let path = UIBezierPath(roundedRect: self.figureFrame, cornerRadius: 1.0).cgPath
@@ -120,19 +124,93 @@ class ImageCropView: UIView {
 //        self.okButton.setTitle(LS("Update Now"), for: .normal)
     }
     
-    func didDrag(to location: CGPoint) {
-      //view?.setImageFrame(model.draggingFrame(for: location))
-        NSLog("didDrag")
+    func draggingFrame(for point: CGPoint) -> CGRect {
+      let previousLocation = panLastLocation ?? point
+      let difference = CGPoint(x: point.x - previousLocation.x, y: point.y - previousLocation.y)
+      
+      let borders = figureFrame
+      
+      let x = imageFrame.origin.x + difference.x
+      let newX = x < borders.origin.x && x + imageFrame.width > borders.maxX ? x : imageFrame.origin.x
+      
+      let y = imageFrame.origin.y + difference.y
+      let newY = y < borders.origin.y && y + imageFrame.height > borders.maxY ? y : imageFrame.origin.y
+      
+      imageFrame = CGRect(origin: CGPoint(x: newX, y: newY), size: imageFrame.size)
+      panLastLocation = point
+      return imageFrame
     }
     
-    func didPinchStarted() {
-      //model.setStartedPinch()
-        NSLog("didPinchStarted")
+    func didDrag(to location: CGPoint) {
+      NSLog("didDrag")
+      self.imageView.frame = self.draggingFrame(for: location)
+    }
+    
+//    func didPinchStarted() {
+//      //model.setStartedPinch()
+//        NSLog("didPinchStarted")
+//    }
+    
+    func scalingFrame(for scale: CGFloat) -> CGRect {
+        
+        let borders = figureFrame
+        let pinchStartSize = CGSize(width: imageFrame.width, height: imageFrame.height)
+        var newSize = CGSize(width: pinchStartSize.width * scale, height: pinchStartSize.height * scale)
+        
+        if newSize.width < borders.width || newSize.height < borders.height {
+            newSize = imageView.image!.size.scale(to: borders.size)
+        }
+        var newX = imageFrame.origin.x - (newSize.width - imageFrame.width) / 2
+        var newY = imageFrame.origin.y - (newSize.height - imageFrame.height) / 2
+        
+        if newX + newSize.width <= borders.maxX {
+            newX = borders.maxX - newSize.width
+        }
+        else if newX >= borders.origin.x {
+            newX = borders.origin.x
+        }
+        
+        if newY + newSize.height <= borders.maxY {
+            newY = borders.maxY - newSize.height
+        }
+        else if newY >= borders.origin.y {
+            newY = borders.origin.y
+        }
+        
+        if newSize.width / imageView.image!.size.width < 2 || newSize.height / imageView.image!.size.height < 2  {
+            
+            let newImageFrame = CGRect(origin: CGPoint(x: newX, y: newY), size: newSize)
+            NSLog("newImageFrame: \(newImageFrame)")
+            if newImageFrame.size.width <= figureFrame.size.width * 3 && newImageFrame.size.height <= figureFrame.size.height  * 3 {
+                imageFrame = CGRect(origin: CGPoint(x: newX, y: newY), size: newSize)
+            }
+        }
+        
+        return imageFrame
     }
     
     func didScale(with scale: CGFloat) {
-      //view?.setImageFrame(model.scalingFrame(for: scale))
-        NSLog("didScale")
+        
+        self.imageView.frame = self.scalingFrame(for: scale)
+    }
+    
+    func centerFrame() -> CGRect {
+      if imageInitialFrame.center != imageFrame.center {
+        imageFrame.center = imageInitialFrame.center
+      }
+      else {
+        imageFrame = imageInitialFrame
+      }
+      
+      return imageFrame
+    }
+    
+    func didDoubleTap() {
+        NSLog("didDoubleTap")
+        
+        UIView.animate(withDuration: 0.2) {
+            self.imageView.frame = self.centerFrame()
+        }
     }
     
     @IBAction func actionPan(_ sender: UIPanGestureRecognizer) {
@@ -155,7 +233,8 @@ class ImageCropView: UIView {
       case .began:
         guard sender.numberOfTouches >= 2 else { return }
         //presenter?.userInteraction(true)
-        self.didPinchStarted()
+        //self.didPinchStarted()
+        break
       case .changed:
         guard sender.numberOfTouches >= 2 else { return }
         self.didScale(with: sender.scale)
@@ -168,7 +247,9 @@ class ImageCropView: UIView {
     }
     
     @IBAction func actionDoubleTap(_ sender: UITapGestureRecognizer) {
-      //presenter?.centerImage()
+        
+        didDoubleTap()
+
     }
     
     

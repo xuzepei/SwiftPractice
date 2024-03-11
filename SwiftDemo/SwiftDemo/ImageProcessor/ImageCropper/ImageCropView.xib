@@ -14,15 +14,15 @@
             <rect key="frame" x="0.0" y="0.0" width="588" height="388"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" id="lBo-YM-3kI">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="lBo-YM-3kI">
                     <rect key="frame" x="153" y="88" width="282" height="211"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vty-pl-dpp" userLabel="Mask">
                     <rect key="frame" x="0.0" y="0.0" width="588" height="388"/>
-                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.1960323829" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dry-Iq-bqx" userLabel="gridView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dry-Iq-bqx" userLabel="GridView">
                     <rect key="frame" x="0.0" y="0.0" width="588" height="388"/>
                     <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                     <gestureRecognizers/>
@@ -33,7 +33,7 @@
                     </connections>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemTealColor"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="dry-Iq-bqx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0ho-f0-tQX"/>
                 <constraint firstAttribute="bottom" secondItem="dry-Iq-bqx" secondAttribute="bottom" id="AfE-gX-gdR"/>
@@ -69,10 +69,6 @@
         </panGestureRecognizer>
     </objects>
     <resources>
-        <image name="info" width="21.333333969116211" height="21.333333969116211"/>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

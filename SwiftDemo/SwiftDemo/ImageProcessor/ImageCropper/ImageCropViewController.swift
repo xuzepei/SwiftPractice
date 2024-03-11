@@ -10,39 +10,51 @@ import UIKit
 class ImageCropViewController: UIViewController {
     
     var imageCropView: ImageCropView!
+    var targetPhoto: Photo!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.setup()
     }
     
     func setup() {
-        initImageCropView()
-        updateContent()
+        
+        updateContent(targetPhoto: Tool.photo4Inches)
     }
     
     func initImageCropView() {
         
         self.imageCropView = UINib(nibName: "ImageCropView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? ImageCropView
         self.imageCropView.translatesAutoresizingMaskIntoConstraints = false
-        self.imageCropView.backgroundColor = .blue
         self.view.addSubview(self.imageCropView)
         
+//        var cropViewWdith: CGFloat = 300
+//        var cropViewHeight: CGFloat = 300
+//        
+//        var size = self.targetPhoto.pixelSize
+//        cropViewHeight = cropViewWdith / size.width * size.height
+//        
+//        NSLog("cropViewHeight: \(cropViewHeight)")
+        
         NSLayoutConstraint.activate([
-            self.imageCropView.widthAnchor.constraint(equalToConstant: 360),
-            self.imageCropView.heightAnchor.constraint(equalToConstant: 600),
+            self.imageCropView.widthAnchor.constraint(equalToConstant: 280),
+            self.imageCropView.heightAnchor.constraint(equalToConstant: 320),
             self.imageCropView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.imageCropView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            self.imageCropView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100)
         ])
         
         self.view.layoutIfNeeded()
     }
     
-    func updateContent() {
+    func updateContent(targetPhoto: Photo) {
         
-        self.imageCropView.updateContent(originalImage: UIImage(named: "photo")!, targetPhoto: Tool.photo1Inches)
+        self.targetPhoto = targetPhoto
+        
+        initImageCropView()
+        
+        self.imageCropView.updateContent(originalImage: UIImage(named: "photo")!, targetPhoto: self.targetPhoto)
     }
 
 
