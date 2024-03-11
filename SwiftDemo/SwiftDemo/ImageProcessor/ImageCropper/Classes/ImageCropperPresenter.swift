@@ -51,6 +51,7 @@ protocol ImageCropperRouter {
 protocol ImageCropperModel {
   var image: UIImage { get }
   var parentFrame: CGRect { set get }
+  var currentFrame: CGRect { set get }
   var imageInitialFrame: CGRect { get }
   
   var mask: CGPath { get }
@@ -103,6 +104,10 @@ extension ImageCropperPresenterImplementation: ImageCropperPresenter {
 
   func viewDidLoad() {
     view?.set(model.image)
+      
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+          self.view?.setImageFrame(self.model.imageInitialFrame)
+      })
   }
   
   func viewDidLayoutSubviews(in frame: CGRect) {
@@ -110,8 +115,10 @@ extension ImageCropperPresenterImplementation: ImageCropperPresenter {
     view?.clearBorderAndGrid()
     
     model.parentFrame = frame
+    NSLog("####parentFrame: \(model.parentFrame)")
+    //model.currentFrame = model.imageInitialFrame
     
-    view?.setImageFrame(model.imageInitialFrame)
+      
     view?.drawMask(by: model.mask, with: model.fillColor)
     view?.drawBorber(by: model.border, with: model.borderColor)
     view?.drawGrid(with: model.grid, with: model.gridColor)

@@ -19,6 +19,8 @@ class ImageCropperModelImplementation  {
   fileprivate var gridSize:CGFloat?
   
   fileprivate var cornerRadius = CGFloat(0)
+    
+  var currentFrame = CGRect.zero
   
   
   init(with configuration: ImageCropperConfiguration) {
@@ -32,6 +34,16 @@ extension ImageCropperModelImplementation: ImageCropperModel {
   var image: UIImage {
     return configuration.image
   }
+    
+    var _currentFrame: CGRect {
+      get {
+        return currentFrame
+      }
+        
+      set {
+          currentFrame = newValue
+      }
+    }
   
   var parentFrame: CGRect {
     get {
@@ -53,7 +65,10 @@ extension ImageCropperModelImplementation: ImageCropperModel {
       figureFrame = CGRect(x: (newValue.width - figureSize.width) / 2, y: (newValue.height - figureSize.height) / 2, width: figureSize.width, height: figureSize.height)
       cornerRadius =  min(figureSize.width, figureSize.height) / 2 * configuration.cornerRadius
       
-      imageFrame = imageInitialFrame
+        if imageFrame == CGRect.zero {
+            imageFrame = imageInitialFrame
+        }
+      
     }
   }
   
@@ -75,11 +90,13 @@ extension ImageCropperModelImplementation: ImageCropperModel {
   }
   
   var fillColor: UIColor {
-    if #available(iOS 10.0, *) {
-      return configuration.maskFillColor ?? UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.5)
-    } else {
-      return configuration.maskFillColor ?? UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
-    }
+//    if #available(iOS 10.0, *) {
+//      return configuration.maskFillColor ?? UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.5)
+//    } else {
+//      return configuration.maskFillColor ?? UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
+//    }
+      
+      return UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.5)
   }
   
   var border: CGPath {

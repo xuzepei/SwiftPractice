@@ -33,6 +33,10 @@
 		097841592B8F372400CFEB4F /* UIImage+NormalizeOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978414E2B8F372400CFEB4F /* UIImage+NormalizeOrientation.swift */; };
 		0978415A2B8F372400CFEB4F /* ImageCropperRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978414F2B8F372400CFEB4F /* ImageCropperRouter.swift */; };
 		097841612B91C26300CFEB4F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097841602B91C26300CFEB4F /* Photo.swift */; };
+		098CDD6B2B9ED6B10051408B /* ImageCropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098CDD692B9ED6B10051408B /* ImageCropView.xib */; };
+		098CDD6C2B9ED6B10051408B /* ImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098CDD6A2B9ED6B10051408B /* ImageCropView.swift */; };
+		098CDD6F2B9ED71F0051408B /* ImageCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098CDD6D2B9ED71F0051408B /* ImageCropViewController.swift */; };
+		098CDD702B9ED71F0051408B /* ImageCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098CDD6E2B9ED71F0051408B /* ImageCropViewController.xib */; };
 		09B20CBF2B4E263900055509 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B20CBE2B4E263900055509 /* TagsView.swift */; };
 		09B485AD2A9F15CC008E08DD /* ScanAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */; };
 		09B485AE2A9F15CC008E08DD /* ScanAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */; };
@@ -105,6 +109,10 @@
 		0978414E2B8F372400CFEB4F /* UIImage+NormalizeOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+NormalizeOrientation.swift"; sourceTree = "<group>"; };
 		0978414F2B8F372400CFEB4F /* ImageCropperRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperRouter.swift; sourceTree = "<group>"; };
 		097841602B91C26300CFEB4F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		098CDD692B9ED6B10051408B /* ImageCropView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCropView.xib; sourceTree = "<group>"; };
+		098CDD6A2B9ED6B10051408B /* ImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropView.swift; sourceTree = "<group>"; };
+		098CDD6D2B9ED71F0051408B /* ImageCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropViewController.swift; sourceTree = "<group>"; };
+		098CDD6E2B9ED71F0051408B /* ImageCropViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCropViewController.xib; sourceTree = "<group>"; };
 		09B20CBE2B4E263900055509 /* TagsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAnimationViewController.swift; sourceTree = "<group>"; };
 		09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanAnimationViewController.xib; sourceTree = "<group>"; };
@@ -225,6 +233,10 @@
 		097841452B8F372400CFEB4F /* ImageCropper */ = {
 			isa = PBXGroup;
 			children = (
+				098CDD6D2B9ED71F0051408B /* ImageCropViewController.swift */,
+				098CDD6E2B9ED71F0051408B /* ImageCropViewController.xib */,
+				098CDD6A2B9ED6B10051408B /* ImageCropView.swift */,
+				098CDD692B9ED6B10051408B /* ImageCropView.xib */,
 				097841462B8F372400CFEB4F /* Classes */,
 			);
 			path = ImageCropper;
@@ -439,7 +451,9 @@
 			files = (
 				09B485AE2A9F15CC008E08DD /* ScanAnimationViewController.xib in Resources */,
 				091CE27E2B47A5ED00204E23 /* TagViewController.xib in Resources */,
+				098CDD702B9ED71F0051408B /* ImageCropViewController.xib in Resources */,
 				09E091CA2B85D895001FF11D /* ImageProcessorViewController.xib in Resources */,
+				098CDD6B2B9ED6B10051408B /* ImageCropView.xib in Resources */,
 				09DAE3A22A5D055F00B77060 /* LaunchScreen.storyboard in Resources */,
 				09D36B982A5D42CB0096C6EC /* CollectionViewController.xib in Resources */,
 				09D36B9E2A5D51260096C6EC /* CollectionViewCell.xib in Resources */,
@@ -536,6 +550,7 @@
 				09D36B9D2A5D51260096C6EC /* CollectionViewCell.swift in Sources */,
 				097841522B8F372400CFEB4F /* ImageCropperConfiguration.swift in Sources */,
 				091CE27D2B47A5ED00204E23 /* TagViewController.swift in Sources */,
+				098CDD6C2B9ED6B10051408B /* ImageCropView.swift in Sources */,
 				091F5B222B32EBF80092FD6E /* AppleToastView.swift in Sources */,
 				091F5B1E2B32EBF80092FD6E /* ToastConfiguration.swift in Sources */,
 				09E091E92B85D93E001FF11D /* NonMaxSuppression.swift in Sources */,
@@ -552,6 +567,7 @@
 				09B20CBF2B4E263900055509 /* TagsView.swift in Sources */,
 				09E091E32B85D93E001FF11D /* UIImage+RawBytes.swift in Sources */,
 				09E091E02B85D93E001FF11D /* Predictions.swift in Sources */,
+				098CDD6F2B9ED71F0051408B /* ImageCropViewController.swift in Sources */,
 				09E091E62B85D93E001FF11D /* CoreML+Combine.swift in Sources */,
 				091F5B2A2B32EBF80092FD6E /* Toast.swift in Sources */,
 				09DAE3952A5D055E00B77060 /* SceneDelegate.swift in Sources */,

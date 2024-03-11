@@ -23,7 +23,7 @@ class HomeTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper"])
+        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper","ImageCropView"])
     }
 
     // MARK: - Table view data source
@@ -143,12 +143,16 @@ class HomeTableViewController: UITableViewController {
                     return
                 }
                 
-                if let image = self.resizeImageByDPI(image: _img, target: Tool.photo4Inches)
+                if let image = self.resizeImageByDPI(image: _img, target: Tool.photo1Inches)
                 {
                     Tool.saveImageToPhotoLibrary(image: image, rootVC: self)
                 }
                 
             })
+            vc.title = getItemByIndex(indexPath: indexPath)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 8 {
+            let vc = ImageCropViewController()
             vc.title = getItemByIndex(indexPath: indexPath)
             self.navigationController?.pushViewController(vc, animated: true)
         }
