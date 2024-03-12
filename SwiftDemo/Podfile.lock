@@ -8,6 +8,9 @@ PODS:
   - TagListView (1.4.1)
   - Toast (4.0.0)
   - TTGTagCollectionView (2.4.2)
+  - Vivid (0.9)
+  - YUCIHighPassSkinSmoothing (1.4):
+    - Vivid
   - ZLImageEditor (1.2.1):
     - ZLImageEditor/Core (= 1.2.1)
   - ZLImageEditor/Core (1.2.1)
@@ -20,6 +23,7 @@ DEPENDENCIES:
   - TagListView
   - Toast (= 4.0.0)
   - TTGTagCollectionView
+  - YUCIHighPassSkinSmoothing
   - ZLImageEditor
 
 SPEC REPOS:
@@ -32,6 +36,8 @@ SPEC REPOS:
     - TagListView
     - Toast
     - TTGTagCollectionView
+    - Vivid
+    - YUCIHighPassSkinSmoothing
     - ZLImageEditor
 
 SPEC CHECKSUMS:
@@ -43,8 +49,10 @@ SPEC CHECKSUMS:
   TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TTGTagCollectionView: 0d4625aaf7ee3ad755c39d549368a4ce69bd17d1
+  Vivid: 0fde7409beac71224deb151dd78f98a5bb860497
+  YUCIHighPassSkinSmoothing: 8418fd1bf605ec22b647c57745b863b352f72097
   ZLImageEditor: df1cd2f84aa2a38ad4d76bdcc34538be6c3a7e73
 
-PODFILE CHECKSUM: 331f74f59f098ba5a9479c18d877648028332011
+PODFILE CHECKSUM: 0d887f645f6ab50bd2865967753848bd9874d515
 
 COCOAPODS: 1.15.2

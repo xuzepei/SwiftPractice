@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ImageCropView" customModule="SwiftDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="588" height="388"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="lBo-YM-3kI">
+                    <rect key="frame" x="153" y="88" width="282" height="211"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vty-pl-dpp" userLabel="Mask">
+                    <rect key="frame" x="0.0" y="0.0" width="588" height="388"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dry-Iq-bqx" userLabel="GridView">
+                    <rect key="frame" x="0.0" y="0.0" width="588" height="388"/>
+                    <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="nvi-nx-nbb" appends="YES" id="ZJ2-gp-y6w"/>
+                        <outletCollection property="gestureRecognizers" destination="Y93-Xt-H6g" appends="YES" id="Q6I-7V-PnH"/>
+                        <outletCollection property="gestureRecognizers" destination="yte-MO-Wfg" appends="YES" id="u5B-Um-1AF"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="dry-Iq-bqx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0ho-f0-tQX"/>
+                <constraint firstAttribute="bottom" secondItem="dry-Iq-bqx" secondAttribute="bottom" id="AfE-gX-gdR"/>
+                <constraint firstItem="vty-pl-dpp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NQo-8y-ocg"/>
+                <constraint firstAttribute="bottom" secondItem="vty-pl-dpp" secondAttribute="bottom" id="Rcw-W9-A45"/>
+                <constraint firstItem="dry-Iq-bqx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VWd-AB-83N"/>
+                <constraint firstItem="vty-pl-dpp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="c6C-Jg-w2O"/>
+                <constraint firstAttribute="trailing" secondItem="dry-Iq-bqx" secondAttribute="trailing" id="rPc-Wu-7D8"/>
+                <constraint firstAttribute="trailing" secondItem="vty-pl-dpp" secondAttribute="trailing" id="t5m-ka-Mhu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="gridView" destination="dry-Iq-bqx" id="hTs-Kn-4zF"/>
+                <outlet property="imageMaskView" destination="vty-pl-dpp" id="9iP-qr-pfC"/>
+                <outlet property="imageView" destination="lBo-YM-3kI" id="gCm-yv-uh0"/>
+            </connections>
+            <point key="canvasLocation" x="37.681159420289859" y="-66.294642857142861"/>
+        </view>
+        <tapGestureRecognizer numberOfTapsRequired="2" id="yte-MO-Wfg">
+            <connections>
+                <action selector="actionDoubleTap:" destination="iN0-l3-epB" id="1HG-mX-Upp"/>
+            </connections>
+        </tapGestureRecognizer>
+        <pinchGestureRecognizer id="Y93-Xt-H6g">
+            <connections>
+                <action selector="actionPinch:" destination="iN0-l3-epB" id="hKv-UQ-SZa"/>
+            </connections>
+        </pinchGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="nvi-nx-nbb">
+            <connections>
+                <action selector="actionPan:" destination="iN0-l3-epB" id="3Co-pd-R3v"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+    <resources>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

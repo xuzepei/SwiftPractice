@@ -16,6 +16,7 @@ target 'SwiftDemo' do
   pod 'ZLImageEditor'
   pod 'TagListView'
   pod "TTGTagCollectionView"
+  pod 'YUCIHighPassSkinSmoothing', '1.4'
   
 end
 

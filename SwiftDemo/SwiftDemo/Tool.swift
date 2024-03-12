@@ -42,6 +42,10 @@ enum ToastType: Int {
     case Info
 }
 
+func LS(_ key: String) -> String {
+    return NSLocalizedString(key,comment: "")
+}
+
 @objcMembers class Tool: NSObject, AVAudioPlayerDelegate {
     
     @objc static let shared = Tool()
@@ -68,8 +72,8 @@ enum ToastType: Int {
     static let photoDPI:Double = 300.0
     //一寸照295*413px, 300DPI, 25*35mm
     //四寸照898*1181px, 300DPI, 76*100mm
-    static let photo1Inches = Photo(pixelSize: CGSizeMake(295.0, 413.0), physicalSize: CGSizeMake(25, 35))
-    static let photo4Inches = Photo(pixelSize: CGSizeMake(898.0, 1181.0), physicalSize: CGSizeMake(76, 100))
+    static let photo1Inches = Photo(pixelSize: CGSizeMake(295.0, 413.0), physicalSize: CGSizeMake(25, 35), label: "一寸照")
+    static let photo4Inches = Photo(pixelSize: CGSizeMake(898.0, 1181.0), physicalSize: CGSizeMake(76, 100), label: "四寸照")
     
     var hud: MBProgressHUD? = nil
     var audioPlayer: AVAudioPlayer? = nil
@@ -292,6 +296,24 @@ enum ToastType: Int {
         return dateFormatter.date(from: dateString)
     }
     
+    //MARK: - Image Process
+    class func resizeImageByDPI(image: UIImage, target: Photo) -> UIImage? {
+        let newSize = target.physicalSize
+        
+        let rect = CGRect(origin: .zero, size: CGSize(width: newSize.width * target.millimetersToInches * Tool.defaultDPI, height: newSize.height * target.millimetersToInches * Tool.defaultDPI))
+
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, target.dpi/Tool.defaultDPI)
+        defer { UIGraphicsEndImageContext() }
+
+        image.draw(in: rect)
+
+        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
+            return nil
+        }
+
+        return newImage
+    }
+    
     //MARK: - Parser
     class func parseToDictionary(_ jsonString:String?) -> [String:AnyObject]? {
         
@@ -366,6 +388,37 @@ enum ToastType: Int {
     //MARK: - File Manager
     class func isExistingFile(_ path: String) -> Bool {
         return FileManager.default .fileExists(atPath: path)
+    }
+    
+    class func removeDirectory(atPath path: String) {
+        let fileManager = FileManager.default
+        
+        do {
+            try fileManager.removeItem(atPath: path)
+        } catch {
+            print("####Error removing directory: \(error.localizedDescription)")
+            return
+        }
+        
+        print("####Directory removed successfully.")
+    }
+    
+    class func savePhotoToLocal(_ imageData: Data, name: String) -> Bool {
+        let directoryPath = documentDirectoryPath + "/images/"
+        if Tool.isExistingFile(directoryPath) == false {
+            
+            do {
+                try FileManager.default.createDirectory(atPath: directoryPath, withIntermediateDirectories: false, attributes: nil)
+            } catch {
+                return false
+            }
+        }
+        
+        let savePath = documentDirectoryPath + "/images/" + name
+        if Tool.isExistingFile(savePath) {
+            Tool.removeDirectory(atPath: savePath)
+        }
+        return ((try? imageData.write(to: URL(fileURLWithPath: savePath), options: [.atomic])) != nil)
     }
     
     class func saveImage(_ imageData: Data?, imageUrl: String!) -> Bool {
@@ -1373,5 +1426,74 @@ extension UIImageView {
         }
         
         task.resume()
+    }
+}
+
+extension CIImage {
+    func toUIImage() -> UIImage? {
+        let context = CIContext(options: nil)
+        if let cgImage = context.createCGImage(self, from: self.extent) {
+            return UIImage(cgImage: cgImage)
+        }
+        return nil
+    }
+}
+
+//修改UIImagePickerController拍照后，编辑时不能移动图片的问题
+//参考: https://stackoverflow.com/questions/12630155/uiimagepicker-allowsediting-stuck-in-center
+extension UIImagePickerController {
+    func fixCannotMoveEditingBox() {
+        if let cropView = cropView,
+           let scrollView = scrollView,
+           scrollView.contentOffset.y == 0 {
+            
+            let top = cropView.frame.minY + self.view.safeAreaInsets.top
+            let bottom = scrollView.frame.height - cropView.frame.height - top
+            scrollView.contentInset = UIEdgeInsets(top: top, left: 0, bottom: bottom, right: 0)
+            
+            var offset: CGFloat = 0
+            if scrollView.contentSize.height > scrollView.contentSize.width {
+                offset = 0.5 * (scrollView.contentSize.height - scrollView.contentSize.width)
+            }
+            scrollView.contentOffset = CGPoint(x: 0, y: -top + offset)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.fixCannotMoveEditingBox()
+        }
+    }
+    
+    var cropView: UIView? {
+        return findCropView(from: self.view)
+    }
+    
+    var scrollView: UIScrollView? {
+        return findScrollView(from: self.view)
+    }
+    
+    func findCropView(from view: UIView) -> UIView? {
+        let width = UIScreen.main.bounds.width
+        let size = view.bounds.size
+        if width == size.height, width == size.height {
+            return view
+        }
+        for view in view.subviews {
+            if let cropView = findCropView(from: view) {
+                return cropView
+            }
+        }
+        return nil
+    }
+    
+    func findScrollView(from view: UIView) -> UIScrollView? {
+        if let scrollView = view as? UIScrollView {
+            return scrollView
+        }
+        for view in view.subviews {
+            if let scrollView = findScrollView(from: view) {
+                return scrollView
+            }
+        }
+        return nil
     }
 }

@@ -7,20 +7,28 @@
 
 import UIKit
 
+
+@objc protocol ColorSelectorDelegate: AnyObject {
+    func selectedColor(color: UIColor)
+}
+
 class ColorSelector: UIView {
     
-    let colors: [UIColor] = [.white, .red, .green, .blue, .yellow, .purple, .orange]
+    let colors: [UIColor] = [.white, UIColor.color("#4a87d7"),UIColor.color("#ea4025"),UIColor.color("#2e6bcb"),.red, UIColor.color("#94c8f5"), .green, .blue, .yellow, .purple, .orange]
     let span: CGFloat = 10.0
     let width: CGFloat = 40.0
     var selectedColor: UIColor = .white
     var itemArray: [ColorButton] = []
+    weak var delegate : ColorSelectorDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.backgroundColor = .clear
+        
         // Create a UIScrollView
         let scrollView = UIScrollView()
-        scrollView.backgroundColor = .gray
+        scrollView.backgroundColor = .clear
         scrollView.showsHorizontalScrollIndicator = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
 //        scrollView.showsHorizontalScrollIndicator = false
@@ -74,12 +82,15 @@ class ColorSelector: UIView {
             print("####Selected color: \(color)")
             self.selectedColor = color
             
-            
             for colorButton in itemArray {
                 colorButton.updateStatus(status: .normal)
             }
             
             colorBtn.updateStatus(status: .selected)
+            
+            if let delegate = self.delegate {
+                delegate.selectedColor(color: self.selectedColor)
+            }
             
         }
     }

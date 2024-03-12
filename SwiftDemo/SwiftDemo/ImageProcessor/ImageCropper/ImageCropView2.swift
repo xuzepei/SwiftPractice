@@ -40,12 +40,12 @@ class ImageCropView: UIView {
     func updateContent(originalImage: UIImage, targetPhoto: Photo) {
         localize()
         
-        self.backgroundColor = .white
+        self.backgroundColor = .blue
         
         self.originalImage = originalImage
         self.targetPhoto = targetPhoto
         var size = self.targetPhoto.pixelSize
-        while size.width > self.width() || size.height > self.height() {
+        while size.width > self.width() - 40 || size.height > self.height() - 40 {
             size = CGSize(width: size.width * 0.9, height: size.height * 0.9)
         }
         
@@ -83,9 +83,7 @@ class ImageCropView: UIView {
     
     var imageInitialFrame: CGRect {
         var size = self.originalImage.size.scale(to: self.figureFrame.size)
-        
-        //size = CGSize(width: size.width * 1.25, height: size.height * 1.25)
-        size = CGSize(width: size.width + 10, height: size.height + 10)
+        size = CGSize(width: size.width * 1.25, height: size.height * 1.25)
         return CGRect(x: (self.bounds.width - size.width) / 2, y: (self.bounds.height - size.height) / 2, width: size.width, height: size.height)
     }
     
@@ -106,11 +104,11 @@ class ImageCropView: UIView {
         hole.path = holePath
         hole.fillRule = CAShapeLayerFillRule.evenOdd
         self.imageMaskView.layer.mask = hole
-        self.imageMaskView.backgroundColor = UIColor.blue.withAlphaComponent(1.0)
+        self.imageMaskView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
     }
     
     func drawBorber() {
-      let path = UIBezierPath(roundedRect: self.figureFrame, cornerRadius: 0.0).cgPath
+      let path = UIBezierPath(roundedRect: self.figureFrame, cornerRadius: 1.0).cgPath
       let border = CAShapeLayer()
       border.frame = self.gridView.bounds
       border.path = path
@@ -213,24 +211,6 @@ class ImageCropView: UIView {
         UIView.animate(withDuration: 0.2) {
             self.imageView.frame = self.centerFrame()
         }
-    }
-    
-    func crop() -> UIImage {
-      let borders = figureFrame
-      let point = CGPoint(x: borders.origin.x - imageFrame.origin.x, y: borders.origin.y - imageFrame.origin.y)
-      let frame = CGRect(origin: point, size: borders.size)
-        let x = frame.origin.x * self.imageView.image!.size.width / imageFrame.width
-      let y = frame.origin.y * self.imageView.image!.size.height / imageFrame.height
-      let width = frame.width * self.imageView.image!.size.width / imageFrame.width
-      let height = frame.height * self.imageView.image!.size.height / imageFrame.height
-      let croppedRect = CGRect(x: x, y: y, width: width, height: height)
-      guard let imageRef = self.imageView.image!.cgImage?.cropping(to: croppedRect) else {
-        return self.imageView.image!
-      }
-      
-      let croppedImage = UIImage(cgImage: imageRef)
-      return croppedImage
-
     }
     
     @IBAction func actionPan(_ sender: UIPanGestureRecognizer) {

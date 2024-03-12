@@ -11,6 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageCropViewController" customModule="SwiftDemo" customModuleProvider="target">
             <connections>
+                <outlet property="colorSelector" destination="jKc-pe-4ld" id="fFV-Ym-aOn"/>
+                <outlet property="colorSelectorConstraintTop" destination="rhQ-Ea-kwq" id="9n4-nK-nf1"/>
+                <outlet property="label1" destination="9Gj-Yo-Mrx" id="GLH-v8-TFh"/>
+                <outlet property="label2" destination="nyg-wp-THY" id="ydD-lb-mgi"/>
+                <outlet property="processBtn" destination="baj-hq-kMK" id="kHK-gI-uSD"/>
+                <outlet property="slider" destination="NCg-FQ-3uZ" id="Ed6-8g-rho"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,14 +24,85 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKc-pe-4ld" customClass="ColorSelector" customModule="SwiftDemo" customModuleProvider="target">
+                    <rect key="frame" x="46.666666666666657" y="401" width="300" height="50"/>
+                    <color key="backgroundColor" systemColor="systemMintColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="E7f-l7-waq"/>
+                        <constraint firstAttribute="height" constant="50" id="JsM-Oo-L6g"/>
+                    </constraints>
+                </view>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NCg-FQ-3uZ">
+                    <rect key="frame" x="44.666666666666657" y="471" width="304" height="31"/>
+                </slider>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baj-hq-kMK" userLabel="Process">
+                    <rect key="frame" x="149.66666666666666" y="541" width="94" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0Sd-7p-ecf"/>
+                        <constraint firstAttribute="width" constant="94" id="Zv4-lk-GCE"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Process"/>
+                    <connections>
+                        <action selector="clickedProcessBtn:" destination="-1" eventType="touchUpInside" id="BtZ-sK-PJb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gj-Yo-Mrx" userLabel="Label1">
+                    <rect key="frame" x="20" y="69" width="353" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="wD5-Vw-RLf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyg-wp-THY" userLabel="Label2">
+                    <rect key="frame" x="20" y="89" width="353" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="qwY-aO-TcO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="makeup" translatesAutoresizingMaskIntoConstraints="NO" id="dPV-tY-i7F" userLabel="Makeup">
+                    <rect key="frame" x="354.66666666666669" y="468" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="hVc-V6-bGX"/>
+                        <constraint firstAttribute="width" constant="30" id="wVm-3y-b37"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9Gj-Yo-Mrx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="34J-i0-BTs"/>
+                <constraint firstItem="nyg-wp-THY" firstAttribute="leading" secondItem="9Gj-Yo-Mrx" secondAttribute="leading" id="Amn-IP-mKS"/>
+                <constraint firstItem="dPV-tY-i7F" firstAttribute="leading" secondItem="NCg-FQ-3uZ" secondAttribute="trailing" constant="8" id="BRl-bg-9Fx"/>
+                <constraint firstItem="9Gj-Yo-Mrx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="BSx-ud-UIK"/>
+                <constraint firstItem="dPV-tY-i7F" firstAttribute="centerY" secondItem="NCg-FQ-3uZ" secondAttribute="centerY" constant="-3" id="KcQ-9k-mwc"/>
+                <constraint firstItem="NCg-FQ-3uZ" firstAttribute="leading" secondItem="jKc-pe-4ld" secondAttribute="leading" id="KqL-pO-mLX"/>
+                <constraint firstItem="nyg-wp-THY" firstAttribute="top" secondItem="9Gj-Yo-Mrx" secondAttribute="bottom" id="OcY-Gp-w7U"/>
+                <constraint firstItem="baj-hq-kMK" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="TCw-dg-yn2"/>
+                <constraint firstItem="NCg-FQ-3uZ" firstAttribute="trailing" secondItem="jKc-pe-4ld" secondAttribute="trailing" id="U59-D5-ggG"/>
+                <constraint firstItem="jKc-pe-4ld" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ekR-uX-4tn"/>
+                <constraint firstItem="nyg-wp-THY" firstAttribute="trailing" secondItem="9Gj-Yo-Mrx" secondAttribute="trailing" id="hFm-Sk-Rie"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Gj-Yo-Mrx" secondAttribute="trailing" constant="20" id="i4T-kg-Jsj"/>
+                <constraint firstItem="NCg-FQ-3uZ" firstAttribute="top" secondItem="jKc-pe-4ld" secondAttribute="bottom" constant="20" id="oNS-Zc-6Ph"/>
+                <constraint firstItem="baj-hq-kMK" firstAttribute="top" secondItem="NCg-FQ-3uZ" secondAttribute="bottom" constant="40" id="qND-5g-Lpm"/>
+                <constraint firstItem="jKc-pe-4ld" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="342" id="rhQ-Ea-kwq"/>
+            </constraints>
             <point key="canvasLocation" x="71" y="-11"/>
         </view>
     </objects>
     <resources>
+        <image name="makeup" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -10,7 +10,7 @@ import PowerplayToastKit
 import SnapKit
 import ZLImageEditor
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var itemArray = NSMutableArray()
 
@@ -143,7 +143,7 @@ class HomeTableViewController: UITableViewController {
                     return
                 }
                 
-                if let image = self.resizeImageByDPI(image: _img, target: Tool.photo1Inches)
+                if let image = Tool.resizeImageByDPI(image: _img, target: Tool.photo1Inches)
                 {
                     Tool.saveImageToPhotoLibrary(image: image, rootVC: self)
                 }
@@ -152,10 +152,144 @@ class HomeTableViewController: UITableViewController {
             vc.title = getItemByIndex(indexPath: indexPath)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 8 {
-            let vc = ImageCropViewController()
-            vc.title = getItemByIndex(indexPath: indexPath)
-            self.navigationController?.pushViewController(vc, animated: true)
+            
+            selectImage()
+            
+//            ImageProcessor.shared.removeBackground(from: image, completion: { (resultImage) in
+//                if let resultImage = resultImage {
+//                    self.outputIV.image = resultImage
+//                } else {
+//                    print("####Failed to remove background")
+//                }
+//            }, withBgColor: self.colorSelector.selectedColor)
+//            
+//            
+//            let vc = ImageCropViewController()
+//            vc.title = getItemByIndex(indexPath: indexPath)
+//            vc.targetPhoto = Tool.photo1Inches
+//            
+//            self.navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    func selectImage() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) || UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+        } else {
+            // the device doesn't have a camera or the user hasn't granted permission
+            Tool.showAlert(LS("Tip"), message: LS("The device doesn't have a camera or the user hasn't granted permission."), rootVC: self)
+            return
+        }
+        
+        
+//        if(self.isRequesting) {
+//            return
+//        }
+//        
+//        
+//        if(self.isUpdatingImage) {
+//            Tool.showAlert(LS("Tip"), message: LS("Current image is updating, please wait for a moment."), rootVC: self)
+//            return
+//        }
+        
+        //只有相册
+        if UIImagePickerController.isSourceTypeAvailable(.camera) == false &&  UIImagePickerController.isSourceTypeAvailable(.photoLibrary) == true {
+            showImagePicker(sourceType: .photoLibrary)
+            return
+        }
+        
+        var alertStyle = UIAlertController.Style.actionSheet
+        if (Tool.isIpad()) {
+          alertStyle = UIAlertController.Style.alert
+        }
+        
+        //两个都有
+        let alert = UIAlertController(title: LS("Choose Photo Source"), message: nil, preferredStyle: alertStyle)
+        alert.addAction(UIAlertAction(title: LS("Camera"), style: .default, handler: { _ in
+            self.showImagePicker(sourceType: .camera)
+        }))
+        
+        alert.addAction(UIAlertAction(title: LS("Photo Library"), style: .default, handler: { _ in
+            self.showImagePicker(sourceType: .photoLibrary)
+        }))
+        
+        alert.addAction(UIAlertAction(title: LS("Cancel"), style: .cancel))
+        
+        present(alert, animated: true)
+    }
+    
+    func showImagePicker(sourceType: UIImagePickerController.SourceType) {
+        
+        let picker = UIImagePickerController()
+        picker.modalPresentationStyle = .fullScreen
+        picker.delegate = self
+        picker.allowsEditing = false
+        
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            picker.sourceType = sourceType
+            if sourceType == .camera {
+                picker.cameraCaptureMode = .photo
+                picker.cameraDevice = .front
+                picker.cameraFlashMode = .off
+                picker.fixCannotMoveEditingBox()
+            }
+        } else {
+            picker.sourceType = .photoLibrary
+        }
+        
+        self.present(picker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        //先取编辑的图片
+        var image: UIImage? = info[.editedImage] as? UIImage
+        if image == nil {
+            image = info[.originalImage] as? UIImage
+        }
+        
+        if image != nil {
+
+            Tool.detectFaces(in: image!) { result in
+                if result == false {
+                    DispatchQueue.main.async {
+                        Tool.showAlert(LS("Tip"), message: LS("The photo must contain a human face. Please select a portrait facial photo."), rootVC: self)
+                    }
+
+                } else {
+                    DispatchQueue.main.async {
+                        self.processImageToRemoveBg(image: image!)
+                    }
+                }
+            }
+        } else {
+
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController)  {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func processImageToRemoveBg(image: UIImage) {
+        ImageProcessor.shared.removeBackground(from: image, completion: { (resultImage) in
+            if let resultImage = resultImage {
+                DispatchQueue.main.async {
+                    let vc = ImageCropViewController()
+                    vc.title = "ImageCropView"
+                    vc.targetPhoto = Tool.photo1Inches
+                    vc.originalImage = resultImage
+        
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+
+            } else {
+                print("####Failed to remove background")
+            }
+        }, withBgColor: .white)
     }
     
     func getDefaultDPI(for image: UIImage) -> CGFloat {
@@ -173,23 +307,6 @@ class HomeTableViewController: UITableViewController {
         let defaultDPI: CGFloat = 72.0 // iOS 设备的标准 DPI
         
         return max(widthInPixels, heightInPixels) / max(sizeInPoints.width, sizeInPoints.height) * defaultDPI
-    }
-    
-    func resizeImageByDPI(image: UIImage, target: Photo) -> UIImage? {
-        let newSize = target.physicalSize
-        
-        let rect = CGRect(origin: .zero, size: CGSize(width: newSize.width * target.millimetersToInches * Tool.defaultDPI, height: newSize.height * target.millimetersToInches * Tool.defaultDPI))
-
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, Tool.photoDPI/Tool.defaultDPI)
-        defer { UIGraphicsEndImageContext() }
-
-        image.draw(in: rect)
-
-        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
-            return nil
-        }
-
-        return newImage
     }
 
     func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {

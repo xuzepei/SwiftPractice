@@ -23,6 +23,11 @@
 		091F5B292B32EBF80092FD6E /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F5B1B2B32EBF80092FD6E /* AnimationType.swift */; };
 		091F5B2A2B32EBF80092FD6E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F5B1C2B32EBF80092FD6E /* Toast.swift */; };
 		091F5B2B2B32EBF80092FD6E /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F5B1D2B32EBF80092FD6E /* Direction.swift */; };
+		093C6D142BA05620008E3759 /* PhoteSizeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C6D122BA05620008E3759 /* PhoteSizeSelectionViewController.swift */; };
+		093C6D152BA05620008E3759 /* PhoteSizeSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093C6D132BA05620008E3759 /* PhoteSizeSelectionViewController.xib */; };
+		093C6D172BA05684008E3759 /* ScrollableSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C6D162BA05684008E3759 /* ScrollableSegmentedControl.swift */; };
+		093C6D1A2BA05C4E008E3759 /* PhotoSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C6D182BA05C4E008E3759 /* PhotoSizeCell.swift */; };
+		093C6D1B2BA05C4E008E3759 /* PhotoSizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093C6D192BA05C4E008E3759 /* PhotoSizeCell.xib */; };
 		097841382B8DD0EA00CFEB4F /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097841372B8DD0EA00CFEB4F /* ColorButton.swift */; };
 		097841522B8F372400CFEB4F /* ImageCropperConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097841472B8F372400CFEB4F /* ImageCropperConfiguration.swift */; };
 		097841542B8F372400CFEB4F /* ImageCropperConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097841492B8F372400CFEB4F /* ImageCropperConfigurator.swift */; };
@@ -99,6 +104,11 @@
 		091F5B1B2B32EBF80092FD6E /* AnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
 		091F5B1C2B32EBF80092FD6E /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		091F5B1D2B32EBF80092FD6E /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		093C6D122BA05620008E3759 /* PhoteSizeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoteSizeSelectionViewController.swift; sourceTree = "<group>"; };
+		093C6D132BA05620008E3759 /* PhoteSizeSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoteSizeSelectionViewController.xib; sourceTree = "<group>"; };
+		093C6D162BA05684008E3759 /* ScrollableSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableSegmentedControl.swift; sourceTree = "<group>"; };
+		093C6D182BA05C4E008E3759 /* PhotoSizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSizeCell.swift; sourceTree = "<group>"; };
+		093C6D192BA05C4E008E3759 /* PhotoSizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoSizeCell.xib; sourceTree = "<group>"; };
 		097841372B8DD0EA00CFEB4F /* ColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButton.swift; sourceTree = "<group>"; };
 		097841472B8F372400CFEB4F /* ImageCropperConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperConfiguration.swift; sourceTree = "<group>"; };
 		097841492B8F372400CFEB4F /* ImageCropperConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperConfigurator.swift; sourceTree = "<group>"; };
@@ -334,6 +344,11 @@
 		09E091C22B85D827001FF11D /* ImageProcessor */ = {
 			isa = PBXGroup;
 			children = (
+				093C6D182BA05C4E008E3759 /* PhotoSizeCell.swift */,
+				093C6D192BA05C4E008E3759 /* PhotoSizeCell.xib */,
+				093C6D162BA05684008E3759 /* ScrollableSegmentedControl.swift */,
+				093C6D122BA05620008E3759 /* PhoteSizeSelectionViewController.swift */,
+				093C6D132BA05620008E3759 /* PhoteSizeSelectionViewController.xib */,
 				097841452B8F372400CFEB4F /* ImageCropper */,
 				09E091CB2B85D93E001FF11D /* CoreMLHelpers */,
 				09E091C52B85D85A001FF11D /* DeepLabV3.mlmodel */,
@@ -456,8 +471,10 @@
 				098CDD6B2B9ED6B10051408B /* ImageCropView.xib in Resources */,
 				09DAE3A22A5D055F00B77060 /* LaunchScreen.storyboard in Resources */,
 				09D36B982A5D42CB0096C6EC /* CollectionViewController.xib in Resources */,
+				093C6D1B2BA05C4E008E3759 /* PhotoSizeCell.xib in Resources */,
 				09D36B9E2A5D51260096C6EC /* CollectionViewCell.xib in Resources */,
 				09DAE39F2A5D055F00B77060 /* Assets.xcassets in Resources */,
+				093C6D152BA05620008E3759 /* PhoteSizeSelectionViewController.xib in Resources */,
 				09DAE39A2A5D055E00B77060 /* Main.storyboard in Resources */,
 				09DAE3AE2A5D248900B77060 /* AutoLayoutViewController.xib in Resources */,
 				097841582B8F372400CFEB4F /* ImageCropper.xib in Resources */,
@@ -539,8 +556,10 @@
 				091F5B252B32EBF80092FD6E /* ToastHelper.swift in Sources */,
 				097841552B8F372400CFEB4F /* ImageCropperModel.swift in Sources */,
 				0978415A2B8F372400CFEB4F /* ImageCropperRouter.swift in Sources */,
+				093C6D142BA05620008E3759 /* PhoteSizeSelectionViewController.swift in Sources */,
 				09E091ED2B85D93E001FF11D /* CVPixelBuffer+Rotate.swift in Sources */,
 				09E091E42B85D93E001FF11D /* MLMultiArray+Helpers.swift in Sources */,
+				093C6D1A2BA05C4E008E3759 /* PhotoSizeCell.swift in Sources */,
 				097841612B91C26300CFEB4F /* Photo.swift in Sources */,
 				09E091E12B85D93E001FF11D /* UIImage+Extensions.swift in Sources */,
 				097841572B8F372400CFEB4F /* ImageCropperPresenter.swift in Sources */,
@@ -562,6 +581,7 @@
 				09E091DF2B85D93E001FF11D /* UIImage+CVPixelBuffer.swift in Sources */,
 				091F5B282B32EBF80092FD6E /* ToastQueue.swift in Sources */,
 				09D36BA22A5D549B0096C6EC /* Tool.swift in Sources */,
+				093C6D172BA05684008E3759 /* ScrollableSegmentedControl.swift in Sources */,
 				097841562B8F372400CFEB4F /* ImageCropperViewController.swift in Sources */,
 				09B485B22A9F1C24008E08DD /* ScanningLineView.swift in Sources */,
 				09B20CBF2B4E263900055509 /* TagsView.swift in Sources */,
