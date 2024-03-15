@@ -28,6 +28,7 @@
 		093C6D172BA05684008E3759 /* ScrollableSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C6D162BA05684008E3759 /* ScrollableSegmentedControl.swift */; };
 		093C6D1A2BA05C4E008E3759 /* PhotoSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C6D182BA05C4E008E3759 /* PhotoSizeCell.swift */; };
 		093C6D1B2BA05C4E008E3759 /* PhotoSizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093C6D192BA05C4E008E3759 /* PhotoSizeCell.xib */; };
+		093C6D1D2BA18F94008E3759 /* photo_size.json in Resources */ = {isa = PBXBuildFile; fileRef = 093C6D1C2BA18F94008E3759 /* photo_size.json */; };
 		097841382B8DD0EA00CFEB4F /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097841372B8DD0EA00CFEB4F /* ColorButton.swift */; };
 		097841522B8F372400CFEB4F /* ImageCropperConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097841472B8F372400CFEB4F /* ImageCropperConfiguration.swift */; };
 		097841542B8F372400CFEB4F /* ImageCropperConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097841492B8F372400CFEB4F /* ImageCropperConfigurator.swift */; };
@@ -109,6 +110,7 @@
 		093C6D162BA05684008E3759 /* ScrollableSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableSegmentedControl.swift; sourceTree = "<group>"; };
 		093C6D182BA05C4E008E3759 /* PhotoSizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSizeCell.swift; sourceTree = "<group>"; };
 		093C6D192BA05C4E008E3759 /* PhotoSizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoSizeCell.xib; sourceTree = "<group>"; };
+		093C6D1C2BA18F94008E3759 /* photo_size.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = photo_size.json; sourceTree = "<group>"; };
 		097841372B8DD0EA00CFEB4F /* ColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButton.swift; sourceTree = "<group>"; };
 		097841472B8F372400CFEB4F /* ImageCropperConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperConfiguration.swift; sourceTree = "<group>"; };
 		097841492B8F372400CFEB4F /* ImageCropperConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperConfigurator.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 		09DAE3862A5D055E00B77060 = {
 			isa = PBXGroup;
 			children = (
+				093C6D1C2BA18F94008E3759 /* photo_size.json */,
 				09DAE3912A5D055E00B77060 /* SwiftDemo */,
 				09DAE3902A5D055E00B77060 /* Products */,
 				A28F494665A468D648DEC985 /* Pods */,
@@ -476,6 +479,7 @@
 				09DAE39F2A5D055F00B77060 /* Assets.xcassets in Resources */,
 				093C6D152BA05620008E3759 /* PhoteSizeSelectionViewController.xib in Resources */,
 				09DAE39A2A5D055E00B77060 /* Main.storyboard in Resources */,
+				093C6D1D2BA18F94008E3759 /* photo_size.json in Resources */,
 				09DAE3AE2A5D248900B77060 /* AutoLayoutViewController.xib in Resources */,
 				097841582B8F372400CFEB4F /* ImageCropper.xib in Resources */,
 			);
@@ -739,16 +743,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7S69FZM933;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TestDemo;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to use your camera to take a selfie to get your facial photo. The photo will be used for the digital smile teeth design function or be used to set your avatar.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to personalize your app experience. It is convenient for users to obtain current location information when setting user information.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app needs to access your Photo Library to save photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs to access your Photo Library to select photos. The selected photo will be used for the digital smile teeth design function or be used to set your avatar.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -757,6 +767,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -772,16 +783,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7S69FZM933;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7S69FZM933;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TestDemo;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to use your camera to take a selfie to get your facial photo. The photo will be used for the digital smile teeth design function or be used to set your avatar.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to personalize your app experience. It is convenient for users to obtain current location information when setting user information.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app needs to access your Photo Library to save photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs to access your Photo Library to select photos. The selected photo will be used for the digital smile teeth design function or be used to set your avatar.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -790,6 +809,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = testdemo_dis;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

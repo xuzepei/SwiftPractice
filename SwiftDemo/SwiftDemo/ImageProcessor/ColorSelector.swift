@@ -94,6 +94,23 @@ class ColorSelector: UIView {
             
         }
     }
+    
+    func selectButton(index: Int) {
+        if index < itemArray.count {
+            
+            for colorButton in itemArray {
+                colorButton.updateStatus(status: .normal)
+            }
+            
+            let selectedBtn = itemArray[index]
+            self.selectedColor = selectedBtn.color
+            selectedBtn.updateStatus(status: .selected)
+
+            if let delegate = self.delegate {
+                delegate.selectedColor(color: self.selectedColor)
+            }
+        }
+    }
 
     /*
     // Only override draw() if you perform custom drawing.

@@ -56,7 +56,7 @@ extension ImageCropperModelImplementation: ImageCropperModel {
         //一寸照295*413px
         //四寸照898*1181px
       
-        var size = Tool.photo1Inches.pixelSize
+        var size = Tool.photo2Inches.pixelSize
         if size.width > 400 {
             size = CGSize(width: size.width * 0.25, height: size.height * 0.25)
         }

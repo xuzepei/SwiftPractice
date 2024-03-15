@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,6 +13,10 @@
             <rect key="frame" x="0.0" y="0.0" width="588" height="388"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rvP-N2-gHx" userLabel="FigureBgView">
+                    <rect key="frame" x="174" y="130" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="lBo-YM-3kI">
                     <rect key="frame" x="153" y="88" width="282" height="211"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -24,7 +27,6 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dry-Iq-bqx" userLabel="GridView">
                     <rect key="frame" x="0.0" y="0.0" width="588" height="388"/>
-                    <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                     <gestureRecognizers/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="nvi-nx-nbb" appends="YES" id="ZJ2-gp-y6w"/>
@@ -33,7 +35,6 @@
                     </connections>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="dry-Iq-bqx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0ho-f0-tQX"/>
                 <constraint firstAttribute="bottom" secondItem="dry-Iq-bqx" secondAttribute="bottom" id="AfE-gX-gdR"/>
@@ -46,6 +47,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="figureBgView" destination="rvP-N2-gHx" id="Z2c-iz-mWE"/>
                 <outlet property="gridView" destination="dry-Iq-bqx" id="hTs-Kn-4zF"/>
                 <outlet property="imageMaskView" destination="vty-pl-dpp" id="9iP-qr-pfC"/>
                 <outlet property="imageView" destination="lBo-YM-3kI" id="gCm-yv-uh0"/>
@@ -68,9 +70,4 @@
             </connections>
         </panGestureRecognizer>
     </objects>
-    <resources>
-        <systemColor name="tertiarySystemFillColor">
-            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

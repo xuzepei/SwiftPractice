@@ -23,7 +23,7 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper","ImageCropView"])
+        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper","ImageCropView", "Demo"])
     }
 
     // MARK: - Table view data source
@@ -143,7 +143,7 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
                     return
                 }
                 
-                if let image = Tool.resizeImageByDPI(image: _img, target: Tool.photo1Inches)
+                if let image = Tool.resizeImageByDPI(image: _img, target: Tool.photo2Inches)
                 {
                     Tool.saveImageToPhotoLibrary(image: image, rootVC: self)
                 }
@@ -169,6 +169,10 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
 //            vc.targetPhoto = Tool.photo1Inches
 //            
 //            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vc = PhoteSizeSelectionViewController()
+            vc.title = getItemByIndex(indexPath: indexPath)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -280,7 +284,7 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
                 DispatchQueue.main.async {
                     let vc = ImageCropViewController()
                     vc.title = "ImageCropView"
-                    vc.targetPhoto = Tool.photo1Inches
+                    vc.targetPhoto = Tool.photo2Inches
                     vc.originalImage = resultImage
         
                     self.navigationController?.pushViewController(vc, animated: true)

@@ -18,12 +18,11 @@ class ImageCropViewController: UIViewController, ColorSelectorDelegate {
     
     @IBOutlet weak var colorSelectorConstraintTop: NSLayoutConstraint!
     
-    
     var imageCropView: ImageCropView!
     var targetPhoto: Photo!
     var originalImage: UIImage!
     var imageNoFilter: UIImage? = nil
-
+    var selectedColor: UIColor = .clear
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +33,8 @@ class ImageCropViewController: UIViewController, ColorSelectorDelegate {
     
     func setup() {
         
+        self.view.backgroundColor = .systemGray6
+
         // Create a UIBarButtonItem
         let rightBarButtonItem = UIBarButtonItem(title: "Export", style: .plain, target: self, action: #selector(clickedExportBtn))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
@@ -41,6 +42,7 @@ class ImageCropViewController: UIViewController, ColorSelectorDelegate {
         updateContent(targetPhoto: self.targetPhoto)
         
         self.colorSelector.delegate = self
+        colorSelector.selectButton(index: 0)
         
         slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
 
@@ -52,17 +54,23 @@ class ImageCropViewController: UIViewController, ColorSelectorDelegate {
         self.imageCropView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.imageCropView)
         
-//        var cropViewWdith: CGFloat = 300
-//        var cropViewHeight: CGFloat = 300
-//        
+        let cropViewMaxWdith: CGFloat = 340
+        let cropViewMaxHeight: CGFloat = 360
+        
 //        var size = self.targetPhoto.pixelSize
 //        cropViewHeight = cropViewWdith / size.width * size.height
-//        
 //        NSLog("cropViewHeight: \(cropViewHeight)")
         
+        var cropViewWdith = cropViewMaxWdith
+        var cropViewHeight = self.targetPhoto.pixelSize.height * cropViewMaxWdith / self.targetPhoto.pixelSize.width
+        while cropViewHeight > cropViewMaxHeight {
+            cropViewWdith -= 5
+            cropViewHeight = self.targetPhoto.pixelSize.height * cropViewWdith / self.targetPhoto.pixelSize.width
+        }
+        
         NSLayoutConstraint.activate([
-            self.imageCropView.widthAnchor.constraint(equalToConstant: 280),
-            self.imageCropView.heightAnchor.constraint(equalToConstant: 360),
+            self.imageCropView.widthAnchor.constraint(equalToConstant: cropViewMaxWdith),
+            self.imageCropView.heightAnchor.constraint(equalToConstant: cropViewHeight),
             self.imageCropView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             self.imageCropView.topAnchor.constraint(equalTo: self.label2.bottomAnchor, constant: 20)
         ])
@@ -86,30 +94,54 @@ class ImageCropViewController: UIViewController, ColorSelectorDelegate {
         self.imageNoFilter = self.originalImage
         
         self.colorSelectorConstraintTop.constant = UIDevice.safeDistance().top + self.imageCropView.height() + 40
+        
+        
     }
 
 
     @objc func clickedExportBtn() {
+
+        //old
+//        let outputImage = self.imageCropView.crop()
+//        //let outputImage = self.imageCropView.imageView.image!
+//        if let image = Tool.resizeImageByDPI(image: outputImage, target: self.targetPhoto)
+//        {
+//            Tool.saveImageToPhotoLibrary(image: image, rootVC: self)
+//            
+//            Tool.savePhotoToLocal(image.pngData()!, name: "myphoto.png")
+//        }
         
         let outputImage = self.imageCropView.crop()
-        //let outputImage = self.imageCropView.imageView.image!
-        if let image = Tool.resizeImageByDPI(image: outputImage, target: self.targetPhoto)
-        {
-            Tool.saveImageToPhotoLibrary(image: image, rootVC: self)
-            
-            Tool.savePhotoToLocal(image.pngData()!, name: "myphoto.png")
-        }
-    }
-    
-    func selectedColor(color: UIColor) {
-        ImageProcessor.shared.removeBackground(from: self.originalImage, completion: { (resultImage) in
+        //Tool.savePhotoToLocal(outputImage.pngData()!, name: "myphoto.png")
+        ImageProcessor.shared.removeBackground(from: outputImage, completion: { (resultImage) in
             if let resultImage = resultImage {
-                self.imageCropView.imageView.image = resultImage
-                self.imageNoFilter = resultImage
+                DispatchQueue.main.async {
+                    if let image = Tool.resizeImageByDPI(image: resultImage, target: self.targetPhoto)
+                    {
+                        Tool.saveImageToPhotoLibrary(image: image, rootVC: self)
+                        //Tool.savePhotoToLocal(image.pngData()!, name: "myphoto.png")
+                    }
+                }
             } else {
                 print("####Failed to remove background")
             }
-        }, withBgColor: color)
+        }, withBgColor: self.selectedColor)
+    }
+    
+    func selectedColor(color: UIColor) {
+        
+        self.imageCropView.figureBgView.backgroundColor = color
+        self.selectedColor = color
+        
+        //old
+//        ImageProcessor.shared.removeBackground(from: self.originalImage, completion: { (resultImage) in
+//            if let resultImage = resultImage {
+//                self.imageCropView.imageView.image = resultImage
+//                self.imageNoFilter = resultImage
+//            } else {
+//                print("####Failed to remove background")
+//            }
+//        }, withBgColor: color)
     }
     
     @IBAction func clickedProcessBtn(_ sender: Any) {

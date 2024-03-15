@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhoteSizeSelectionViewController" customModule="SwiftDemo" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="hjg-7g-gok" id="cJ4-rb-kl0"/>
+                <outlet property="segmentedControl" destination="tVC-Ai-bfY" id="fAR-mV-z41"/>
+                <outlet property="tableView" destination="BMX-f3-aou" id="PHf-ed-fIo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hjg-7g-gok">
-                    <rect key="frame" x="8" y="103" width="377" height="44"/>
+                    <rect key="frame" x="8" y="59" width="377" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="kmk-cZ-Kwi"/>
                     </constraints>
@@ -34,7 +37,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BMX-f3-aou">
-                    <rect key="frame" x="0.0" y="147" width="393" height="614"/>
+                    <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -47,8 +50,8 @@
                 <constraint firstItem="tVC-Ai-bfY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="NFH-kN-yfa"/>
                 <constraint firstItem="BMX-f3-aou" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Pxg-1E-RCz"/>
                 <constraint firstItem="tVC-Ai-bfY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="R6u-Vu-wDD"/>
-                <constraint firstItem="hjg-7g-gok" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="con-Ed-IEh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BMX-f3-aou" secondAttribute="bottom" constant="57" id="hfJ-HN-XBi"/>
+                <constraint firstItem="hjg-7g-gok" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="con-Ed-IEh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BMX-f3-aou" secondAttribute="bottom" id="hfJ-HN-XBi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hjg-7g-gok" secondAttribute="trailing" constant="8" id="pgr-zf-akw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tVC-Ai-bfY" secondAttribute="trailing" constant="16" id="zTL-tb-RYY"/>
             </constraints>

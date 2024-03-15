@@ -73,6 +73,7 @@ func LS(_ key: String) -> String {
     //一寸照295*413px, 300DPI, 25*35mm
     //四寸照898*1181px, 300DPI, 76*100mm
     static let photo1Inches = Photo(pixelSize: CGSizeMake(295.0, 413.0), physicalSize: CGSizeMake(25, 35), label: "一寸照")
+    static let photo2Inches = Photo(pixelSize: CGSizeMake(413.0, 579.0), physicalSize: CGSizeMake(35, 49), label: "二寸照")
     static let photo4Inches = Photo(pixelSize: CGSizeMake(898.0, 1181.0), physicalSize: CGSizeMake(76, 100), label: "四寸照")
     
     var hud: MBProgressHUD? = nil
@@ -300,7 +301,7 @@ func LS(_ key: String) -> String {
     class func resizeImageByDPI(image: UIImage, target: Photo) -> UIImage? {
         let newSize = target.physicalSize
         
-        let rect = CGRect(origin: .zero, size: CGSize(width: newSize.width * target.millimetersToInches * Tool.defaultDPI, height: newSize.height * target.millimetersToInches * Tool.defaultDPI))
+        let rect = CGRect(origin: .zero, size: CGSize(width: newSize.width * target.millimetersToInchesByWidth * Tool.defaultDPI, height: newSize.height * target.millimetersToInchesByHeight * Tool.defaultDPI))
 
         UIGraphicsBeginImageContextWithOptions(rect.size, false, target.dpi/Tool.defaultDPI)
         defer { UIGraphicsEndImageContext() }
@@ -310,6 +311,8 @@ func LS(_ key: String) -> String {
         guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
             return nil
         }
+        
+        NSLog("newImageSize:\(newImage.size)")
 
         return newImage
     }
@@ -463,7 +466,7 @@ func LS(_ key: String) -> String {
                 print("Image saved to Photo Library successfully!")
                 
                 DispatchQueue.main.async {
-                    Tool.showAlert("Success", message: "The image has been saved to your Photo Library successfully.", rootVC: rootVC)
+                    Tool.showAlert("Success", message: "The photo has been saved to your Photo Library successfully.", rootVC: rootVC)
                 }
                 
             } else {
@@ -979,6 +982,19 @@ extension Notification.Name {
 //MARK: -
 extension UIImage {
     
+    func fixOrientation() -> UIImage {
+        if self.imageOrientation == .up {
+            return self
+        }
+
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+        self.draw(in: CGRect(origin: .zero, size: self.size))
+        let normalizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return normalizedImage ?? self
+    }
+    
     class func image(withColor color: UIColor, size: CGSize = CGSizeMake(1.0, 1.0)) -> UIImage? {
         
         var image: UIImage? = nil
@@ -1260,6 +1276,17 @@ extension NSMutableAttributedString {
             return true
         }
         return false
+    }
+}
+
+//MARK: -
+extension CGRect {
+    func extendedBy(dx: CGFloat, dy: CGFloat) -> CGRect {
+        return insetBy(dx: -dx, dy: -dy)
+    }
+    
+    func shrinkBy(dx: CGFloat, dy: CGFloat) -> CGRect {
+        return insetBy(dx: dx, dy: dy)
     }
 }
 

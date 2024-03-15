@@ -10,6 +10,7 @@ protocol ImageCropViewDelegate {
 class ImageCropView: UIView {
     
     // MARK: - IBOutlets
+    @IBOutlet weak var figureBgView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageMaskView: UIView!
     @IBOutlet weak var gridView: UIView!
@@ -33,15 +34,15 @@ class ImageCropView: UIView {
         return view
     }
     
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     func updateContent(originalImage: UIImage, targetPhoto: Photo) {
+        
+        self.layer.masksToBounds = true
+        self.backgroundColor = .clear
+        
         localize()
         
-        self.backgroundColor = .white
         
+        //self.gridView.backgroundColor = .clear
         self.originalImage = originalImage
         self.targetPhoto = targetPhoto
         var size = self.targetPhoto.pixelSize
@@ -52,7 +53,8 @@ class ImageCropView: UIView {
         let figureSize = CGSize(width: size.width, height: size.height)
         figureFrame = CGRect(x: (self.bounds.width - figureSize.width) / 2, y: (self.bounds.height - figureSize.height) / 2, width: figureSize.width, height: figureSize.height)
         
-        NSLog("figureFrame: \(figureFrame)")
+        
+        self.figureBgView.frame = figureFrame
       
         
         imageFrame = imageInitialFrame
@@ -62,23 +64,8 @@ class ImageCropView: UIView {
         
         self.drawMask()
         self.drawBorber()
-//        self.drawGrid(with: model.grid, with: model.gridColor)
-        
-//        self.backgroundColor = .white
-//        self.layer.borderColor = UIColor.lightGray.cgColor
-//        self.layer.borderWidth = 0.5
-//        self.layer.cornerRadius = 20
-//
-//        self.titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
-//        self.versionLabel.font = UIFont.systemFont(ofSize: 15)
-//        self.changelogTV.font = UIFont.systemFont(ofSize: 15)
-//        
-//        self.cancelButton.addTarget(self, action: #selector(clickedCancelBtn(_:)), for: .touchUpInside)
-//        self.cancelButton.setTitleColor(UIColor.gray, for: .normal)
-//        self.okButton.addTarget(self, action: #selector(clickedOKBtn(_:)), for: .touchUpInside)
-        
+
         self.layoutIfNeeded()
-        self.layer.masksToBounds = true
     }
     
     var imageInitialFrame: CGRect {
@@ -93,7 +80,7 @@ class ImageCropView: UIView {
         
         var holePath: CGPath {
             var border: CGPath {
-                return UIBezierPath(roundedRect: self.figureFrame, cornerRadius: 1.0).cgPath
+                return UIBezierPath(roundedRect: self.figureFrame, cornerRadius: 0.0).cgPath
             }
             let hole = UIBezierPath(cgPath: border)
             let path = UIBezierPath(roundedRect: self.bounds, cornerRadius: 0)
@@ -106,17 +93,22 @@ class ImageCropView: UIView {
         hole.path = holePath
         hole.fillRule = CAShapeLayerFillRule.evenOdd
         self.imageMaskView.layer.mask = hole
-        self.imageMaskView.backgroundColor = UIColor.blue.withAlphaComponent(1.0)
+        self.imageMaskView.backgroundColor = UIColor.systemGray6
     }
     
     func drawBorber() {
-      let path = UIBezierPath(roundedRect: self.figureFrame, cornerRadius: 0.0).cgPath
+        
+      let extendedRect = self.figureFrame.extendedBy(dx: 2, dy: 2)
+//        print("Original Rect:", self.figureFrame)
+//        print("Extended Rect:", extendedRect)
+        
+      let path = UIBezierPath(rect: extendedRect).cgPath
       let border = CAShapeLayer()
       border.frame = self.gridView.bounds
       border.path = path
       border.fillColor = UIColor.clear.cgColor
-      border.strokeColor = UIColor.yellow.cgColor
-      border.lineWidth = 2
+      border.strokeColor = UIColor.white.cgColor
+      border.lineWidth = 5
       self.gridView.layer.addSublayer(border)
     }
     
@@ -130,7 +122,7 @@ class ImageCropView: UIView {
       let previousLocation = panLastLocation ?? point
       let difference = CGPoint(x: point.x - previousLocation.x, y: point.y - previousLocation.y)
       
-      let borders = figureFrame
+      let borders = figureFrame //.shrinkBy(dx: figureFrame.size.width*0.5, dy: figureFrame.size.height*0.5)
       
       let x = imageFrame.origin.x + difference.x
       let newX = x < borders.origin.x && x + imageFrame.width > borders.maxX ? x : imageFrame.origin.x
@@ -139,6 +131,7 @@ class ImageCropView: UIView {
       let newY = y < borders.origin.y && y + imageFrame.height > borders.maxY ? y : imageFrame.origin.y
       
       imageFrame = CGRect(origin: CGPoint(x: newX, y: newY), size: imageFrame.size)
+        
       panLastLocation = point
       return imageFrame
     }
@@ -155,7 +148,9 @@ class ImageCropView: UIView {
     
     func scalingFrame(for scale: CGFloat) -> CGRect {
         
-        let borders = figureFrame
+        NSLog("scalingFrame: \(scale)")
+        
+        let borders = figureFrame//.shrinkBy(dx: 100, dy: 100)
         let pinchStartSize = CGSize(width: imageFrame.width, height: imageFrame.height)
         var newSize = CGSize(width: pinchStartSize.width * scale, height: pinchStartSize.height * scale)
         
@@ -183,7 +178,7 @@ class ImageCropView: UIView {
             
             let newImageFrame = CGRect(origin: CGPoint(x: newX, y: newY), size: newSize)
             NSLog("newImageFrame: \(newImageFrame)")
-            if newImageFrame.size.width <= figureFrame.size.width * 3 && newImageFrame.size.height <= figureFrame.size.height  * 3 {
+            if newImageFrame.size.width <= figureFrame.size.width * 5 && newImageFrame.size.height <= figureFrame.size.height  * 5 {
                 imageFrame = CGRect(origin: CGPoint(x: newX, y: newY), size: newSize)
             }
         }
@@ -193,6 +188,7 @@ class ImageCropView: UIView {
     
     func didScale(with scale: CGFloat) {
         
+        //let scaleValue = min(max(scale, 0.0), 1.5)
         self.imageView.frame = self.scalingFrame(for: scale)
     }
     
@@ -217,13 +213,27 @@ class ImageCropView: UIView {
     
     func crop() -> UIImage {
       let borders = figureFrame
+        
+        NSLog("figureFrame: \(figureFrame)")
+        
       let point = CGPoint(x: borders.origin.x - imageFrame.origin.x, y: borders.origin.y - imageFrame.origin.y)
+        
+        NSLog("imageFrame: \(imageFrame)")
+        
+        NSLog("point: \(point)")
+        
       let frame = CGRect(origin: point, size: borders.size)
         let x = frame.origin.x * self.imageView.image!.size.width / imageFrame.width
       let y = frame.origin.y * self.imageView.image!.size.height / imageFrame.height
       let width = frame.width * self.imageView.image!.size.width / imageFrame.width
       let height = frame.height * self.imageView.image!.size.height / imageFrame.height
+        
+        
+        
       let croppedRect = CGRect(x: x, y: y, width: width, height: height)
+        
+        NSLog("croppedRect: \(croppedRect)")
+        
       guard let imageRef = self.imageView.image!.cgImage?.cropping(to: croppedRect) else {
         return self.imageView.image!
       }
@@ -237,11 +247,13 @@ class ImageCropView: UIView {
       switch sender.state {
       case .began:
         //presenter?.userInteraction(true)
+          self.panLastLocation = nil
           break
       case .changed:
         self.didDrag(to: sender.location(in: gridView))
       case .ended:
         //presenter?.userInteraction(false)
+          self.panLastLocation = nil
           break
       default:
         return
@@ -253,6 +265,7 @@ class ImageCropView: UIView {
       case .began:
         guard sender.numberOfTouches >= 2 else { return }
         //presenter?.userInteraction(true)
+          self.panLastLocation = nil
         //self.didPinchStarted()
         break
       case .changed:
@@ -260,6 +273,7 @@ class ImageCropView: UIView {
         self.didScale(with: sender.scale)
       case .ended, .cancelled:
         //presenter?.userInteraction(false)
+          self.panLastLocation = nil
           break
       default:
         return

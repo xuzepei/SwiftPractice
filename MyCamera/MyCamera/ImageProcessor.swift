@@ -106,7 +106,7 @@ struct AngleColors {
         }
     }
     
-    func removeBackground(from image: UIImage, completion: @escaping (UIImage?) -> Void, withBgColor: UIColor = .white) {
+    func removeBackground(from image: UIImage, completion: @escaping (UIImage?) -> Void, withBgColor: UIColor = .clear) {
         
         self.inputImage = image
         self.bgColor = withBgColor
@@ -216,7 +216,9 @@ struct AngleColors {
     func maskInputImage(completion: @escaping (UIImage?) -> Void, bgColor:UIColor = .white, bgAlpha:CGFloat = 1.0){
     
         self.bgColor = bgColor
-        let bgImage = UIImage.imageFromColor(color: self.bgColor.withAlphaComponent(bgAlpha), size: self.removedBgImage.size, scale: self.removedBgImage.scale)!
+        
+        
+        let bgImage = UIImage.imageFromColor(color: self.bgColor.withAlphaComponent((self.bgColor == .clear) ? 0.0:bgAlpha), size: self.removedBgImage.size, scale: self.removedBgImage.scale)!
         let beginImage = CIImage(cgImage: inputImage.cgImage!)
         let background = CIImage(cgImage: bgImage.cgImage!)
         let mask = CIImage(cgImage: self.removedBgImage.cgImage!)

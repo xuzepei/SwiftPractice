@@ -1,0 +1,1298 @@
+[
+    {
+        "category": "常用尺寸",
+        "name": "一寸照",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "常用尺寸",
+        "name": "二寸照",
+        "pixel_width": "413",
+        "pixel_height": "579",
+        "size_width": "35",
+        "size_height": "49"
+    },
+    {
+        "category": "常用尺寸",
+        "name": "大一寸照",
+        "pixel_width": "390",
+        "pixel_height": "567",
+        "size_width": "33",
+        "size_height": "48"
+    },
+    {
+        "category": "常用尺寸",
+        "name": "小一寸照",
+        "pixel_width": "260",
+        "pixel_height": "378",
+        "size_width": "22",
+        "size_height": "32"
+    },
+    {
+        "category": "常用尺寸",
+        "name": "大二寸照",
+        "pixel_width": "413",
+        "pixel_height": "626",
+        "size_width": "35",
+        "size_height": "53"
+    },
+    {
+        "category": "常用尺寸",
+        "name": "小二寸照",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "常用尺寸",
+        "name": "三寸照",
+        "pixel_width": "650",
+        "pixel_height": "992",
+        "size_width": "55",
+        "size_height": "84"
+    },
+    {
+        "category": "常用尺寸",
+        "name": "四寸照",
+        "pixel_width": "898",
+        "pixel_height": "1181",
+        "size_width": "76",
+        "size_height": "100"
+    },
+    {
+        "category": "近期热门",
+        "name": "标准证件照",
+        "pixel_width": "462",
+        "pixel_height": "612",
+        "size_width": "35",
+        "size_height": "48"
+    },
+    {
+        "category": "近期热门",
+        "name": "卫生资格考试",
+        "pixel_width": "590",
+        "pixel_height": "826",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "近期热门",
+        "name": "身份证 (无回执)",
+        "pixel_width": "358",
+        "pixel_height": "441",
+        "size_width": "26",
+        "size_height": "32"
+    },
+    {
+        "category": "近期热门",
+        "name": "驾驶证",
+        "pixel_width": "260",
+        "pixel_height": "378",
+        "size_width": "22",
+        "size_height": "32"
+    },
+    {
+        "category": "近期热门",
+        "name": "大学生图像信息采集",
+        "pixel_width": "480",
+        "pixel_height": "640",
+        "size_width": "41",
+        "size_height": "54"
+    },
+    {
+        "category": "近期热门",
+        "name": "社保卡",
+        "pixel_width": "307",
+        "pixel_height": "378",
+        "size_width": "26",
+        "size_height": "32"
+    },
+    {
+        "category": "近期热门",
+        "name": "国考报名",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "近期热门",
+        "name": "护士资格考试",
+        "pixel_width": "590",
+        "pixel_height": "826",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "近期热门",
+        "name": "护照 (无回执)",
+        "pixel_width": "390",
+        "pixel_height": "567",
+        "size_width": "33",
+        "size_height": "48"
+    },
+    {
+        "category": "近期热门",
+        "name": "美国签证",
+        "pixel_width": "602",
+        "pixel_height": "602",
+        "size_width": "51",
+        "size_height": "51"
+    },
+    {
+        "category": "近期热门",
+        "name": "云南教师编制考试",
+        "pixel_width": "480",
+        "pixel_height": "640",
+        "size_width": "41",
+        "size_height": "54"
+    },
+    {
+        "category": "近期热门",
+        "name": "公务员考试",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "执业药师资格考试",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "专升本考试",
+        "pixel_width": "480",
+        "pixel_height": "640",
+        "size_width": "39",
+        "size_height": "52"
+    },
+    {
+        "category": "考试证照",
+        "name": "执业医师资格考试",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "高考报名",
+        "pixel_width": "484",
+        "pixel_height": "637",
+        "size_width": "41",
+        "size_height": "54"
+    },
+    {
+        "category": "考试证照",
+        "name": "国家司法考试",
+        "pixel_width": "413",
+        "pixel_height": "626",
+        "size_width": "35",
+        "size_height": "53"
+    },
+    {
+        "category": "考试证照",
+        "name": "国家公务员考试",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "学籍照片",
+        "pixel_width": "307",
+        "pixel_height": "378",
+        "size_width": "26",
+        "size_height": "32"
+    },
+    {
+        "category": "考试证照",
+        "name": "卫生资格考试",
+        "pixel_width": "590",
+        "pixel_height": "826",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "国考报名",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "护士资格考试",
+        "pixel_width": "590",
+        "pixel_height": "826",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "云南教师编制考试",
+        "pixel_width": "480",
+        "pixel_height": "640",
+        "size_width": "41",
+        "size_height": "54"
+    },
+    {
+        "category": "考试证照",
+        "name": "公务员考试",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "教师资格证",
+        "pixel_width": "354",
+        "pixel_height": "472",
+        "size_width": "30",
+        "size_height": "40"
+    },
+    {
+        "category": "考试证照",
+        "name": "普通话水平测试",
+        "pixel_width": "390",
+        "pixel_height": "567",
+        "size_width": "33",
+        "size_height": "48"
+    },
+    {
+        "category": "考试证照",
+        "name": "社工资格证",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "消防设施操作员",
+        "pixel_width": "400",
+        "pixel_height": "560",
+        "size_width": "33",
+        "size_height": "48"
+    },
+    {
+        "category": "考试证照",
+        "name": "会计职称考试",
+        "pixel_width": "590",
+        "pixel_height": "826",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "特岗教师报名",
+        "pixel_width": "358",
+        "pixel_height": "441",
+        "size_width": "26",
+        "size_height": "32"
+    },
+    {
+        "category": "考试证照",
+        "name": "道路运输从业资格证",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "二级建造师",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "英语四六级考试",
+        "pixel_width": "360",
+        "pixel_height": "567",
+        "size_width": "33",
+        "size_height": "48"
+    },
+    {
+        "category": "考试证照",
+        "name": "计算机等级考试",
+        "pixel_width": "660",
+        "pixel_height": "960",
+        "size_width": "33",
+        "size_height": "48"
+    },
+    {
+        "category": "考试证照",
+        "name": "书画等级考试",
+        "pixel_width": "413",
+        "pixel_height": "579",
+        "size_width": "35",
+        "size_height": "49"
+    },
+    {
+        "category": "考试证照",
+        "name": "四川公务员",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "健康管理师",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "陕西行政执法证",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "研究生证",
+        "pixel_width": "425",
+        "pixel_height": "567",
+        "size_width": "36",
+        "size_height": "48"
+    },
+    {
+        "category": "考试证照",
+        "name": "一级建造师",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "房地产经纪人职业资格证",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "国家医学考试",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "证劵从业资格证",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "深圳行政执法证",
+        "pixel_width": "472",
+        "pixel_height": "630",
+        "size_width": "40",
+        "size_height": "53"
+    },
+    {
+        "category": "考试证照",
+        "name": "日语能力考试",
+        "pixel_width": "360",
+        "pixel_height": "480",
+        "size_width": "30",
+        "size_height": "40"
+    },
+    {
+        "category": "考试证照",
+        "name": "广东行政执法证",
+        "pixel_width": "472",
+        "pixel_height": "630",
+        "size_width": "40",
+        "size_height": "53"
+    },
+    {
+        "category": "考试证照",
+        "name": "注册会计师报名",
+        "pixel_width": "178",
+        "pixel_height": "220",
+        "size_width": "30",
+        "size_height": "37"
+    },
+    {
+        "category": "考试证照",
+        "name": "山东公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "监理工程师",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "初、中级经济师",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "江西安全监管执法证",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "四川行政执法证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "浙江行政执法证",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "江苏南京教师招聘考试",
+        "pixel_width": "240",
+        "pixel_height": "320",
+        "size_width": "20",
+        "size_height": "27"
+    },
+    {
+        "category": "考试证照",
+        "name": "吉林省特岗教师",
+        "pixel_width": "120",
+        "pixel_height": "150",
+        "size_width": "10",
+        "size_height": "13"
+    },
+    {
+        "category": "考试证照",
+        "name": "税务师职业资格考试",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "中小学教师资格证",
+        "pixel_width": "500",
+        "pixel_height": "700",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "保险从业资格证",
+        "pixel_width": "210",
+        "pixel_height": "370",
+        "size_width": "18",
+        "size_height": "31"
+    },
+    {
+        "category": "考试证照",
+        "name": "导游证",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "幼儿教师资格证",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "江西行政执法证",
+        "pixel_width": "283",
+        "pixel_height": "378",
+        "size_width": "24",
+        "size_height": "32"
+    },
+    {
+        "category": "考试证照",
+        "name": "人力资源管理师",
+        "pixel_width": "413",
+        "pixel_height": "579",
+        "size_width": "35",
+        "size_height": "49"
+    },
+    {
+        "category": "考试证照",
+        "name": "安徽教师招聘考试",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "河南行政执法证",
+        "pixel_width": "472",
+        "pixel_height": "630",
+        "size_width": "40",
+        "size_height": "53"
+    },
+    {
+        "category": "考试证照",
+        "name": "西藏公务员",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "重庆公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "甘肃公务员",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "陕西公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "海南公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "广西公务员",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "安徽公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "江西公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "天津公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "内蒙古公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "福建公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "北京公务员",
+        "pixel_width": "400",
+        "pixel_height": "600",
+        "size_width": "34",
+        "size_height": "51"
+    },
+    {
+        "category": "考试证照",
+        "name": "河南公务员",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "吉林公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "湖南公务员",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "黑龙江公务员",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "广东公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "宁夏公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "贵州公务员",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "云南公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "西疆公务员",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "考试证照",
+        "name": "湖北公务员",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "翻译资格考试报名",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "兰州教师招聘考试",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "专业代理人资格考试",
+        "pixel_width": "390",
+        "pixel_height": "567",
+        "size_width": "33",
+        "size_height": "48"
+    },
+    {
+        "category": "考试证照",
+        "name": "安全评估师",
+        "pixel_width": "331",
+        "pixel_height": "437",
+        "size_width": "28",
+        "size_height": "37"
+    },
+    {
+        "category": "考试证照",
+        "name": "资产评估师",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "考试证照",
+        "name": "全国林业执法证",
+        "pixel_width": "260",
+        "pixel_height": "390",
+        "size_width": "22",
+        "size_height": "33"
+    },
+    {
+        "category": "考试证照",
+        "name": "深圳行政执法证",
+        "pixel_width": "472",
+        "pixel_height": "630",
+        "size_width": "40",
+        "size_height": "53"
+    },
+    {
+        "category": "考试证照",
+        "name": "云南特岗教师报名",
+        "pixel_width": "142",
+        "pixel_height": "171",
+        "size_width": "12",
+        "size_height": "14"
+    },
+    {
+        "category": "护照签证",
+        "name": "护照 (无回执)",
+        "pixel_width": "390",
+        "pixel_height": "567",
+        "size_width": "33",
+        "size_height": "48"
+    },
+    {
+        "category": "护照签证",
+        "name": "美国签证",
+        "pixel_width": "602",
+        "pixel_height": "602",
+        "size_width": "51",
+        "size_height": "51"
+    },
+    {
+        "category": "护照签证",
+        "name": "日本签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "港澳通行证 (无回执)",
+        "pixel_width": "390",
+        "pixel_height": "567",
+        "size_width": "33",
+        "size_height": "48"
+    },
+    {
+        "category": "护照签证",
+        "name": "新西兰签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "澳大利亚签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "新加坡签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "因公电子护照",
+        "pixel_width": "354",
+        "pixel_height": "472",
+        "size_width": "30",
+        "size_height": "40"
+    },
+    {
+        "category": "护照签证",
+        "name": "韩国签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "印度签证",
+        "pixel_width": "591",
+        "pixel_height": "591",
+        "size_width": "50",
+        "size_height": "50"
+    },
+    {
+        "category": "护照签证",
+        "name": "越南签证 (40x60)",
+        "pixel_width": "472",
+        "pixel_height": "709",
+        "size_width": "40",
+        "size_height": "60"
+    },
+    {
+        "category": "护照签证",
+        "name": "越南签证 (35x45)",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "加拿大签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "马来西亚签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "泰国签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "俄罗斯签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "法国签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "日本签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "台湾通行证",
+        "pixel_width": "390",
+        "pixel_height": "567",
+        "size_width": "33",
+        "size_height": "48"
+    },
+    {
+        "category": "护照签证",
+        "name": "入台证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "迪拜签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "芬兰签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "比利时签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "捷克签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "叙利亚签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "蒙古签证",
+        "pixel_width": "390",
+        "pixel_height": "567",
+        "size_width": "33",
+        "size_height": "48"
+    },
+    {
+        "category": "护照签证",
+        "name": "奥地利签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "巴基斯坦签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "柬埔寨签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "菲律宾签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "孟加拉签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "冰岛签证",
+        "pixel_width": "472",
+        "pixel_height": "590",
+        "size_width": "40",
+        "size_height": "50"
+    },
+    {
+        "category": "护照签证",
+        "name": "伊朗签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "尼泊尔签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "老挝签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "巴西签证",
+        "pixel_width": "472",
+        "pixel_height": "590",
+        "size_width": "40",
+        "size_height": "50"
+    },
+    {
+        "category": "护照签证",
+        "name": "阿根廷签证",
+        "pixel_width": "472",
+        "pixel_height": "590",
+        "size_width": "40",
+        "size_height": "50"
+    },
+    {
+        "category": "护照签证",
+        "name": "土库曼斯坦",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "阿富汗签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "吉尔吉斯斯坦签证",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "护照签证",
+        "name": "肯尼亚签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "文莱签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "缅甸签证",
+        "pixel_width": "413",
+        "pixel_height": "531",
+        "size_width": "35",
+        "size_height": "45"
+    },
+    {
+        "category": "护照签证",
+        "name": "外国人来华工作许可",
+        "pixel_width": "390",
+        "pixel_height": "567",
+        "size_width": "33",
+        "size_height": "48"
+    },
+    {
+        "category": "个人证件",
+        "name": "标准证件照",
+        "pixel_width": "462",
+        "pixel_height": "612",
+        "size_width": "35",
+        "size_height": "48"
+    },
+    {
+        "category": "个人证件",
+        "name": "身份证 (无回执)",
+        "pixel_width": "358",
+        "pixel_height": "441",
+        "size_width": "26",
+        "size_height": "32"
+    },
+    {
+        "category": "个人证件",
+        "name": "驾驶证",
+        "pixel_width": "260",
+        "pixel_height": "378",
+        "size_width": "22",
+        "size_height": "32"
+    },
+    {
+        "category": "个人证件",
+        "name": "大学生图像信息采集",
+        "pixel_width": "480",
+        "pixel_height": "640",
+        "size_width": "41",
+        "size_height": "54"
+    },
+    {
+        "category": "个人证件",
+        "name": "社保卡",
+        "pixel_width": "307",
+        "pixel_height": "378",
+        "size_width": "26",
+        "size_height": "32"
+    },
+    {
+        "category": "个人证件",
+        "name": "求职简历照",
+        "pixel_width": "462",
+        "pixel_height": "612",
+        "size_width": "35",
+        "size_height": "48"
+    },
+    {
+        "category": "个人证件",
+        "name": "健康证",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "个人证件",
+        "name": "微信头像",
+        "pixel_width": "1000",
+        "pixel_height": "1000",
+        "size_width": "85",
+        "size_height": "85"
+    },
+    {
+        "category": "个人证件",
+        "name": "幼儿园入学照片 (一寸)",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "个人证件",
+        "name": "退役军人优待证",
+        "pixel_width": "352",
+        "pixel_height": "440",
+        "size_width": "30",
+        "size_height": "37"
+    },
+    {
+        "category": "个人证件",
+        "name": "医保证 (无回执)",
+        "pixel_width": "307",
+        "pixel_height": "378",
+        "size_width": "26",
+        "size_height": "32"
+    },
+    {
+        "category": "个人证件",
+        "name": "社工",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "个人证件",
+        "name": "残疾人证",
+        "pixel_width": "413",
+        "pixel_height": "579",
+        "size_width": "35",
+        "size_height": "49"
+    },
+    {
+        "category": "个人证件",
+        "name": "交通银行网申",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    },
+    {
+        "category": "个人证件",
+        "name": "厦门电子社保卡",
+        "pixel_width": "264",
+        "pixel_height": "308",
+        "size_width": "30",
+        "size_height": "35"
+    },
+    {
+        "category": "个人证件",
+        "name": "建设银行网申",
+        "pixel_width": "295",
+        "pixel_height": "413",
+        "size_width": "25",
+        "size_height": "35"
+    }
+]
