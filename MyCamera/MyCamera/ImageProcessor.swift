@@ -106,48 +106,6 @@ struct AngleColors {
         }
     }
     
-    func removeBackground(from image: UIImage, completion: @escaping (UIImage?) -> Void, withBgColor: UIColor = .clear) {
-        
-        self.inputImage = image
-        self.bgColor = withBgColor
-        
-        guard let ciImage = CIImage(image: image) else {
-            completion(nil)
-            return
-        }
-        
-        var segmentationRequest = VNGeneratePersonSegmentationRequest()
-        segmentationRequest.qualityLevel = .balanced
-        segmentationRequest.outputPixelFormat = kCVPixelFormatType_OneComponent8
-        
-        guard let originalCG = self.inputImage.cgImage else {
-            completion(nil)
-            return
-        }
-        
-        // Create request handler
-        let requestHandler = VNImageRequestHandler(
-          cgImage: originalCG,
-          options: [:])
-        try? requestHandler.perform([segmentationRequest])
-        
-        DispatchQueue.main.async {
-            guard let mask =
-              segmentationRequest.results?.first else {
-                completion(nil)
-                return
-            }
-            
-            if let outputCGImage = CGImage.create(pixelBuffer: mask.pixelBuffer) {
-                self.removedBgImage = UIImage(cgImage: outputCGImage)
-            }
-            
-            self.maskInputImage(completion: completion, bgColor: self.bgColor)
-        }
-        
-
-    }
-    
     // Performs the blend operation.
     private func blend(original framePixelBuffer: CVPixelBuffer,
                        mask maskPixelBuffer: CVPixelBuffer) {
