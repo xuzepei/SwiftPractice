@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09223B432D81883300CD2D03 /* ScrollViewStickyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09223B422D81883300CD2D03 /* ScrollViewStickyController.xib */; };
+		09223B442D81883300CD2D03 /* ScrollViewStickyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09223B412D81883300CD2D03 /* ScrollViewStickyController.swift */; };
 		09B2518E2A42E72500F59118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B2518D2A42E72500F59118 /* AppDelegate.swift */; };
 		09B251902A42E72500F59118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B2518F2A42E72500F59118 /* SceneDelegate.swift */; };
 		09B251922A42E72500F59118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B251912A42E72500F59118 /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09223B412D81883300CD2D03 /* ScrollViewStickyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewStickyController.swift; sourceTree = "<group>"; };
+		09223B422D81883300CD2D03 /* ScrollViewStickyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollViewStickyController.xib; sourceTree = "<group>"; };
 		09B2518A2A42E72500F59118 /* ScrollViewDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollViewDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B2518D2A42E72500F59118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09B2518F2A42E72500F59118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				09CF76AA2A482CC200156019 /* ScrollView2Controller.xib */,
 				09CF76AD2A4844A000156019 /* ScrollView3Controller.swift */,
 				09CF76AE2A4844A000156019 /* ScrollView3Controller.xib */,
+				09223B412D81883300CD2D03 /* ScrollViewStickyController.swift */,
+				09223B422D81883300CD2D03 /* ScrollViewStickyController.xib */,
 				09C0AAFE2A49340B0005544D /* ExpandingScrollViewController.swift */,
 				09C0AAFF2A49340B0005544D /* ExpandingScrollViewController.xib */,
 			);
@@ -156,6 +162,7 @@
 				09CF76B02A4844A000156019 /* ScrollView3Controller.xib in Resources */,
 				09CF76A42A482B1100156019 /* ScrollView1Controller.xib in Resources */,
 				09B251972A42E72500F59118 /* Assets.xcassets in Resources */,
+				09223B432D81883300CD2D03 /* ScrollViewStickyController.xib in Resources */,
 				09B251952A42E72500F59118 /* Main.storyboard in Resources */,
 				09C0AB012A49340B0005544D /* ExpandingScrollViewController.xib in Resources */,
 				09CF76AC2A482CC300156019 /* ScrollView2Controller.xib in Resources */,
@@ -177,6 +184,7 @@
 				09B2518E2A42E72500F59118 /* AppDelegate.swift in Sources */,
 				09B251902A42E72500F59118 /* SceneDelegate.swift in Sources */,
 				09CF76AF2A4844A000156019 /* ScrollView3Controller.swift in Sources */,
+				09223B442D81883300CD2D03 /* ScrollViewStickyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

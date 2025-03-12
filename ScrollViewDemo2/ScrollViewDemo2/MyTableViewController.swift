@@ -10,7 +10,7 @@ import UIKit
 class MyTableViewController: UITableViewController {
     
     
-    var itemArray:[String] = ["ScrollView without xib", "ScrollView without content layout guid", "ScrollView with content layout guid", "ScrollView Expanding"]
+    var itemArray:[String] = ["ScrollView without xib", "ScrollView without content layout guid", "ScrollView with content layout guid", "ScrollView Expanding","ScrollView Sticky"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class MyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return itemArray.count
     }
 
     
@@ -71,7 +71,8 @@ class MyTableViewController: UITableViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
         else if indexPath.row == 4 {
-            
+            let vc = ScrollViewStickyController()
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 
