@@ -66,6 +66,7 @@ class ScrollViewStickyController: UIViewController, UIScrollViewDelegate {
         
         print("#### offsetY: \(offsetY)")
         
+        //3. 调整stickyView顶部的约束距离
         if offsetY >= stickyThreshold {
             
             print("#### 111111")
