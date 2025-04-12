@@ -43,6 +43,9 @@
 		098CDD6C2B9ED6B10051408B /* ImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098CDD6A2B9ED6B10051408B /* ImageCropView.swift */; };
 		098CDD6F2B9ED71F0051408B /* ImageCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098CDD6D2B9ED71F0051408B /* ImageCropViewController.swift */; };
 		098CDD702B9ED71F0051408B /* ImageCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098CDD6E2B9ED71F0051408B /* ImageCropViewController.xib */; };
+		09A853802DAA597B0048C2B7 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A8537E2DAA597B0048C2B7 /* ImageViewerViewController.swift */; };
+		09A853812DAA597B0048C2B7 /* ImageViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8537F2DAA597B0048C2B7 /* ImageViewerViewController.xib */; };
+		09A853832DAA65EA0048C2B7 /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A853822DAA65E40048C2B7 /* ImageViewer.swift */; };
 		09B20CBF2B4E263900055509 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B20CBE2B4E263900055509 /* TagsView.swift */; };
 		09B485AD2A9F15CC008E08DD /* ScanAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */; };
 		09B485AE2A9F15CC008E08DD /* ScanAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */; };
@@ -125,6 +128,9 @@
 		098CDD6A2B9ED6B10051408B /* ImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropView.swift; sourceTree = "<group>"; };
 		098CDD6D2B9ED71F0051408B /* ImageCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropViewController.swift; sourceTree = "<group>"; };
 		098CDD6E2B9ED71F0051408B /* ImageCropViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCropViewController.xib; sourceTree = "<group>"; };
+		09A8537E2DAA597B0048C2B7 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
+		09A8537F2DAA597B0048C2B7 /* ImageViewerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewerViewController.xib; sourceTree = "<group>"; };
+		09A853822DAA65E40048C2B7 /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
 		09B20CBE2B4E263900055509 /* TagsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAnimationViewController.swift; sourceTree = "<group>"; };
 		09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanAnimationViewController.xib; sourceTree = "<group>"; };
@@ -323,6 +329,7 @@
 		09DAE3912A5D055E00B77060 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				09A853822DAA65E40048C2B7 /* ImageViewer.swift */,
 				09E091C22B85D827001FF11D /* ImageProcessor */,
 				091CE2802B47A60500204E23 /* Tags */,
 				091F5B0C2B32EBF80092FD6E /* Toast */,
@@ -340,6 +347,8 @@
 				09DAE3A92A5D20F900B77060 /* HomeTableViewController.swift */,
 				09D36B992A5D50CF0096C6EC /* AutoLayout */,
 				09D36B9A2A5D50EF0096C6EC /* CollectionView */,
+				09A8537E2DAA597B0048C2B7 /* ImageViewerViewController.swift */,
+				09A8537F2DAA597B0048C2B7 /* ImageViewerViewController.xib */,
 			);
 			path = SwiftDemo;
 			sourceTree = "<group>";
@@ -469,6 +478,7 @@
 			files = (
 				09B485AE2A9F15CC008E08DD /* ScanAnimationViewController.xib in Resources */,
 				091CE27E2B47A5ED00204E23 /* TagViewController.xib in Resources */,
+				09A853812DAA597B0048C2B7 /* ImageViewerViewController.xib in Resources */,
 				098CDD702B9ED71F0051408B /* ImageCropViewController.xib in Resources */,
 				09E091CA2B85D895001FF11D /* ImageProcessorViewController.xib in Resources */,
 				098CDD6B2B9ED6B10051408B /* ImageCropView.xib in Resources */,
@@ -548,6 +558,7 @@
 				091F5B202B32EBF80092FD6E /* MulticastDelegate.swift in Sources */,
 				09E091E52B85D93E001FF11D /* MLModel+Images.swift in Sources */,
 				09D36B972A5D42CB0096C6EC /* CollectionViewController.swift in Sources */,
+				09A853802DAA597B0048C2B7 /* ImageViewerViewController.swift in Sources */,
 				09DAE3AA2A5D20F900B77060 /* HomeTableViewController.swift in Sources */,
 				09E091EC2B85D93E001FF11D /* CVPixelBuffer+Resize.swift in Sources */,
 				09D3DCE22B88887D0076DBAB /* ColorSelector.swift in Sources */,
@@ -556,6 +567,7 @@
 				097841542B8F372400CFEB4F /* ImageCropperConfigurator.swift in Sources */,
 				091F5B292B32EBF80092FD6E /* AnimationType.swift in Sources */,
 				09E091DD2B85D93E001FF11D /* Array+Extensions.swift in Sources */,
+				09A853832DAA65EA0048C2B7 /* ImageViewer.swift in Sources */,
 				091F5B272B32EBF80092FD6E /* ToastQueueDelegate.swift in Sources */,
 				091F5B252B32EBF80092FD6E /* ToastHelper.swift in Sources */,
 				097841552B8F372400CFEB4F /* ImageCropperModel.swift in Sources */,

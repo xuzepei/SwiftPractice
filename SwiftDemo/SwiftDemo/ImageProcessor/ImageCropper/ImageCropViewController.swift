@@ -113,19 +113,19 @@ class ImageCropViewController: UIViewController, ColorSelectorDelegate {
         
         let outputImage = self.imageCropView.crop()
         //Tool.savePhotoToLocal(outputImage.pngData()!, name: "myphoto.png")
-        ImageProcessor.shared.removeBackground(from: outputImage, completion: { (resultImage) in
-            if let resultImage = resultImage {
-                DispatchQueue.main.async {
-                    if let image = Tool.resizeImageByDPI(image: resultImage, target: self.targetPhoto)
-                    {
-                        Tool.saveImageToPhotoLibrary(image: image, rootVC: self)
-                        //Tool.savePhotoToLocal(image.pngData()!, name: "myphoto.png")
-                    }
-                }
-            } else {
-                print("####Failed to remove background")
-            }
-        }, withBgColor: self.selectedColor)
+//        ImageProcessor.shared.removeBackground(from: outputImage, completion: { (resultImage) in
+//            if let resultImage = resultImage {
+//                DispatchQueue.main.async {
+//                    if let image = Tool.resizeImageByDPI(image: resultImage, target: self.targetPhoto)
+//                    {
+//                        Tool.saveImageToPhotoLibrary(image: image, rootVC: self)
+//                        //Tool.savePhotoToLocal(image.pngData()!, name: "myphoto.png")
+//                    }
+//                }
+//            } else {
+//                print("####Failed to remove background")
+//            }
+//        }, withBgColor: self.selectedColor)
     }
     
     func selectedColor(color: UIColor) {
@@ -175,13 +175,13 @@ class ImageCropViewController: UIViewController, ColorSelectorDelegate {
             }
             //self.imageCropView.imageView.image = outputImage.toUIImage()
             
-            ImageProcessor.shared.removeBackground(from: outputImage.toUIImage()!, completion: { (resultImage) in
-                if let resultImage = resultImage {
-                    self.imageCropView.imageView.image = resultImage
-                } else {
-                    print("####Failed to remove background")
-                }
-            }, withBgColor: self.colorSelector.selectedColor)
+//            ImageProcessor.shared.removeBackground(from: outputImage.toUIImage()!, completion: { (resultImage) in
+//                if let resultImage = resultImage {
+//                    self.imageCropView.imageView.image = resultImage
+//                } else {
+//                    print("####Failed to remove background")
+//                }
+//            }, withBgColor: self.colorSelector.selectedColor)
         }
     }
     

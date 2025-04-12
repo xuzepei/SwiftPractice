@@ -23,7 +23,7 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper","ImageCropView", "Demo"])
+        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper","ImageCropView", "Select Photo Size", "ImageViewr"])
     }
 
     // MARK: - Table view data source
@@ -169,10 +169,29 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
 //            vc.targetPhoto = Tool.photo1Inches
 //            
 //            self.navigationController?.pushViewController(vc, animated: true)
-        } else {
+        } else if indexPath.row == 9 {
             let vc = PhoteSizeSelectionViewController()
             vc.title = getItemByIndex(indexPath: indexPath)
             self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+//            let vc = ImageViewerViewController()
+//            self.navigationController?.pushViewController(vc, animated: true)
+            
+            let images = [UIImage(named: "photo")!, UIImage(named: "photo2")!, UIImage(named: "tes")!]
+            ImageViewer.show(from: self.view, with: images)
+            
+//            let viewer = ImageViewer()
+//            viewer.translatesAutoresizingMaskIntoConstraints = false
+//            view.addSubview(viewer)
+//            viewer.images = images
+//            
+//
+//            NSLayoutConstraint.activate([
+//                viewer.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+//                viewer.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+//                viewer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+//                viewer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+//            ])
         }
     }
     
@@ -279,21 +298,21 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
     }
     
     func processImageToRemoveBg(image: UIImage) {
-        ImageProcessor.shared.removeBackground(from: image, completion: { (resultImage) in
-            if let resultImage = resultImage {
-                DispatchQueue.main.async {
-                    let vc = ImageCropViewController()
-                    vc.title = "ImageCropView"
-                    vc.targetPhoto = Tool.photo2Inches
-                    vc.originalImage = resultImage
-        
-                    self.navigationController?.pushViewController(vc, animated: true)
-                }
-
-            } else {
-                print("####Failed to remove background")
-            }
-        }, withBgColor: .white)
+//        ImageProcessor.shared.removeBackground(from: image, completion: { (resultImage) in
+//            if let resultImage = resultImage {
+//                DispatchQueue.main.async {
+//                    let vc = ImageCropViewController()
+//                    vc.title = "ImageCropView"
+//                    vc.targetPhoto = Tool.photo2Inches
+//                    vc.originalImage = resultImage
+//        
+//                    self.navigationController?.pushViewController(vc, animated: true)
+//                }
+//
+//            } else {
+//                print("####Failed to remove background")
+//            }
+//        }, withBgColor: .white)
     }
     
     func getDefaultDPI(for image: UIImage) -> CGFloat {

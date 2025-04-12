@@ -296,32 +296,32 @@ class PhoteSizeSelectionViewController: UIViewController, UISearchBarDelegate, U
     
     
     func processImageToRemoveBg(image: UIImage) {
-        ImageProcessor.shared.removeBackground(from: image, completion: { (resultImage) in
-            if let resultImage = resultImage {
-                DispatchQueue.main.async {
-                    
-                    if let item = self.getCellDataAtIndexPath(self.selectedIndexPath) as? Dictionary<String, AnyObject> {
-                        
-                        let name = item["name"] as? String ?? ""
-                        let pxielWidth = Double(item["pixel_width"] as? String ?? "0") ?? 0
-                        let pxielHeight = Double(item["pixel_height"] as? String ?? "0") ?? 0
-                        let sizeWidth = Double(item["size_width"] as? String ?? "0") ?? 0
-                        let sizeHeight = Double(item["size_height"] as? String ?? "0") ?? 0
-                        
-                        let photo = Photo(pixelSize: CGSizeMake(pxielWidth, pxielHeight), physicalSize: CGSizeMake(sizeWidth, sizeHeight), label: name)
-                        let vc = ImageCropViewController()
-                        vc.title = "ImageCropView"
-                        vc.targetPhoto = photo
-                        vc.originalImage = resultImage
-            
-                        self.navigationController?.pushViewController(vc, animated: true)
-                    }
-                }
-
-            } else {
-                print("####Failed to remove background")
-            }
-        }, withBgColor: .clear)
+//        ImageProcessor.shared.removeBackground(from: image, completion: { (resultImage) in
+//            if let resultImage = resultImage {
+//                DispatchQueue.main.async {
+//                    
+//                    if let item = self.getCellDataAtIndexPath(self.selectedIndexPath) as? Dictionary<String, AnyObject> {
+//                        
+//                        let name = item["name"] as? String ?? ""
+//                        let pxielWidth = Double(item["pixel_width"] as? String ?? "0") ?? 0
+//                        let pxielHeight = Double(item["pixel_height"] as? String ?? "0") ?? 0
+//                        let sizeWidth = Double(item["size_width"] as? String ?? "0") ?? 0
+//                        let sizeHeight = Double(item["size_height"] as? String ?? "0") ?? 0
+//                        
+//                        let photo = Photo(pixelSize: CGSizeMake(pxielWidth, pxielHeight), physicalSize: CGSizeMake(sizeWidth, sizeHeight), label: name)
+//                        let vc = ImageCropViewController()
+//                        vc.title = "ImageCropView"
+//                        vc.targetPhoto = photo
+//                        vc.originalImage = resultImage
+//            
+//                        self.navigationController?.pushViewController(vc, animated: true)
+//                    }
+//                }
+//
+//            } else {
+//                print("####Failed to remove background")
+//            }
+//        }, withBgColor: .clear)
     }
 
 }

@@ -46,13 +46,13 @@ class ImageProcessorViewController: UIViewController {
     @IBAction func clickedProcessBtn(_ sender: Any) {
         
         if let image = self.inputIV.image {
-            imageProcessor.removeBackground(from: image, completion: { (resultImage) in
-                if let resultImage = resultImage {
-                    self.outputIV.image = resultImage
-                } else {
-                    print("####Failed to remove background")
-                }
-            }, withBgColor: self.colorSelector.selectedColor)
+//            imageProcessor.removeBackground(from: image, completion: { (resultImage) in
+//                if let resultImage = resultImage {
+//                    self.outputIV.image = resultImage
+//                } else {
+//                    print("####Failed to remove background")
+//                }
+//            }, withBgColor: self.colorSelector.selectedColor)
             
 
         }

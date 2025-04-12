@@ -23,11 +23,11 @@ DEPENDENCIES:
   - TagListView
   - Toast (= 4.0.0)
   - TTGTagCollectionView
-  - YUCIHighPassSkinSmoothing
+  - YUCIHighPassSkinSmoothing (= 1.4)
   - ZLImageEditor
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Alamofire
     - MBProgressHUD
     - PowerplayToastKit
@@ -53,6 +53,6 @@ SPEC CHECKSUMS:
   YUCIHighPassSkinSmoothing: 8418fd1bf605ec22b647c57745b863b352f72097
   ZLImageEditor: df1cd2f84aa2a38ad4d76bdcc34538be6c3a7e73
 
-PODFILE CHECKSUM: 0d887f645f6ab50bd2865967753848bd9874d515
+PODFILE CHECKSUM: 8711f2210fa52c6cd90a4af2ebeb105d703ca18d
 
 COCOAPODS: 1.15.2
