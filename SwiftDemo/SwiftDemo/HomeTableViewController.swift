@@ -23,7 +23,7 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper","ImageCropView", "Select Photo Size", "ImageViewr"])
+        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper","ImageCropView", "Select Photo Size", "ImageViewer"])
     }
 
     // MARK: - Table view data source
@@ -178,7 +178,7 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
 //            self.navigationController?.pushViewController(vc, animated: true)
             
             let images = [UIImage(named: "photo")!, UIImage(named: "photo2")!, UIImage(named: "tes")!]
-            ImageViewer.show(from: self.view, with: images)
+            ImageViewer.show(with: images, from: nil)
             
 //            let viewer = ImageViewer()
 //            viewer.translatesAutoresizingMaskIntoConstraints = false

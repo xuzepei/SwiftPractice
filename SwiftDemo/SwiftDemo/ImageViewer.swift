@@ -14,23 +14,44 @@ class ImageViewer: UIView, UIScrollViewDelegate {
     private let scrollView = UIScrollView()
     private let pageControl = UIPageControl()
     private var zoomScrollViews: [UIScrollView] = []
-    let closeButton = UIButton(type: .system)
+    let closeButton = UIButton(type: .custom)
+    let saveButton = UIButton(type: .custom)
     
-    static func show(from parent: UIView, with images: [UIImage]) {
+    static func show(with images: [UIImage], from parent: UIView?) {
         
         let viewer = ImageViewer()
         viewer.translatesAutoresizingMaskIntoConstraints = false
         viewer.alpha = 0
         viewer.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         viewer.images = images
-        parent.addSubview(viewer)
         
-        NSLayoutConstraint.activate([
-            viewer.leadingAnchor.constraint(equalTo: parent.safeAreaLayoutGuide.leadingAnchor),
-            viewer.trailingAnchor.constraint(equalTo: parent.safeAreaLayoutGuide.trailingAnchor),
-            viewer.topAnchor.constraint(equalTo: parent.safeAreaLayoutGuide.topAnchor),
-            viewer.bottomAnchor.constraint(equalTo: parent.safeAreaLayoutGuide.bottomAnchor)
-        ])
+        if let parentView = parent {
+            parentView.addSubview(viewer)
+            
+            NSLayoutConstraint.activate([
+                viewer.leadingAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.leadingAnchor),
+                viewer.trailingAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.trailingAnchor),
+                viewer.topAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.topAnchor),
+                viewer.bottomAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.bottomAnchor)
+            ])
+        } else {
+            guard let window = UIApplication.shared
+                .connectedScenes
+                .compactMap({ $0 as? UIWindowScene })
+                .first?.windows
+                .first(where: { $0.isKeyWindow }) else {
+                    print("No key window")
+                    return
+            }
+            
+            window.addSubview(viewer)
+            NSLayoutConstraint.activate([
+                viewer.leadingAnchor.constraint(equalTo: window.leadingAnchor),
+                viewer.trailingAnchor.constraint(equalTo: window.trailingAnchor),
+                viewer.topAnchor.constraint(equalTo: window.topAnchor),
+                viewer.bottomAnchor.constraint(equalTo: window.bottomAnchor),
+            ])
+        }
 
         viewer.setup()
 
@@ -57,10 +78,11 @@ class ImageViewer: UIView, UIScrollViewDelegate {
     }
     
     func setup() {
-        self.backgroundColor = .black.withAlphaComponent(0.7)
+        self.backgroundColor = .black.withAlphaComponent(0.8)
         setupScrollView()
         setupPageControl()
         setupCloseButton()
+        setupSaveButton()
     }
     
     // MARK: - Setup ScrollView
@@ -98,7 +120,7 @@ class ImageViewer: UIView, UIScrollViewDelegate {
             let zoomView = UIScrollView()
             zoomView.delegate = self
             zoomView.translatesAutoresizingMaskIntoConstraints = false
-            zoomView.minimumZoomScale = 0.5
+            zoomView.minimumZoomScale = 1.0
             zoomView.maximumZoomScale = 3.0
             zoomView.showsVerticalScrollIndicator = false
             zoomView.showsHorizontalScrollIndicator = false
@@ -159,21 +181,15 @@ class ImageViewer: UIView, UIScrollViewDelegate {
     
     private func setupCloseButton() {
         closeButton.translatesAutoresizingMaskIntoConstraints = false
-        closeButton.setTitle("✕", for: .normal)
-        closeButton.setTitleColor(.red, for: .normal)
-        closeButton.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .bold)
-        closeButton.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
-        closeButton.layer.cornerRadius = 20
-        closeButton.clipsToBounds = true
+        closeButton.setImage(UIImage(named: "close_btn"), for: .normal)
         closeButton.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
-
         self.addSubview(closeButton)
         
         NSLayoutConstraint.activate([
-            closeButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 40),
+            closeButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 60),
             closeButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            closeButton.widthAnchor.constraint(equalToConstant: 40),
-            closeButton.heightAnchor.constraint(equalToConstant: 40)
+            closeButton.widthAnchor.constraint(equalToConstant: 30),
+            closeButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
@@ -184,6 +200,45 @@ class ImageViewer: UIView, UIScrollViewDelegate {
         }) { _ in
             self.removeFromSuperview()
         }
+    }
+    
+    private func setupSaveButton() {
+        saveButton.translatesAutoresizingMaskIntoConstraints = false
+        //saveButton.backgroundColor = .systemGreen
+        saveButton.layer.cornerRadius = 20
+        saveButton.layer.masksToBounds = true
+        
+        saveButton.setBackgroundImage(UIImage.image(withColor: .black), for: .normal)
+        saveButton.setBackgroundImage(UIImage.image(withColor: .black.withAlphaComponent(0.6)), for: .highlighted)
+        
+        saveButton.addTarget(self, action: #selector(saveTapped), for: .touchUpInside)
+        self.addSubview(saveButton)
+        
+        NSLayoutConstraint.activate([
+            saveButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -40),
+            saveButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            saveButton.widthAnchor.constraint(equalToConstant: 40),
+            saveButton.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        
+        let iv = UIImageView()
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        iv.image = UIImage(named: "save_btn1")?.withTintColor(.white)
+        saveButton.addSubview(iv)
+        
+        NSLayoutConstraint.activate([
+            iv.widthAnchor.constraint(equalToConstant: 30),
+            iv.heightAnchor.constraint(equalToConstant: 30),
+            iv.centerXAnchor.constraint(equalTo: saveButton.centerXAnchor),
+            iv.centerYAnchor.constraint(equalTo: saveButton.centerYAnchor),
+        ])
+
+    }
+    
+    @objc private func saveTapped() {
+//        if let image = self.image {
+//            Tool.saveImageToPhotoLibrary(image: image, rootVC: nil)
+//        }
     }
     
     // MARK: - Zoom
