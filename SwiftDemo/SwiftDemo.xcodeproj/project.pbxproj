@@ -58,6 +58,9 @@
 		09D36BA02A5D54840096C6EC /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D36B9F2A5D54840096C6EC /* HttpRequest.swift */; };
 		09D36BA22A5D549B0096C6EC /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D36BA12A5D549B0096C6EC /* Tool.swift */; };
 		09D3DCE22B88887D0076DBAB /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D3DCE12B88887D0076DBAB /* ColorSelector.swift */; };
+		09D6C5942DAC96620068D81D /* ThreeDotsIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D6C5912DAC96620068D81D /* ThreeDotsIndicatorViewController.swift */; };
+		09D6C5952DAC96620068D81D /* ThreeDotsIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D6C5902DAC96620068D81D /* ThreeDotsIndicatorView.swift */; };
+		09D6C5962DAC96620068D81D /* ThreeDotsIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09D6C5922DAC96620068D81D /* ThreeDotsIndicatorViewController.xib */; };
 		09DAE3932A5D055E00B77060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAE3922A5D055E00B77060 /* AppDelegate.swift */; };
 		09DAE3952A5D055E00B77060 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAE3942A5D055E00B77060 /* SceneDelegate.swift */; };
 		09DAE39A2A5D055E00B77060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DAE3982A5D055E00B77060 /* Main.storyboard */; };
@@ -144,6 +147,9 @@
 		09D36BA12A5D549B0096C6EC /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		09D36BA32A5D55B40096C6EC /* SwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		09D3DCE12B88887D0076DBAB /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
+		09D6C5902DAC96620068D81D /* ThreeDotsIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDotsIndicatorView.swift; sourceTree = "<group>"; };
+		09D6C5912DAC96620068D81D /* ThreeDotsIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDotsIndicatorViewController.swift; sourceTree = "<group>"; };
+		09D6C5922DAC96620068D81D /* ThreeDotsIndicatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThreeDotsIndicatorViewController.xib; sourceTree = "<group>"; };
 		09DAE38F2A5D055E00B77060 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DAE3922A5D055E00B77060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09DAE3942A5D055E00B77060 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -306,6 +312,16 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		09D6C5932DAC96620068D81D /* 3DotsIndicatior */ = {
+			isa = PBXGroup;
+			children = (
+				09D6C5902DAC96620068D81D /* ThreeDotsIndicatorView.swift */,
+				09D6C5912DAC96620068D81D /* ThreeDotsIndicatorViewController.swift */,
+				09D6C5922DAC96620068D81D /* ThreeDotsIndicatorViewController.xib */,
+			);
+			path = 3DotsIndicatior;
+			sourceTree = "<group>";
+		};
 		09DAE3862A5D055E00B77060 = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				09A853822DAA65E40048C2B7 /* ImageViewer.swift */,
+				09D6C5932DAC96620068D81D /* 3DotsIndicatior */,
 				09E091C22B85D827001FF11D /* ImageProcessor */,
 				091CE2802B47A60500204E23 /* Tags */,
 				091F5B0C2B32EBF80092FD6E /* Toast */,
@@ -486,6 +503,7 @@
 				09D36B982A5D42CB0096C6EC /* CollectionViewController.xib in Resources */,
 				093C6D1B2BA05C4E008E3759 /* PhotoSizeCell.xib in Resources */,
 				09D36B9E2A5D51260096C6EC /* CollectionViewCell.xib in Resources */,
+				09D6C5962DAC96620068D81D /* ThreeDotsIndicatorViewController.xib in Resources */,
 				09DAE39F2A5D055F00B77060 /* Assets.xcassets in Resources */,
 				093C6D152BA05620008E3759 /* PhoteSizeSelectionViewController.xib in Resources */,
 				09DAE39A2A5D055E00B77060 /* Main.storyboard in Resources */,
@@ -560,6 +578,8 @@
 				09D36B972A5D42CB0096C6EC /* CollectionViewController.swift in Sources */,
 				09A853802DAA597B0048C2B7 /* ImageViewerViewController.swift in Sources */,
 				09DAE3AA2A5D20F900B77060 /* HomeTableViewController.swift in Sources */,
+				09D6C5942DAC96620068D81D /* ThreeDotsIndicatorViewController.swift in Sources */,
+				09D6C5952DAC96620068D81D /* ThreeDotsIndicatorView.swift in Sources */,
 				09E091EC2B85D93E001FF11D /* CVPixelBuffer+Resize.swift in Sources */,
 				09D3DCE22B88887D0076DBAB /* ColorSelector.swift in Sources */,
 				09E091EB2B85D93E001FF11D /* MLMultiArray+Image.swift in Sources */,
