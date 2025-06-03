@@ -18,7 +18,9 @@ struct SwiftUIDemoApp: App {
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
             
-            LandmarkContentView().environmentObject(modelData)
+            //LandmarkContentView().environmentObject(modelData)
+            
+            ContentView()
                 
         }
     }

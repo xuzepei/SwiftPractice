@@ -13,7 +13,10 @@ struct MapView: View {
     
     var landmark: Landmark
     
-    @State private var region = MKCoordinateRegion()
+    @State private var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868),
+        span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+    )
     
     var body: some View {
         //        Map(coordinateRegion: $region)
@@ -21,19 +24,22 @@ struct MapView: View {
         //                setRegion(coordinate)
         //            }
         
-        Map(coordinateRegion: $region, annotationItems: [landmark]) { annotation in
-            MapPin(coordinate: annotation.locationCoordinate)
-        }.onAppear {
-            setRegion(landmark.locationCoordinate)
-        }
+//        Map(coordinateRegion: $region, annotationItems: [landmark]) { annotation in
+//            MapPin(coordinate: annotation.locationCoordinate)
+//        }.onAppear {
+//            setRegion(landmark.locationCoordinate)
+//        }
+        
+        //Map(initialPosition: .region(region))
+        Map(coordinateRegion: $region)
     }
     
-    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
-        region = MKCoordinateRegion(
-            center: coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-        )
-    }
+//    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
+//        region = MKCoordinateRegion(
+//            center: coordinate,
+//            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+//        )
+//    }
 }
 
 struct MapView_Previews: PreviewProvider {
