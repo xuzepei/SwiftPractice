@@ -12,38 +12,29 @@ import MapKit
 struct MapView: View {
     
     var landmark: Landmark
-    
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868),
-        span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-    )
+    @State private var region: MKCoordinateRegion = MKCoordinateRegion()
+
     
     var body: some View {
-        //        Map(coordinateRegion: $region)
-        //            .onAppear {
-        //                setRegion(coordinate)
-        //            }
-        
-//        Map(coordinateRegion: $region, annotationItems: [landmark]) { annotation in
-//            MapPin(coordinate: annotation.locationCoordinate)
-//        }.onAppear {
-//            setRegion(landmark.locationCoordinate)
-//        }
+
+        Map(coordinateRegion: $region)
+            .ignoresSafeArea()
+            .onAppear {
+                setRegion(landmark.locationCoordinate)
+            }
         
         //Map(initialPosition: .region(region))
-        Map(coordinateRegion: $region)
     }
     
-//    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
-//        region = MKCoordinateRegion(
-//            center: coordinate,
-//            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-//        )
-//    }
+    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
+        region = MKCoordinateRegion(
+            center: coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        )
+    }
 }
 
-struct MapView_Previews: PreviewProvider {
-    static var previews: some View {
-        MapView(landmark: ModelData().landmarks[0])
-    }
+#Preview {
+    let landmarks = ModelData().landmarks
+    MapView(landmark: landmarks[0])
 }

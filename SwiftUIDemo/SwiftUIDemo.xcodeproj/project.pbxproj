@@ -31,7 +31,6 @@
 		09C03F822A66374F00A377C5 /* DataPassTestChangeObservedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F812A66374F00A377C5 /* DataPassTestChangeObservedObject.swift */; };
 		09C03F842A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F832A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift */; };
 		09C03F862A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F852A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift */; };
-		09C480F32DEEEEA8004DD161 /* HellowWorldContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C480F22DEEEEA8004DD161 /* HellowWorldContentView.swift */; };
 		09C480F52DEEF463004DD161 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C480F42DEEF458004DD161 /* Color+Extension.swift */; };
 		09E0C19B2A64D27200C24842 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C19A2A64D27200C24842 /* UIDevice+Extension.swift */; };
 		09E0C19E2A6548B600C24842 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C19D2A6548B600C24842 /* FavoriteButton.swift */; };
@@ -64,7 +63,6 @@
 		09C03F812A66374F00A377C5 /* DataPassTestChangeObservedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestChangeObservedObject.swift; sourceTree = "<group>"; };
 		09C03F832A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestEnvironmentKeyValue.swift; sourceTree = "<group>"; };
 		09C03F852A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestChangeEnvironmentKeyValue.swift; sourceTree = "<group>"; };
-		09C480F22DEEEEA8004DD161 /* HellowWorldContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HellowWorldContentView.swift; sourceTree = "<group>"; };
 		09C480F42DEEF458004DD161 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		09E0C19A2A64D27200C24842 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		09E0C19D2A6548B600C24842 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				095B80422A614DF3001D95CE /* LandmarkList.swift */,
 				095B80442A614F83001D95CE /* LandmarkDetail.swift */,
 				09E0C19D2A6548B600C24842 /* FavoriteButton.swift */,
-				09C480F22DEEEEA8004DD161 /* HellowWorldContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09C480F32DEEEEA8004DD161 /* HellowWorldContentView.swift in Sources */,
 				09C480F52DEEF463004DD161 /* Color+Extension.swift in Sources */,
 				09C03F772A66200C00A377C5 /* DataPassTestBinding.swift in Sources */,
 				09E0C19B2A64D27200C24842 /* UIDevice+Extension.swift in Sources */,

@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUIDemoApp: App {
     let persistenceController = PersistenceController.shared
     
-    private var modelData = ModelData()
+    @StateObject private var modelData = ModelData()
 
     var body: some Scene {
         WindowGroup {
@@ -20,7 +20,8 @@ struct SwiftUIDemoApp: App {
             
             //LandmarkContentView().environmentObject(modelData)
             
-            ContentView()
+            //ContentView()
+            LandmarkContentView().environmentObject(modelData)
                 
         }
     }

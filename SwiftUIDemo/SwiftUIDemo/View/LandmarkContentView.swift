@@ -13,8 +13,6 @@ struct LandmarkContentView: View {
     }
 }
 
-struct LandmarkContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        LandmarkContentView().environmentObject(ModelData())
-    }
+#Preview {
+    LandmarkContentView().environmentObject(ModelData())
 }
