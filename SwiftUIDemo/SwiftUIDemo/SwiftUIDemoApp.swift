@@ -21,8 +21,11 @@ struct SwiftUIDemoApp: App {
             //LandmarkContentView().environmentObject(modelData)
             
             //ContentView()
-            LandmarkContentView().environmentObject(modelData)
-                
+            //LandmarkContentView().environmentObject(modelData)
+            DeviceManagementView()
+            //TestContentView()
+            
+            //CustomPopoverExample()
         }
     }
 }

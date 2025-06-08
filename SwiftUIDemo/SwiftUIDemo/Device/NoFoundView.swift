@@ -19,5 +19,5 @@ struct NoFoundView: View {
 }
 
 #Preview {
-    NoFoundView(text: LS("No Device Found"))
+    NoFoundView(text: "No Device Found")
 }

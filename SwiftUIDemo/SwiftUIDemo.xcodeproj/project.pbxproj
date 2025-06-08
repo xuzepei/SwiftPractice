@@ -32,6 +32,13 @@
 		09C03F842A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F832A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift */; };
 		09C03F862A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F852A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift */; };
 		09C480F52DEEF463004DD161 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C480F42DEEF458004DD161 /* Color+Extension.swift */; };
+		09E0B3132DF51D9E008C0759 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0B3112DF51D9E008C0759 /* View+Extension.swift */; };
+		09E0B3152DF51D9E008C0759 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0B30F2DF51D9E008C0759 /* DeviceModel.swift */; };
+		09E0B3162DF51D9E008C0759 /* NoFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0B3102DF51D9E008C0759 /* NoFoundView.swift */; };
+		09E0B3172DF51D9E008C0759 /* DeviceManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0B30D2DF51D9E008C0759 /* DeviceManagementView.swift */; };
+		09E0B3182DF51D9E008C0759 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0B30C2DF51D9E008C0759 /* DeviceCell.swift */; };
+		09E0B31A2DF5721A008C0759 /* TestContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0B3192DF57214008C0759 /* TestContentView.swift */; };
+		09E0B31C2DF58CFC008C0759 /* CustomPopoverExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0B31B2DF58CFA008C0759 /* CustomPopoverExample.swift */; };
 		09E0C19B2A64D27200C24842 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C19A2A64D27200C24842 /* UIDevice+Extension.swift */; };
 		09E0C19E2A6548B600C24842 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C19D2A6548B600C24842 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +71,13 @@
 		09C03F832A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestEnvironmentKeyValue.swift; sourceTree = "<group>"; };
 		09C03F852A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestChangeEnvironmentKeyValue.swift; sourceTree = "<group>"; };
 		09C480F42DEEF458004DD161 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		09E0B30C2DF51D9E008C0759 /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
+		09E0B30D2DF51D9E008C0759 /* DeviceManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagementView.swift; sourceTree = "<group>"; };
+		09E0B30F2DF51D9E008C0759 /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		09E0B3102DF51D9E008C0759 /* NoFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFoundView.swift; sourceTree = "<group>"; };
+		09E0B3112DF51D9E008C0759 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		09E0B3192DF57214008C0759 /* TestContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestContentView.swift; sourceTree = "<group>"; };
+		09E0B31B2DF58CFA008C0759 /* CustomPopoverExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopoverExample.swift; sourceTree = "<group>"; };
 		09E0C19A2A64D27200C24842 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		09E0C19D2A6548B600C24842 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +112,7 @@
 		095B801A2A612F42001D95CE /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				09E0B3122DF51D9E008C0759 /* Device */,
 				09C03F7A2A66282600A377C5 /* DataPassTest */,
 				09E0C19C2A64D27E00C24842 /* Common */,
 				095B803D2A614B33001D95CE /* Resource */,
@@ -167,6 +182,20 @@
 				09C03F852A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift */,
 			);
 			path = DataPassTest;
+			sourceTree = "<group>";
+		};
+		09E0B3122DF51D9E008C0759 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				09E0B31B2DF58CFA008C0759 /* CustomPopoverExample.swift */,
+				09E0B3192DF57214008C0759 /* TestContentView.swift */,
+				09E0B30C2DF51D9E008C0759 /* DeviceCell.swift */,
+				09E0B30D2DF51D9E008C0759 /* DeviceManagementView.swift */,
+				09E0B30F2DF51D9E008C0759 /* DeviceModel.swift */,
+				09E0B3102DF51D9E008C0759 /* NoFoundView.swift */,
+				09E0B3112DF51D9E008C0759 /* View+Extension.swift */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 		09E0C19C2A64D27E00C24842 /* Common */ = {
@@ -253,14 +282,21 @@
 				09C03F772A66200C00A377C5 /* DataPassTestBinding.swift in Sources */,
 				09E0C19B2A64D27200C24842 /* UIDevice+Extension.swift in Sources */,
 				09C03F802A66367B00A377C5 /* DataPassTestObservedObject.swift in Sources */,
+				09E0B3132DF51D9E008C0759 /* View+Extension.swift in Sources */,
+				09E0B3152DF51D9E008C0759 /* DeviceModel.swift in Sources */,
+				09E0B3162DF51D9E008C0759 /* NoFoundView.swift in Sources */,
+				09E0B3172DF51D9E008C0759 /* DeviceManagementView.swift in Sources */,
+				09E0B3182DF51D9E008C0759 /* DeviceCell.swift in Sources */,
 				095B80342A613D57001D95CE /* MapView.swift in Sources */,
 				09C03F792A66281E00A377C5 /* DataPassTestList.swift in Sources */,
 				095B80432A614DF3001D95CE /* LandmarkList.swift in Sources */,
 				09C03F862A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift in Sources */,
 				095B80282A612F43001D95CE /* SwiftUIDemo.xcdatamodeld in Sources */,
 				095B803A2A6148EC001D95CE /* ModelData.swift in Sources */,
+				09E0B31C2DF58CFC008C0759 /* CustomPopoverExample.swift in Sources */,
 				09C03F822A66374F00A377C5 /* DataPassTestChangeObservedObject.swift in Sources */,
 				095B80452A614F83001D95CE /* LandmarkDetail.swift in Sources */,
+				09E0B31A2DF5721A008C0759 /* TestContentView.swift in Sources */,
 				09C03F7C2A662C9B00A377C5 /* DataPassTestEnviromentObject.swift in Sources */,
 				095B80252A612F43001D95CE /* Persistence.swift in Sources */,
 				09C03F752A661E0200A377C5 /* DataPassTestState.swift in Sources */,

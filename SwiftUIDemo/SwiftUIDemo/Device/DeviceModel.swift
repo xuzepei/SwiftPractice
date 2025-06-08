@@ -5,6 +5,8 @@
 //  Created by xuzepei on 2025/6/5.
 //
 
+import UIKit
+
 
 struct Device {
     
@@ -109,46 +111,14 @@ struct Device {
         }
     }
     
-    func isNotInCurrentRegion() -> Bool {
-        
-        if !User.shared.region.isEmpty {
-            
-            var userRegion = ""
-            if User.shared.region == Region.OTHER {
-                userRegion = "en"
-            } else {
-                userRegion = User.shared.region
-            }
-            
-            if !self.region.isEmpty {
-                if userRegion.lowercased() != self.region.lowercased() {
-                    return true
-                }
-            }
-        }
-        
-        return false
-    }
     
     func getExpirationDateText() -> String {
-        
-        if Tool.isForever(dateStr: expireTime) {
-            return LS("Permanent")
-        }
-        
-        return Tool.getOnlyDateDes(expireTime)
+         
+        return "2025-06-08"
     }
     
     func getExpirationTip() -> (String, UIColor)? {
-        if Tool.isAfterNow(expireTime) {
-           if !Tool.isMoreThan5Days(expireTime) {
-               return (LS("About to expire"),.systemOrange)
-           }
-        } else {
-            return (LS("Expired"),.systemRed)
-        }
-        
-        return nil
+        return ("Expired", .red)
     }
     
 
@@ -187,79 +157,21 @@ class DeviceModel: ObservableObject {
         
         self.completion = completion
         
-        var urlString = UrlConfig.shared.getDeviceCoreUrl() + "/manageable"
-        if listType == 1 {
-            urlString = UrlConfig.shared.getDeviceCoreUrl() + "/auths"
-        } else if listType == 2 {
-            urlString = UrlConfig.shared.getDeviceCoreUrl() + "/usable"
-        }
-        
-        
-        var bodyDict = [String:Any]()
-        bodyDict["pageIndex"] = 1
-        bodyDict["pageSize"] = pageItemCount
-        
-        if listType == 1 {
-            bodyDict["number"] = keyword
-        } else {
-            bodyDict["keyword"] = keyword
-        }
-        
-        bodyDict["sorter"] = ["number":"ascend"]
-        bodyDict["filter"] = [:]
         
         DispatchQueue.main.async {
             self.isLoading = true
             self.lastItemIndex = 9
         }
-
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: bodyDict)
-            // Use jsonData for further processing
-            let request = HttpRequest()
-            let b = request.post(urlString, resultBlock: { [weak self] dict in
-
-//                defer {
-//                    completion()
-//                }
-                
-                guard let self = self else {
-                    return
-                }
-                
-                if let dict {
-                    
-                    Logger.logRequestResult(dict)
-                    
-                    if let data = dict["data"] as? Dictionary<String, AnyObject> {
-                        if let array = data["records"] as? Array<Dictionary<String, AnyObject>> {
-                            self.currentPageIndex = 1
-                            
-                            var devices:[Device] = []
-                            for temp in array {
-                                let device = Device(data: temp)
-                                devices.append(device)
-                            }
-                            
-                            handleFetchSucceeded(newDevices: devices)
-                            return
-                        }
-                    }
-                }
-                
-                handleFetchFailed(errorMsg: Errors.default_error)
-                
-            }, token: ["bodyData": jsonData])
-            
-            if b == false {
-                handleFetchFailed(errorMsg: Errors.default_error)
-            }
-            
-        } catch {
-            print(error.localizedDescription)
-            handleFetchFailed(errorMsg: Errors.default_error)
-            
+        
+        var newDevices:[Device] = []
+        for i in 1...10 {
+            var d = Device()
+            d.name = "测试设备 \(i)"
+            d.number = String(i)
+            newDevices.append(d)
         }
+
+        handleFetchSucceeded(newDevices: newDevices)
 
     }
     
@@ -272,22 +184,22 @@ class DeviceModel: ObservableObject {
             self.sort()
             
             self.isLoading = false
+            
+            self.currentPageIndex = 1
             self.completion?()
         }
     }
     
     func handleFetchFailed(errorMsg: String) {
-        
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.isLoading = false
             self.errorMsg = errorMsg
             self.completion?()
         }
-        
     }
     
     func sort() {
-        devices.sort { $0.registerTime > $1.registerTime }
+        devices.sort { Int($0.number) ?? 0 < Int($1.number) ?? 0 }
     }
     
     func loadMore(listType: Int, keyword: String, completion: @escaping () -> Void) {
@@ -304,82 +216,21 @@ class DeviceModel: ObservableObject {
         
         self.completion = completion
         
-        var urlString = UrlConfig.shared.getDeviceCoreUrl() + "/manageable"
-        if listType == 1 {
-            urlString = UrlConfig.shared.getDeviceCoreUrl() + "/auths"
-        } else if listType == 2 {
-            urlString = UrlConfig.shared.getDeviceCoreUrl() + "/usable"
-        }
-        
-        
-        var bodyDict = [String:Any]()
-        bodyDict["pageIndex"] = self.currentPageIndex + 1
-        bodyDict["pageSize"] = pageItemCount
-        
-        if listType == 1 {
-            bodyDict["number"] = keyword
-        } else {
-            bodyDict["keyword"] = keyword
-        }
-        
-        bodyDict["sorter"] = ["number":"ascend"]
-        bodyDict["filter"] = [:]
-        
         DispatchQueue.main.async {
             self.isLoadingMore = true
             self.lastItemIndex = self.pageItemCount * (self.currentPageIndex + 1) - 1
         }
 
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: bodyDict)
-            // Use jsonData for further processing
-            let request = HttpRequest()
-            let b = request.post(urlString, resultBlock: { [weak self] dict in
-
-//                defer {
-//                    completion()
-//                }
-                
-                guard let self = self else {
-                    return
-                }
-                
-                if let dict {
-                    
-                    Logger.logRequestResult(dict)
-                    
-                    if let data = dict["data"] as? Dictionary<String, AnyObject> {
-                        if let array = data["records"] as? Array<Dictionary<String, AnyObject>> {
-                            
-                            if array.count > 0 {
-                                self.currentPageIndex += 1
-                                
-                                var devices:[Device] = []
-                                for temp in array {
-                                    let device = Device(data: temp)
-                                    devices.append(device)
-                                }
-                                
-                                handleLoadMoreSucceeded(newDevices: devices)
-                                return
-                            }
-                        }
-                    }
-                }
-                
-                handleLoadMoreFailed(errorMsg: Errors.default_error)
-                
-            }, token: ["bodyData": jsonData])
-            
-            if b == false {
-                handleLoadMoreFailed(errorMsg: Errors.default_error)
-            }
-            
-        } catch {
-            print(error.localizedDescription)
-            handleLoadMoreFailed(errorMsg: Errors.default_error)
-            
+        var newDevices:[Device] = []
+        for i in 1...10 {
+            var d = Device()
+            let j = self.currentPageIndex*10 + i
+            d.name = "测试设备 \(j)"
+            d.number = String(j)
+            newDevices.append(d)
         }
+                                
+        handleLoadMoreSucceeded(newDevices: newDevices)
 
     }
     
@@ -387,15 +238,18 @@ class DeviceModel: ObservableObject {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.devices.append(contentsOf: newDevices)
-            self.isLoadingMore = false
-            self.completion?()
             self.sort()
+            
+            self.isLoadingMore = false
+            self.currentPageIndex += 1
+            self.completion?()
+            
         }
     }
     
     func handleLoadMoreFailed(errorMsg: String) {
         
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.isLoadingMore = false
             self.errorMsg = errorMsg
             self.completion?()
