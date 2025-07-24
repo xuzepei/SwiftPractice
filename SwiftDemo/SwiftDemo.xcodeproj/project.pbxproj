@@ -46,6 +46,8 @@
 		09A853802DAA597B0048C2B7 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A8537E2DAA597B0048C2B7 /* ImageViewerViewController.swift */; };
 		09A853812DAA597B0048C2B7 /* ImageViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8537F2DAA597B0048C2B7 /* ImageViewerViewController.xib */; };
 		09A853832DAA65EA0048C2B7 /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A853822DAA65E40048C2B7 /* ImageViewer.swift */; };
+		09AF244B2E32112F001BBCCF /* MenuDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF24492E32112F001BBCCF /* MenuDemoViewController.swift */; };
+		09AF244C2E32112F001BBCCF /* MenuDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09AF244A2E32112F001BBCCF /* MenuDemoViewController.xib */; };
 		09B20CBF2B4E263900055509 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B20CBE2B4E263900055509 /* TagsView.swift */; };
 		09B485AD2A9F15CC008E08DD /* ScanAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */; };
 		09B485AE2A9F15CC008E08DD /* ScanAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */; };
@@ -134,6 +136,8 @@
 		09A8537E2DAA597B0048C2B7 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		09A8537F2DAA597B0048C2B7 /* ImageViewerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewerViewController.xib; sourceTree = "<group>"; };
 		09A853822DAA65E40048C2B7 /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
+		09AF24492E32112F001BBCCF /* MenuDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDemoViewController.swift; sourceTree = "<group>"; };
+		09AF244A2E32112F001BBCCF /* MenuDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuDemoViewController.xib; sourceTree = "<group>"; };
 		09B20CBE2B4E263900055509 /* TagsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		09B485AB2A9F15CC008E08DD /* ScanAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAnimationViewController.swift; sourceTree = "<group>"; };
 		09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanAnimationViewController.xib; sourceTree = "<group>"; };
@@ -366,6 +370,8 @@
 				09D36B9A2A5D50EF0096C6EC /* CollectionView */,
 				09A8537E2DAA597B0048C2B7 /* ImageViewerViewController.swift */,
 				09A8537F2DAA597B0048C2B7 /* ImageViewerViewController.xib */,
+				09AF24492E32112F001BBCCF /* MenuDemoViewController.swift */,
+				09AF244A2E32112F001BBCCF /* MenuDemoViewController.xib */,
 			);
 			path = SwiftDemo;
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 				098CDD702B9ED71F0051408B /* ImageCropViewController.xib in Resources */,
 				09E091CA2B85D895001FF11D /* ImageProcessorViewController.xib in Resources */,
 				098CDD6B2B9ED6B10051408B /* ImageCropView.xib in Resources */,
+				09AF244C2E32112F001BBCCF /* MenuDemoViewController.xib in Resources */,
 				09DAE3A22A5D055F00B77060 /* LaunchScreen.storyboard in Resources */,
 				09D36B982A5D42CB0096C6EC /* CollectionViewController.xib in Resources */,
 				093C6D1B2BA05C4E008E3759 /* PhotoSizeCell.xib in Resources */,
@@ -566,6 +573,7 @@
 				091F5B262B32EBF80092FD6E /* ToastViewConfiguration.swift in Sources */,
 				091F5B232B32EBF80092FD6E /* TextAppleToastView.swift in Sources */,
 				09E091DE2B85D93E001FF11D /* Math.swift in Sources */,
+				09AF244B2E32112F001BBCCF /* MenuDemoViewController.swift in Sources */,
 				091F5B212B32EBF80092FD6E /* ToastView.swift in Sources */,
 				09E091EA2B85D93E001FF11D /* CGImage+RawBytes.swift in Sources */,
 				097841592B8F372400CFEB4F /* UIImage+NormalizeOrientation.swift in Sources */,

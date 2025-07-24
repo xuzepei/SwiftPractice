@@ -23,7 +23,7 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper","ImageCropView", "Select Photo Size", "ImageViewer", "ThreeDotsIndicator"])
+        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper","ImageCropView", "Select Photo Size", "ImageViewer", "ThreeDotsIndicator", "UIMenu"])
     }
 
     // MARK: - Table view data source
@@ -192,8 +192,12 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
 //                viewer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
 //                viewer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
 //            ])
-        } else {
+        } else if indexPath.row == 11  {
             let vc = ThreeDotsIndicatorViewController()
+            vc.title = getItemByIndex(indexPath: indexPath)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vc = MenuDemoViewController()
             vc.title = getItemByIndex(indexPath: indexPath)
             self.navigationController?.pushViewController(vc, animated: true)
         }

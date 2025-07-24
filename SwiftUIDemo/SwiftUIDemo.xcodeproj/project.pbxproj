@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0912FABC2E04F82800DAF741 /* GeometryTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912FABB2E04F82800DAF741 /* GeometryTestView.swift */; };
 		095B801C2A612F42001D95CE /* SwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B801B2A612F42001D95CE /* SwiftUIDemoApp.swift */; };
 		095B801E2A612F42001D95CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B801D2A612F42001D95CE /* ContentView.swift */; };
 		095B80202A612F43001D95CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 095B801F2A612F43001D95CE /* Assets.xcassets */; };
@@ -22,6 +23,13 @@
 		095B80412A614BB9001D95CE /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B80402A614BB9001D95CE /* LandmarkRow.swift */; };
 		095B80432A614DF3001D95CE /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B80422A614DF3001D95CE /* LandmarkList.swift */; };
 		095B80452A614F83001D95CE /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B80442A614F83001D95CE /* LandmarkDetail.swift */; };
+		097DCDCB2DF7CE0300A432B9 /* NavigationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097DCDCA2DF7CE0300A432B9 /* NavigationContentView.swift */; };
+		097DCDD32DFA71F100A432B9 /* PopupDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097DCDD22DFA71F100A432B9 /* PopupDemoView.swift */; };
+		097DCDD52DFA72CE00A432B9 /* PopupBelowButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097DCDD42DFA72CE00A432B9 /* PopupBelowButtonView.swift */; };
+		099B6A252E0B950F0058EAC0 /* NavigationStackDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B6A242E0B950F0058EAC0 /* NavigationStackDemoView.swift */; };
+		099B6A272E0B9A630058EAC0 /* TestView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B6A262E0B9A630058EAC0 /* TestView1.swift */; };
+		099B6A292E0BA9140058EAC0 /* TestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B6A282E0BA9140058EAC0 /* TestView2.swift */; };
+		099B6A2B2E0BA9740058EAC0 /* TestView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B6A2A2E0BA9740058EAC0 /* TestView3.swift */; };
 		09C03F752A661E0200A377C5 /* DataPassTestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F742A661E0200A377C5 /* DataPassTestState.swift */; };
 		09C03F772A66200C00A377C5 /* DataPassTestBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F762A66200C00A377C5 /* DataPassTestBinding.swift */; };
 		09C03F792A66281E00A377C5 /* DataPassTestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C03F782A66281E00A377C5 /* DataPassTestList.swift */; };
@@ -44,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0912FABB2E04F82800DAF741 /* GeometryTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryTestView.swift; sourceTree = "<group>"; };
 		095B80182A612F42001D95CE /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		095B801B2A612F42001D95CE /* SwiftUIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoApp.swift; sourceTree = "<group>"; };
 		095B801D2A612F42001D95CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +70,13 @@
 		095B80402A614BB9001D95CE /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		095B80422A614DF3001D95CE /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		095B80442A614F83001D95CE /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		097DCDCA2DF7CE0300A432B9 /* NavigationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationContentView.swift; sourceTree = "<group>"; };
+		097DCDD22DFA71F100A432B9 /* PopupDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDemoView.swift; sourceTree = "<group>"; };
+		097DCDD42DFA72CE00A432B9 /* PopupBelowButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupBelowButtonView.swift; sourceTree = "<group>"; };
+		099B6A242E0B950F0058EAC0 /* NavigationStackDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackDemoView.swift; sourceTree = "<group>"; };
+		099B6A262E0B9A630058EAC0 /* TestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView1.swift; sourceTree = "<group>"; };
+		099B6A282E0BA9140058EAC0 /* TestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView2.swift; sourceTree = "<group>"; };
+		099B6A2A2E0BA9740058EAC0 /* TestView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView3.swift; sourceTree = "<group>"; };
 		09C03F742A661E0200A377C5 /* DataPassTestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestState.swift; sourceTree = "<group>"; };
 		09C03F762A66200C00A377C5 /* DataPassTestBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestBinding.swift; sourceTree = "<group>"; };
 		09C03F782A66281E00A377C5 /* DataPassTestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassTestList.swift; sourceTree = "<group>"; };
@@ -194,6 +210,14 @@
 				09E0B30F2DF51D9E008C0759 /* DeviceModel.swift */,
 				09E0B3102DF51D9E008C0759 /* NoFoundView.swift */,
 				09E0B3112DF51D9E008C0759 /* View+Extension.swift */,
+				097DCDCA2DF7CE0300A432B9 /* NavigationContentView.swift */,
+				097DCDD22DFA71F100A432B9 /* PopupDemoView.swift */,
+				097DCDD42DFA72CE00A432B9 /* PopupBelowButtonView.swift */,
+				0912FABB2E04F82800DAF741 /* GeometryTestView.swift */,
+				099B6A242E0B950F0058EAC0 /* NavigationStackDemoView.swift */,
+				099B6A262E0B9A630058EAC0 /* TestView1.swift */,
+				099B6A282E0BA9140058EAC0 /* TestView2.swift */,
+				099B6A2A2E0BA9740058EAC0 /* TestView3.swift */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -280,10 +304,12 @@
 			files = (
 				09C480F52DEEF463004DD161 /* Color+Extension.swift in Sources */,
 				09C03F772A66200C00A377C5 /* DataPassTestBinding.swift in Sources */,
+				099B6A252E0B950F0058EAC0 /* NavigationStackDemoView.swift in Sources */,
 				09E0C19B2A64D27200C24842 /* UIDevice+Extension.swift in Sources */,
 				09C03F802A66367B00A377C5 /* DataPassTestObservedObject.swift in Sources */,
 				09E0B3132DF51D9E008C0759 /* View+Extension.swift in Sources */,
 				09E0B3152DF51D9E008C0759 /* DeviceModel.swift in Sources */,
+				099B6A272E0B9A630058EAC0 /* TestView1.swift in Sources */,
 				09E0B3162DF51D9E008C0759 /* NoFoundView.swift in Sources */,
 				09E0B3172DF51D9E008C0759 /* DeviceManagementView.swift in Sources */,
 				09E0B3182DF51D9E008C0759 /* DeviceCell.swift in Sources */,
@@ -291,6 +317,7 @@
 				09C03F792A66281E00A377C5 /* DataPassTestList.swift in Sources */,
 				095B80432A614DF3001D95CE /* LandmarkList.swift in Sources */,
 				09C03F862A663B6C00A377C5 /* DataPassTestChangeEnvironmentKeyValue.swift in Sources */,
+				097DCDD52DFA72CE00A432B9 /* PopupBelowButtonView.swift in Sources */,
 				095B80282A612F43001D95CE /* SwiftUIDemo.xcdatamodeld in Sources */,
 				095B803A2A6148EC001D95CE /* ModelData.swift in Sources */,
 				09E0B31C2DF58CFC008C0759 /* CustomPopoverExample.swift in Sources */,
@@ -301,11 +328,16 @@
 				095B80252A612F43001D95CE /* Persistence.swift in Sources */,
 				09C03F752A661E0200A377C5 /* DataPassTestState.swift in Sources */,
 				095B80382A614567001D95CE /* Landmark.swift in Sources */,
+				099B6A2B2E0BA9740058EAC0 /* TestView3.swift in Sources */,
+				097DCDD32DFA71F100A432B9 /* PopupDemoView.swift in Sources */,
+				099B6A292E0BA9140058EAC0 /* TestView2.swift in Sources */,
 				09C03F842A6639C500A377C5 /* DataPassTestEnvironmentKeyValue.swift in Sources */,
 				095B80302A61348E001D95CE /* LandmarkContentView.swift in Sources */,
 				095B801E2A612F42001D95CE /* ContentView.swift in Sources */,
 				095B801C2A612F42001D95CE /* SwiftUIDemoApp.swift in Sources */,
 				09E0C19E2A6548B600C24842 /* FavoriteButton.swift in Sources */,
+				0912FABC2E04F82800DAF741 /* GeometryTestView.swift in Sources */,
+				097DCDCB2DF7CE0300A432B9 /* NavigationContentView.swift in Sources */,
 				095B80412A614BB9001D95CE /* LandmarkRow.swift in Sources */,
 				095B80322A613B6A001D95CE /* CircleImage.swift in Sources */,
 				09C03F7E2A66313900A377C5 /* DataPassTestChangeEnviromentObject.swift in Sources */,
@@ -445,7 +477,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,7 +507,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

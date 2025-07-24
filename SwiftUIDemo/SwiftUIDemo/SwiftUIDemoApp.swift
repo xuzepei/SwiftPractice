@@ -22,10 +22,19 @@ struct SwiftUIDemoApp: App {
             
             //ContentView()
             //LandmarkContentView().environmentObject(modelData)
-            DeviceManagementView()
+            //DeviceManagementView()
             //TestContentView()
             
             //CustomPopoverExample()
+            
+            //NavigationContentView()
+            
+            //PopupDemoView()
+            
+            //PopupBelowButtonView()
+            //GeometryTestView()
+            
+            NavigationStackDemoView()
         }
     }
 }
