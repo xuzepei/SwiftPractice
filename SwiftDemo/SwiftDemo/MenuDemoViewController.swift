@@ -7,9 +7,10 @@
 
 import UIKit
 
-class MenuDemoViewController: UIViewController {
+class MenuDemoViewController: UIViewController, UIContextMenuInteractionDelegate {
 
     @IBOutlet weak var myBtn: UIButton!
+    @IBOutlet weak var contextMenuBtn: UIButton!
     
     var selectedItem: String = ""
 
@@ -19,7 +20,12 @@ class MenuDemoViewController: UIViewController {
         // Do any additional setup after loading the view.
         //myBtn.showsMenuAsPrimaryAction = true
         
+        //普通UIMenu
         updateMenu()
+        
+        // 添加 UIContextMenuInteraction
+        //用于实现 长按（或右键）弹出上下文菜单，类似桌面系统的右键菜单。相比 UIMenu，它可以自定义预览内容，并且在长按时出现
+        initContextMenu()
     }
     
     func updateMenu() {
@@ -55,6 +61,25 @@ class MenuDemoViewController: UIViewController {
         print("#### clickedBtn")
         
 
+    }
+    
+    func initContextMenu() {
+        let interaction = UIContextMenuInteraction(delegate: self)
+        contextMenuBtn.addInteraction(interaction)
+    }
+    
+    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { suggestedActions in
+            let editAction = UIAction(title: "Edit", image: UIImage(systemName: "pencil")) { action in
+                print("Edit action triggered")
+            }
+
+            let deleteAction = UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive) { action in
+                print("Delete action triggered")
+            }
+
+            return UIMenu(title: "", children: [editAction, deleteAction])
+        }
     }
 
     /*

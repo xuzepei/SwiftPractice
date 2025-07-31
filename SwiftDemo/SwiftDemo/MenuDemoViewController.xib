@@ -11,22 +11,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuDemoViewController" customModule="SwiftDemo" customModuleProvider="target">
             <connections>
+                <outlet property="contextMenuBtn" destination="maD-JC-ZRS" id="cVZ-bE-VLh"/>
                 <outlet property="myBtn" destination="SnV-JJ-kKb" id="V4z-vc-UwO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnV-JJ-kKb">
-                    <rect key="frame" x="150" y="328.66666666666669" width="75" height="35"/>
+                    <rect key="frame" x="159" y="421" width="75" height="35"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Button"/>
                     <connections>
                         <action selector="clickedBtn:" destination="-1" eventType="touchUpInside" id="KxC-bD-Lft"/>
                     </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maD-JC-ZRS">
+                    <rect key="frame" x="108" y="543" width="177" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Show Context Menu"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -34,6 +40,8 @@
             <constraints>
                 <constraint firstItem="SnV-JJ-kKb" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="B1b-Ib-E8e"/>
                 <constraint firstItem="SnV-JJ-kKb" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="TKs-OQ-i1I"/>
+                <constraint firstItem="maD-JC-ZRS" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="X86-sR-kUk"/>
+                <constraint firstItem="maD-JC-ZRS" firstAttribute="top" secondItem="SnV-JJ-kKb" secondAttribute="bottom" constant="87" id="gDc-Z7-U2P"/>
             </constraints>
             <point key="canvasLocation" x="111" y="-11"/>
         </view>
