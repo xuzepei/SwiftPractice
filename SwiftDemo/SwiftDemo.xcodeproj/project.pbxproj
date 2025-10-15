@@ -43,6 +43,8 @@
 		098CDD6C2B9ED6B10051408B /* ImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098CDD6A2B9ED6B10051408B /* ImageCropView.swift */; };
 		098CDD6F2B9ED71F0051408B /* ImageCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098CDD6D2B9ED71F0051408B /* ImageCropViewController.swift */; };
 		098CDD702B9ED71F0051408B /* ImageCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098CDD6E2B9ED71F0051408B /* ImageCropViewController.xib */; };
+		098E617F2E82A114005025AD /* GlassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098E617E2E82A114005025AD /* GlassButton.swift */; };
+		098E61812E82A395005025AD /* ProminentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098E61802E82A387005025AD /* ProminentButton.swift */; };
 		09A853802DAA597B0048C2B7 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A8537E2DAA597B0048C2B7 /* ImageViewerViewController.swift */; };
 		09A853812DAA597B0048C2B7 /* ImageViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8537F2DAA597B0048C2B7 /* ImageViewerViewController.xib */; };
 		09A853832DAA65EA0048C2B7 /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A853822DAA65E40048C2B7 /* ImageViewer.swift */; };
@@ -53,6 +55,10 @@
 		09B485AE2A9F15CC008E08DD /* ScanAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */; };
 		09B485B02A9F1630008E08DD /* FaceScanAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B485AF2A9F1630008E08DD /* FaceScanAnimationView.swift */; };
 		09B485B22A9F1C24008E08DD /* ScanningLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B485B12A9F1C24008E08DD /* ScanningLineView.swift */; };
+		09C83EDC2E7BD8840072F4F2 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C83EDA2E7BD8840072F4F2 /* DatePickerViewController.swift */; };
+		09C83EDD2E7BD8840072F4F2 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C83EDB2E7BD8840072F4F2 /* DatePickerViewController.xib */; };
+		09C83EE02E7BE5050072F4F2 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C83EDE2E7BE5050072F4F2 /* DatePicker.swift */; };
+		09C83EE12E7BE5050072F4F2 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C83EDF2E7BE5050072F4F2 /* DatePicker.xib */; };
 		09D36B972A5D42CB0096C6EC /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D36B952A5D42CB0096C6EC /* CollectionViewController.swift */; };
 		09D36B982A5D42CB0096C6EC /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09D36B962A5D42CB0096C6EC /* CollectionViewController.xib */; };
 		09D36B9D2A5D51260096C6EC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D36B9B2A5D51260096C6EC /* CollectionViewCell.swift */; };
@@ -133,6 +139,8 @@
 		098CDD6A2B9ED6B10051408B /* ImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropView.swift; sourceTree = "<group>"; };
 		098CDD6D2B9ED71F0051408B /* ImageCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropViewController.swift; sourceTree = "<group>"; };
 		098CDD6E2B9ED71F0051408B /* ImageCropViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCropViewController.xib; sourceTree = "<group>"; };
+		098E617E2E82A114005025AD /* GlassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassButton.swift; sourceTree = "<group>"; };
+		098E61802E82A387005025AD /* ProminentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProminentButton.swift; sourceTree = "<group>"; };
 		09A8537E2DAA597B0048C2B7 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		09A8537F2DAA597B0048C2B7 /* ImageViewerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewerViewController.xib; sourceTree = "<group>"; };
 		09A853822DAA65E40048C2B7 /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
@@ -143,6 +151,10 @@
 		09B485AC2A9F15CC008E08DD /* ScanAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanAnimationViewController.xib; sourceTree = "<group>"; };
 		09B485AF2A9F1630008E08DD /* FaceScanAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceScanAnimationView.swift; sourceTree = "<group>"; };
 		09B485B12A9F1C24008E08DD /* ScanningLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningLineView.swift; sourceTree = "<group>"; };
+		09C83EDA2E7BD8840072F4F2 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		09C83EDB2E7BD8840072F4F2 /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		09C83EDE2E7BE5050072F4F2 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		09C83EDF2E7BE5050072F4F2 /* DatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
 		09D36B952A5D42CB0096C6EC /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		09D36B962A5D42CB0096C6EC /* CollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewController.xib; sourceTree = "<group>"; };
 		09D36B9B2A5D51260096C6EC /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -349,6 +361,10 @@
 		09DAE3912A5D055E00B77060 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				098E61802E82A387005025AD /* ProminentButton.swift */,
+				098E617E2E82A114005025AD /* GlassButton.swift */,
+				09C83EDE2E7BE5050072F4F2 /* DatePicker.swift */,
+				09C83EDF2E7BE5050072F4F2 /* DatePicker.xib */,
 				09A853822DAA65E40048C2B7 /* ImageViewer.swift */,
 				09D6C5932DAC96620068D81D /* 3DotsIndicatior */,
 				09E091C22B85D827001FF11D /* ImageProcessor */,
@@ -372,6 +388,8 @@
 				09A8537F2DAA597B0048C2B7 /* ImageViewerViewController.xib */,
 				09AF24492E32112F001BBCCF /* MenuDemoViewController.swift */,
 				09AF244A2E32112F001BBCCF /* MenuDemoViewController.xib */,
+				09C83EDA2E7BD8840072F4F2 /* DatePickerViewController.swift */,
+				09C83EDB2E7BD8840072F4F2 /* DatePickerViewController.xib */,
 			);
 			path = SwiftDemo;
 			sourceTree = "<group>";
@@ -502,6 +520,7 @@
 				09B485AE2A9F15CC008E08DD /* ScanAnimationViewController.xib in Resources */,
 				091CE27E2B47A5ED00204E23 /* TagViewController.xib in Resources */,
 				09A853812DAA597B0048C2B7 /* ImageViewerViewController.xib in Resources */,
+				09C83EE12E7BE5050072F4F2 /* DatePicker.xib in Resources */,
 				098CDD702B9ED71F0051408B /* ImageCropViewController.xib in Resources */,
 				09E091CA2B85D895001FF11D /* ImageProcessorViewController.xib in Resources */,
 				098CDD6B2B9ED6B10051408B /* ImageCropView.xib in Resources */,
@@ -511,6 +530,7 @@
 				093C6D1B2BA05C4E008E3759 /* PhotoSizeCell.xib in Resources */,
 				09D36B9E2A5D51260096C6EC /* CollectionViewCell.xib in Resources */,
 				09D6C5962DAC96620068D81D /* ThreeDotsIndicatorViewController.xib in Resources */,
+				09C83EDD2E7BD8840072F4F2 /* DatePickerViewController.xib in Resources */,
 				09DAE39F2A5D055F00B77060 /* Assets.xcassets in Resources */,
 				093C6D152BA05620008E3759 /* PhoteSizeSelectionViewController.xib in Resources */,
 				09DAE39A2A5D055E00B77060 /* Main.storyboard in Resources */,
@@ -531,9 +551,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -585,10 +609,12 @@
 				09E091E52B85D93E001FF11D /* MLModel+Images.swift in Sources */,
 				09D36B972A5D42CB0096C6EC /* CollectionViewController.swift in Sources */,
 				09A853802DAA597B0048C2B7 /* ImageViewerViewController.swift in Sources */,
+				098E61812E82A395005025AD /* ProminentButton.swift in Sources */,
 				09DAE3AA2A5D20F900B77060 /* HomeTableViewController.swift in Sources */,
 				09D6C5942DAC96620068D81D /* ThreeDotsIndicatorViewController.swift in Sources */,
 				09D6C5952DAC96620068D81D /* ThreeDotsIndicatorView.swift in Sources */,
 				09E091EC2B85D93E001FF11D /* CVPixelBuffer+Resize.swift in Sources */,
+				09C83EDC2E7BD8840072F4F2 /* DatePickerViewController.swift in Sources */,
 				09D3DCE22B88887D0076DBAB /* ColorSelector.swift in Sources */,
 				09E091EB2B85D93E001FF11D /* MLMultiArray+Image.swift in Sources */,
 				097841382B8DD0EA00CFEB4F /* ColorButton.swift in Sources */,
@@ -597,11 +623,13 @@
 				09E091DD2B85D93E001FF11D /* Array+Extensions.swift in Sources */,
 				09A853832DAA65EA0048C2B7 /* ImageViewer.swift in Sources */,
 				091F5B272B32EBF80092FD6E /* ToastQueueDelegate.swift in Sources */,
+				09C83EE02E7BE5050072F4F2 /* DatePicker.swift in Sources */,
 				091F5B252B32EBF80092FD6E /* ToastHelper.swift in Sources */,
 				097841552B8F372400CFEB4F /* ImageCropperModel.swift in Sources */,
 				0978415A2B8F372400CFEB4F /* ImageCropperRouter.swift in Sources */,
 				093C6D142BA05620008E3759 /* PhoteSizeSelectionViewController.swift in Sources */,
 				09E091ED2B85D93E001FF11D /* CVPixelBuffer+Rotate.swift in Sources */,
+				098E617F2E82A114005025AD /* GlassButton.swift in Sources */,
 				09E091E42B85D93E001FF11D /* MLMultiArray+Helpers.swift in Sources */,
 				093C6D1A2BA05C4E008E3759 /* PhotoSizeCell.swift in Sources */,
 				097841612B91C26300CFEB4F /* Photo.swift in Sources */,

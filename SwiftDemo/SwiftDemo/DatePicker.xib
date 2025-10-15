@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DatePicker" customModule="SwiftDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="588" height="388"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agE-22-dL8">
+                    <rect key="frame" x="10" y="20" width="568" height="20.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qEB-vT-N1B">
+                    <rect key="frame" x="10" y="60.5" width="568" height="257.5"/>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2u8-eG-qF2">
+                    <rect key="frame" x="10" y="328" width="568" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ov-z2-GOP">
+                            <rect key="frame" x="0.0" y="7.5" width="284" height="35.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Cancel"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                            </buttonConfiguration>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKp-Ot-ium">
+                            <rect key="frame" x="284" y="10" width="1" height="30"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="mgH-F6-8xi"/>
+                                <constraint firstAttribute="height" constant="30" id="n6O-U4-Pfj"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mw5-4J-XXX">
+                            <rect key="frame" x="285" y="7.5" width="283" height="35.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="OK"/>
+                            <buttonConfiguration key="configuration" style="plain" title="OK">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="JCM-in-C2x"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2u8-eG-qF2" secondAttribute="trailing" constant="10" id="39s-3i-qmV"/>
+                <constraint firstItem="qEB-vT-N1B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="4wc-OZ-npb"/>
+                <constraint firstItem="2u8-eG-qF2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="6ut-5m-PVz"/>
+                <constraint firstAttribute="bottom" secondItem="2u8-eG-qF2" secondAttribute="bottom" constant="10" id="L4L-Zs-mVS"/>
+                <constraint firstAttribute="trailing" secondItem="qEB-vT-N1B" secondAttribute="trailing" constant="10" id="OZa-wA-qT3"/>
+                <constraint firstItem="agE-22-dL8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="P8e-lY-snn"/>
+                <constraint firstItem="2u8-eG-qF2" firstAttribute="top" secondItem="qEB-vT-N1B" secondAttribute="bottom" constant="10" id="RHL-mS-lvG"/>
+                <constraint firstItem="agE-22-dL8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cB7-7g-exo"/>
+                <constraint firstAttribute="trailing" secondItem="agE-22-dL8" secondAttribute="trailing" constant="10" id="gSU-Iu-dA9"/>
+                <constraint firstItem="agE-22-dL8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="p34-5b-5Ea"/>
+                <constraint firstItem="qEB-vT-N1B" firstAttribute="top" secondItem="agE-22-dL8" secondAttribute="bottom" constant="20" id="ws1-u6-Q3f"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="buttonContainer" destination="2u8-eG-qF2" id="cDr-ZI-HNj"/>
+                <outlet property="cancelButton" destination="6ov-z2-GOP" id="ZUe-jP-cnl"/>
+                <outlet property="dateContainer" destination="qEB-vT-N1B" id="cdW-BK-DkE"/>
+                <outlet property="okButton" destination="Mw5-4J-XXX" id="NpI-PE-ih2"/>
+                <outlet property="titleLabel" destination="agE-22-dL8" id="I3m-WH-qOy"/>
+            </connections>
+            <point key="canvasLocation" x="37.681159420289859" y="-66.294642857142861"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
