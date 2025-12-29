@@ -5,7 +5,7 @@
 //  Created by xuzepei on 2025/6/6.
 //
 
-import SwiftUICore
+import SwiftUI
 
 extension View {
     @ViewBuilder

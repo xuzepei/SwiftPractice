@@ -23,7 +23,7 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper","ImageCropView", "Select Photo Size", "ImageViewer", "ThreeDotsIndicator", "UIMenu", "UIDatePicker"])
+        itemArray.addObjects(from: ["AutoLayout-UIStackView","UICollectionView","ScanAnimation","Toast","ImageEditor","TagListView","ImageProcessor","ImageCropper","ImageCropView", "Select Photo Size", "ImageViewer", "ThreeDotsIndicator", "UIMenu", "UIDatePicker", "FaceScan","Gallery UI"])
     }
 
     // MARK: - Table view data source
@@ -200,8 +200,18 @@ class HomeTableViewController: UITableViewController, UIImagePickerControllerDel
             let vc = MenuDemoViewController()
             vc.title = getItemByIndex(indexPath: indexPath)
             self.navigationController?.pushViewController(vc, animated: true)
-        } else {
+        }
+        else if indexPath.row == 13 {
             let vc = DatePickerViewController()
+            vc.title = getItemByIndex(indexPath: indexPath)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        else if indexPath.row == 14 {
+            let vc = FaceScanViewController()
+            vc.title = getItemByIndex(indexPath: indexPath)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vc = GalleryViewController()
             vc.title = getItemByIndex(indexPath: indexPath)
             self.navigationController?.pushViewController(vc, animated: true)
         }

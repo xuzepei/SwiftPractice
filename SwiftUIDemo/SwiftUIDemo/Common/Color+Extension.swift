@@ -5,7 +5,7 @@
 //  Created by xuzepei on 2025/6/3.
 //
 
-import SwiftUICore
+import SwiftUI
 import UIKit
 
 extension Color {

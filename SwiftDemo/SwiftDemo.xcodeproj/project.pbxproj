@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		091CE27D2B47A5ED00204E23 /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091CE27B2B47A5ED00204E23 /* TagViewController.swift */; };
 		091CE27E2B47A5ED00204E23 /* TagViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091CE27C2B47A5ED00204E23 /* TagViewController.xib */; };
+		091CEBB62ED056D600044D3A /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091CEBB52ED056CD00044D3A /* GalleryViewController.swift */; };
 		091F5B1E2B32EBF80092FD6E /* ToastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F5B0D2B32EBF80092FD6E /* ToastConfiguration.swift */; };
 		091F5B1F2B32EBF80092FD6E /* ToastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F5B0E2B32EBF80092FD6E /* ToastDelegate.swift */; };
 		091F5B202B32EBF80092FD6E /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F5B0F2B32EBF80092FD6E /* MulticastDelegate.swift */; };
@@ -45,6 +46,7 @@
 		098CDD702B9ED71F0051408B /* ImageCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098CDD6E2B9ED71F0051408B /* ImageCropViewController.xib */; };
 		098E617F2E82A114005025AD /* GlassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098E617E2E82A114005025AD /* GlassButton.swift */; };
 		098E61812E82A395005025AD /* ProminentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098E61802E82A387005025AD /* ProminentButton.swift */; };
+		09918F332EB9F17F006C5DEE /* FaceScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09918F322EB9F161006C5DEE /* FaceScanViewController.swift */; };
 		09A853802DAA597B0048C2B7 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A8537E2DAA597B0048C2B7 /* ImageViewerViewController.swift */; };
 		09A853812DAA597B0048C2B7 /* ImageViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8537F2DAA597B0048C2B7 /* ImageViewerViewController.xib */; };
 		09A853832DAA65EA0048C2B7 /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A853822DAA65E40048C2B7 /* ImageViewer.swift */; };
@@ -105,6 +107,7 @@
 /* Begin PBXFileReference section */
 		091CE27B2B47A5ED00204E23 /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		091CE27C2B47A5ED00204E23 /* TagViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagViewController.xib; sourceTree = "<group>"; };
+		091CEBB52ED056CD00044D3A /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		091F5B0D2B32EBF80092FD6E /* ToastConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastConfiguration.swift; sourceTree = "<group>"; };
 		091F5B0E2B32EBF80092FD6E /* ToastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastDelegate.swift; sourceTree = "<group>"; };
 		091F5B0F2B32EBF80092FD6E /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 		098CDD6E2B9ED71F0051408B /* ImageCropViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCropViewController.xib; sourceTree = "<group>"; };
 		098E617E2E82A114005025AD /* GlassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassButton.swift; sourceTree = "<group>"; };
 		098E61802E82A387005025AD /* ProminentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProminentButton.swift; sourceTree = "<group>"; };
+		09918F322EB9F161006C5DEE /* FaceScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceScanViewController.swift; sourceTree = "<group>"; };
 		09A8537E2DAA597B0048C2B7 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		09A8537F2DAA597B0048C2B7 /* ImageViewerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewerViewController.xib; sourceTree = "<group>"; };
 		09A853822DAA65E40048C2B7 /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
@@ -361,6 +365,8 @@
 		09DAE3912A5D055E00B77060 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				091CEBB52ED056CD00044D3A /* GalleryViewController.swift */,
+				09918F322EB9F161006C5DEE /* FaceScanViewController.swift */,
 				098E61802E82A387005025AD /* ProminentButton.swift */,
 				098E617E2E82A114005025AD /* GlassButton.swift */,
 				09C83EDE2E7BE5050072F4F2 /* DatePicker.swift */,
@@ -633,6 +639,7 @@
 				09E091E42B85D93E001FF11D /* MLMultiArray+Helpers.swift in Sources */,
 				093C6D1A2BA05C4E008E3759 /* PhotoSizeCell.swift in Sources */,
 				097841612B91C26300CFEB4F /* Photo.swift in Sources */,
+				09918F332EB9F17F006C5DEE /* FaceScanViewController.swift in Sources */,
 				09E091E12B85D93E001FF11D /* UIImage+Extensions.swift in Sources */,
 				097841572B8F372400CFEB4F /* ImageCropperPresenter.swift in Sources */,
 				09DAE39D2A5D055E00B77060 /* SwiftDemo.xcdatamodeld in Sources */,
@@ -657,6 +664,7 @@
 				097841562B8F372400CFEB4F /* ImageCropperViewController.swift in Sources */,
 				09B485B22A9F1C24008E08DD /* ScanningLineView.swift in Sources */,
 				09B20CBF2B4E263900055509 /* TagsView.swift in Sources */,
+				091CEBB62ED056D600044D3A /* GalleryViewController.swift in Sources */,
 				09E091E32B85D93E001FF11D /* UIImage+RawBytes.swift in Sources */,
 				09E091E02B85D93E001FF11D /* Predictions.swift in Sources */,
 				098CDD6F2B9ED71F0051408B /* ImageCropViewController.swift in Sources */,
